@@ -1,0 +1,77 @@
+@background: #090928;
+@foreground_hover: #D3D3D3;
+@accent: #2C826F;
+@accent_hover: #216E5B;
+
+@font-face {
+    font-family: 'Varela';
+    src: url('../fonts/Varela-Regular.ttf');
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela', "Lucida Grande", sans-serif;
+    background-color: @background;
+}
+
+.content {
+    min-height: 100%;
+}
+  
+.content-inside {    
+    padding-bottom: 203px;
+}
+  
+.footer {
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    margin-top: -203px;    
+    background-color: #ECEFF1;
+    border-top: 3px solid #B0BEC5;    
+}
+
+.ash-btn {
+    margin: 5px;
+    padding: 15px;
+    color: @accent;
+    font-size: 11pt;
+    background-color: transparent;
+    border: 2px solid @accent;
+    cursor: pointer;
+
+    &:hover {
+        color: @accent_hover;
+        border-color: @accent_hover;
+    }
+}
+
+.right-aligned {
+    float: right;
+}
+
+.header {
+    padding: 10px;
+    color: white;
+
+    .logo {
+        cursor: pointer;
+        height: 75px;
+        width: 150px;
+        margin: 5px;
+    }
+
+    .link {
+        padding: 20px;
+        cursor: pointer;
+        font-size: 11pt;
+        
+        &:hover {
+            color: @foreground_hover;
+        }
+    }
+}
+
+

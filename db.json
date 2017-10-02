@@ -1,0 +1,9 @@
+{
+  "users": [
+    {
+      "email": "web@dwjproduction.com",
+      "password": "$2a$10$fobDVjVoKpAWXGwDY42pZeladtiqM9VRo6i8KiH98DEfkVbB2T/TW",
+      "admin": true
+    }
+  ]
+}
