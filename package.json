@@ -4,7 +4,7 @@
   "description": "authentication app template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "dwj production web team",
   "license": "ISC",
