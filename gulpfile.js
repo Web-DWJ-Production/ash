@@ -8,6 +8,7 @@ var del = require('del');
 
 var gulpSequence = require('gulp-sequence');
 var gfi = require("gulp-file-insert");
+var gbr = require('gulp-batch-replace');
 var merge = require('merge-stream');
 
 var config = {
@@ -20,6 +21,7 @@ var config = {
     libsFonts: ['app/assets/fonts/**'],
     views: ['app/views/*.html'],
     htmlFiles: [{ 'filename': 'index', 'locationname': 'index.html' }],
+    navigationLinks: [['{home}','index.html']],    
     htmlLocation: "app/templates/"
   },
   dest: {
@@ -79,7 +81,10 @@ gulp.task('build-html', function () {
   var tasks = config.src.htmlFiles.map(function (fileObj) {
     console.log("Building File: " + fileObj.filename);
     return gulp.src(config.src.htmlLocation + '/layout.html')
+      /* Build each page with layout file */
       .pipe(gfi({ "/* INSERT BODY */": config.src.htmlLocation + fileObj.locationname }))
+      /* Insert proper location into the page links */
+      .pipe(gbr(config.src.navigationLinks))
       .pipe(rename(function (path) { path.basename = fileObj.filename; }))
       .pipe(gulp.dest(config.dest.base));
   });
