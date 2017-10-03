@@ -9,6 +9,7 @@ var del = require('del');
 var gulpSequence = require('gulp-sequence');
 var gfi = require("gulp-file-insert");
 var gbr = require('gulp-batch-replace');
+var jeditor = require("gulp-json-editor");
 var merge = require('merge-stream');
 
 var config = {
@@ -30,6 +31,14 @@ var config = {
     appFonts: 'dist/assets/fonts',
     appImgs: 'dist/assets/images',
     base: 'dist'
+  },
+  builds:{
+    dev:{
+      apiUrl: 'http://localhost:8080'
+    },
+    production: {
+      apiUrl: ''
+    }
   }
 };
 
@@ -96,5 +105,24 @@ gulp.task('copy-views', function () {
   return gulp.src(config.src.views)
     .pipe(gulp.dest(config.dest.base));
 });
+
+/* Environment Builds */
+gulp.task('build-dev', function(){
+  gulp.src("ash.json")
+  .pipe(jeditor(function(json) {
+    json.apiUrl = config.builds.dev.apiUrl;
+    return json; 
+  }))
+  .pipe(gulp.dest("./"));
+})
+
+gulp.task('build-production', function(){
+  gulp.src("ash.json")
+  .pipe(jeditor(function(json) {
+    json.apiUrl = config.builds.production.apiUrl;
+    return json; 
+  }))
+  .pipe(gulp.dest("./"));
+})
 
 gulp.task('all', gulpSequence('clean', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));
