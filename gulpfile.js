@@ -33,8 +33,11 @@ var config = {
     base: 'dist'
   },
   builds:{
-    dev:{
+    local:{
       apiUrl: 'http://localhost:8080'
+    },
+    dev:{
+      apiUrl: ''
     },
     production: {
       apiUrl: ''
@@ -107,6 +110,15 @@ gulp.task('copy-views', function () {
 });
 
 /* Environment Builds */
+gulp.task('build-local', function(){
+  gulp.src("ash.json")
+  .pipe(jeditor(function(json) {
+    json.apiUrl = config.builds.local.apiUrl;
+    return json; 
+  }))
+  .pipe(gulp.dest("./"));
+})
+
 gulp.task('build-dev', function(){
   gulp.src("ash.json")
   .pipe(jeditor(function(json) {
@@ -114,7 +126,7 @@ gulp.task('build-dev', function(){
     return json; 
   }))
   .pipe(gulp.dest("./"));
-})
+});
 
 gulp.task('build-production', function(){
   gulp.src("ash.json")
@@ -123,6 +135,6 @@ gulp.task('build-production', function(){
     return json; 
   }))
   .pipe(gulp.dest("./"));
-})
+});
 
 gulp.task('all', gulpSequence('clean', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));
