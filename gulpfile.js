@@ -17,9 +17,15 @@ var config = {
     appJs: ['app/js/*.js'],
     appLess: ['app/less/*.less'],
     appImgs: ['app/assets/images/**'],
-    libsJs: [],
-    libsCSS: [],
-    libsFonts: ['app/assets/fonts/**'],
+    libsJs: [
+      'app/assets/libs/jquery/dist/jquery.min.js',
+      'app/assets/libs/bootstrap/dist/js/bootstrap.min.js'
+    ],
+    libsCSS: [
+      'app/assets/libs/bootstrap/dist/css/bootstrap.min.css',
+      'app/assets/libs/animate.css/animate.min.css'
+    ],
+    libsFonts: ['app/assets/fonts/**', 'app/assets/libs/bootstrap/fonts/**'],
     views: ['app/views/*.html'],
     htmlFiles: [{ 'filename': 'index', 'locationname': 'index.html' }],
     navigationLinks: [['{home}','index.html']],    
@@ -137,8 +143,8 @@ gulp.task('build-production', function(){
   .pipe(gulp.dest("./"));
 });
 
-gulp.task('local', gulpSequence('clean', 'build-local', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));
-gulp.task('dev', gulpSequence('clean', 'build-dev', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));
-gulp.task('prod', gulpSequence('clean', 'build-production', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));
+gulp.task('local', gulpSequence('clean', 'build-local', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less'], 'build-html'));
+gulp.task('dev', gulpSequence('clean', 'build-dev', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less'], 'build-html'));
+gulp.task('prod', gulpSequence('clean', 'build-production', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less'], 'build-html'));
 
-gulp.task('all', gulpSequence('clean', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));
+gulp.task('all', gulpSequence('clean', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less'], 'build-html'));

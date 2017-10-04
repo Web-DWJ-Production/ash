@@ -1,0 +1,8 @@
+{
+    "name": "strategicAnalytix",
+    "version": "1.0.0",
+    "dependencies": {
+      "bootstrap": "latest",      
+      "animate.css": "latest"      
+    }
+  }
