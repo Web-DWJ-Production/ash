@@ -1,0 +1,92 @@
+.home {
+    .content-section {
+        .backImg {
+            position: absolute;
+            z-index: 0;
+            top:0;
+            left:0;
+            width:100%;
+            height: 100%;
+            .overlay { 
+                position: absolute; 
+                z-index: 1; 
+                width: 100%; 
+                height: 100%; 
+                background: linear-gradient(to right, @color3, @color4); 
+                opacity: 0.3;
+            }
+            .img {
+                background-image: url('../images/demo4.jpg');
+                position: relative;
+                z-index: 0;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                opacity: 0.2;
+
+                -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+                filter: grayscale(80%);
+            }
+        }
+        .carousel-switch{
+            display: flex;
+            flex-direction: row; 
+            position: absolute;
+            z-index: 1;
+            width: 80%;
+            top: 50%;
+            transform: translateY(-50%);       
+            .switch-section{            
+                &.wd6 { width: 60%; }
+                &.wd4 { width: 40%; }
+                .content-title {
+                    text-align: center;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                .content-text { font-size: 1.3rem; line-height: 3rem;}
+                .css-object {            
+                    &.css-computer { display: block; }
+                    &.css-phone { display: none; }
+                    @media @mobile-screen {
+                        &.css-computer { display: none;}
+                        &.css-phone { display: block; }
+                    }
+                }     
+            }
+        }
+
+        .content-box-container {
+            display: flex;
+            flex-direction: row;
+            .content-box {
+                display: flex;
+                flex-direction: column;
+                .box-row {
+                    display: flex;
+                    flex: 1;
+                    flex-direction: row;
+                    &+.line-row { border-top: 2px solid rgba(255,255,255,1); }
+                    .box-column {
+                        display: flex;
+                        flex-direction: row;
+                        padding: 30px 20px;
+                        width: 50%;
+                        &.column-flex {
+                            flex-direction: column;
+                        }
+                        &+.line-column{ border-left: 2px solid rgba(255,255,255,1);}
+                        .box-content{
+                            padding: 0px 10px;                            
+                            .content-title {
+                                margin-top: 0px;
+                                .text-highlight { color: @color2;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

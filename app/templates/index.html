@@ -1,5 +1,135 @@
-<h1>Home</h1>
+<div class="content-body home">
+    <div class="content-section full afterAngle angle-background">
+        <div class="backImg">
+            <div class="overlay"></div>
+            <div class="img demoimg1"></div>
+        </div>
+        <div class="carousel-switch">
+            <div class="switch-section wd4">
+                <h1 class="content-title">Who We Are</h1>
+                <div class="content-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+            </div>
+            <div class="switch-section wd6">
+                <!-- Computer -->
+                <div class="css-object css-computer screen">
+                    <div class="content">
+                        <div class="pg">
+                        <ul class="btns">
+                            <li ng-repeat="i in cc.getNumber(3) track by $index"></li>
+                        </ul>
+                        <ul class="txt">
+                            <li ng-repeat="i in cc.getNumber(2) track by $index"></li>
+                            <li class="thin" ng-repeat="i in cc.getNumber(3) track by $index"></li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="base">
+                        <div class="grey-shadow"></div>
+                        <div class="foot top"></div>
+                        <div class="foot bottom"></div>
+                        <div class="shadow"></div>
+                        <div class="keyboard">
+                        <div class="btm"></div>
+                        <ul class="keys">
+                            <li ng-repeat="i in cc.getNumber(4) track by $index"></li>
+                        </ul>
+                        <div class="shadow"></div>
+                        </div>
+                    </div>
+                </div>
 
-<p>
-    Index page works!
-</p>
+                <!-- Mobile -->
+                <div class="css-object css-phone">
+                    <div class="screen">
+                        <div class="content">
+                        <ul class="txt">
+                            <li ng-repeat="i in $ctrl.getNumber(3) track by $index"></li>
+                        </ul>
+                        </div>
+                    </div>
+
+                    <div class="shadow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Content section-->
+     <div class="content-section">
+         <div class="content-box-container">
+            <div class="content-box">
+                <div class="box-row line-row">
+                    <!-- Sensible -->
+                    <div class="box-column line-column">
+                        <div class="box-content box-icon"><img src="assets/images/sensible_icon.png"></div>
+                        <div class="box-content box-text">
+                            <h2 class="content-title"><span class="text-highlight">Sensible</span> Solutions</h2>
+                            <div class="content-text">We provide you with practical and easy solutions for your business.</div>
+                        </div>
+                    </div>
+                    <!-- Foward -->
+                    <div class="box-column line-column">
+                        <div class="box-content box-icon"><img src="assets/images/forward_icon.png"></div>
+                        <div class="box-content box-text">
+                            <h2 class="content-title"><span class="text-highlight">Forward</span> Thinking</h2>
+                            <div class="content-text">Our consultants are leading experts in hundreds of industries.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-row line-row">
+                    <!-- Our Client Strategy -->
+                    <div class="box-column line-column">
+                        <div class="box-content box-icon"><img src="assets/images/client_icon.png"></div>
+                        <div class="box-content box-text">
+                            <h2 class="content-title"><span class="text-highlight">Our</span> Client <span class="text-highlight">Strategy</span>  </h2>
+                            <div class="content-text">We help our clients achieve and retain the greatest possible success.</div>
+                        </div>
+                    </div>
+                    <!-- Beyond The Box -->
+                    <div class="box-column line-column">
+                        <div class="box-content box-icon"><img src="assets/images/box_icon.png"></div>
+                        <div class="box-content box-text">
+                            <h2 class="content-title">Beyond <span class="text-highlight">The Box</span></h2>
+                            <div class="content-text">We strongly believe in delivering innovative strategies to your ideas.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- Solutions -->
+     <div class="content-section beforeAngle">
+        <h2 class="section-title">Featured Services</h2>
+        <div class="content-box-container">
+            <div class="content-box">
+                <div class="box-row">
+                    <!-- Cybersecurity -->
+                    <div class="box-column column-flex">
+                        <div class="box-content"><div class="solution-img"></div></div>
+                        <div class="box-content"><h3>Cybersecurity</h3></div>
+                        <div class="box-content"><div class="content-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div></div>
+                        <div class="box-content"><div class="cir-btn">Read More</div></div>
+                    </div>
+                    <!-- Systems Engineering -->
+                    <div class="box-column column-flex">
+                        <div class="box-content"><div class="solution-img"></div></div>
+                        <div class="box-content"><h3>Systems Engineering</h3></div>
+                        <div class="box-content"><div class="content-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div></div>
+                        <div class="box-content"><div class="cir-btn">Read More</div></div>
+                    </div>
+                    <!-- Programmatic & Acquisition -->
+                    <div class="box-column column-flex">
+                        <div class="box-content"><div class="solution-img"></div></div>
+                        <div class="box-content"><h3>Programmatic & Acquisition</h3></div>
+                        <div class="box-content"><div class="content-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div></div>
+                        <div class="box-content"><div class="cir-btn">Read More</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
