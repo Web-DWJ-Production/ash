@@ -20,6 +20,7 @@
 @color3-fade-1: rgba(32,99,154,0.1);
 
 @color4: rgba(31,152,75,1);
+@color4-fade-7: rgba(31,152,75,0.7);
 
 @color5: rgba(255,255,255,1);
 @color5-fade-3: rgba(255,255,255,0.3);
@@ -133,18 +134,18 @@ body { color: rgba(255,255,255,1);}
 }
 
 /* Body */
-.mainBody {
-    padding-bottom: 30px;
+.mainBody {    
     .content-body {
       min-height: 100vh;
       position: relative;      
       .content-section{
-        padding:30px 10%;
+        padding:50px 10%;
         position: relative;
         overflow-y: hidden;
         &.full {
           min-height: calc(~"100vh + "@angleHeight );
         }
+        /* Angles */
         &.afterAngle {
           padding-bottom: @angleHeight;
           &::after {
@@ -163,6 +164,31 @@ body { color: rgba(255,255,255,1);}
             }
           }
         }
+
+        &.beforeAngle {
+          padding-top: @angleHeight;
+
+          &::before {
+            content:"";
+            width: 0;
+            height: 0;            
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+
+          &.angle-background {
+            &::before {
+              border-top: @angleHeight solid @background;
+              border-right: 100vw solid transparent;
+            }
+          }          
+        }
+        /* background colors */
+        &.light-3 {
+          background-color: rgba(255,255,255,0.3);
+        }
+        /* Components */
         .section-title {
           text-align: center;
         }
@@ -171,7 +197,15 @@ body { color: rgba(255,255,255,1);}
 
     /* Buttons */
     .cir-btn{
-      
+      cursor: pointer;
+      display: inline-block;            
+      border-radius: 25px;
+      padding: 5px 20px;
+      background: @color4;
+      transition: @transition-time all ease-in-out;
+      margin: 10px 0px;
+
+      &:hover { background: @color2; }
     }
 }
 
@@ -216,7 +250,7 @@ body { color: rgba(255,255,255,1);}
             }
         }
         .main-section {
-          background-color: @color3-fade-1;
+          background-color: rgba(50,50,50,.5);
         }
         .sub-section { 
             height: 40px;

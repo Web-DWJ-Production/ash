@@ -78,10 +78,31 @@
                         }
                         &+.line-column{ border-left: 2px solid rgba(255,255,255,1);}
                         .box-content{
-                            padding: 0px 10px;                            
+                            padding: 0px 10px;
+                            &.center-content { text-align: center;}                            
+                            &.btn-box { padding-top: 20px;}
                             .content-title {
                                 margin-top: 0px;
                                 .text-highlight { color: @color2;}
+                            }
+
+                            .solution-img {
+                                border-radius: 50%;
+                                background: @color4-fade-7;
+                                display: inline-block;
+                                width: 150px;
+                                height: 150px; 
+                                position: relative;
+                                overflow: hidden;
+                                
+                                .material-icons {
+                                    color: rgba(255,255,255,1);
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    font-size: 50px;
+                                }
                             }
                         }
                     }
