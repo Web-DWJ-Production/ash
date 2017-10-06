@@ -142,6 +142,7 @@ body { color: rgba(255,255,255,1);}
         padding:50px 10%;
         position: relative;
         overflow-y: hidden;
+        @media @mobile-screen { padding:50px 5%;}
         &.full {
           min-height: calc(~"100vh + "@angleHeight );
         }
@@ -216,9 +217,11 @@ body { color: rgba(255,255,255,1);}
         .row-layout { 
             display: flex;
             flex-direction: row;
+
+            @media @mobile-screen { flex-direction: column;}
             .row-column {                
                 padding: 15px;
-                flex: 1;
+                flex: 1;                
                 .column-row {
                     overflow: hidden;
                     img { width: 40%; }
@@ -239,6 +242,7 @@ body { color: rgba(255,255,255,1);}
                         margin-bottom: 10px;
                         font-weight: bold;
                         font-size: 1rem;
+                        @media @mobile-screen { text-align: center;}
                     }
                     a { 
                       color: rgba(200,200,200,1); 
