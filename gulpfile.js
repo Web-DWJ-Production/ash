@@ -27,8 +27,21 @@ var config = {
     ],
     libsFonts: ['app/assets/fonts/**', 'app/assets/libs/bootstrap/fonts/**'],
     views: ['app/views/*.html'],
-    htmlFiles: [{ 'filename': 'index', 'locationname': 'index.html' }],
-    navigationLinks: [['{home}','index.html']],    
+    htmlFiles: [
+      { 'filename': 'index', 'locationname': 'index.html' },
+      { 'filename': 'underconstruction', 'locationname': 'underconstruction.html' },
+    ],
+    navigationLinks: [
+      ['{home}','index.html'],
+      ['{about-us}','underconstruction.html'],
+      ['{leadership}','underconstruction.html'],
+      ['{company-history}','underconstruction.html'],
+      ['{services}','underconstruction.html'],
+      ['{careers}','underconstruction.html'],
+      ['{benifits}','underconstruction.html'],
+      ['{services}','underconstruction.html'],
+      ['{employee-portal}','underconstruction.html']
+    ],    
     htmlLocation: "app/templates/"
   },
   dest: {
