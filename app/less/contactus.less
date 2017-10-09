@@ -1,3 +1,75 @@
 .contact-us{
-    
+    .content-section{
+        .content-box-container {
+            &.contact-us-form-container{
+                justify-content: center;
+                padding-top: 20px;
+                .content-box{
+                    width: 640px;
+                    @media @mobile-screen { width: 100%;}
+                    .form-container {
+                        width: 100%;
+                        .form-row {
+                            width: 100%;
+                            padding: 10px 0px;
+                            &.btn-box { text-align: center;}
+                            input{
+                                width: 100%;
+                                height: 2.5rem;
+                                color: rgba(255,255,255,1);
+                                border-radius: 5px;
+                                padding: 0px 10px;
+                                border: 0;
+                                background-color: rgba(255,255,255,0.4);
+                                &::-webkit-input-placeholder { color: @color3; }
+                                &::-moz-placeholder { color: @color3; }
+                                &::-ms-input-placeholder { color: @color3; }
+                                &::-moz-placeholder { color: @color3; }
+                            }
+                            textarea{
+                                color: rgba(0,0,0,1);
+                                width: 100%;
+                                height: 150px;
+                                resize: none;
+                                border-radius: 5px;
+                                padding: 10px;
+                                border: 0;
+                                background-color: rgba(255,255,255,0.4);
+                                &::-webkit-input-placeholder { color: @color3; }
+                                &::-moz-placeholder { color: @color3; }
+                                &::-ms-input-placeholder { color: @color3; }
+                                &::-moz-placeholder { color: @color3; }
+                            }
+                        }
+                    }
+                }
+            }
+
+            /**/
+            .map-box {
+                width: 100%;
+                .map-row {
+                    width: 100%;
+                    .map-column {
+                        width: 70% !important;
+                        padding: 0 !important;
+                        @media @mobile-screen { width: 100% !important;}
+                        #map {
+                            height: 400px;
+                            width:100%;
+                        }
+                    }
+                    .info-column {
+                        overflow: hidden;
+                        .color3(background-color, 0.5);
+                        .img-content { 
+                            position: relative;
+                            text-align: center;
+                            img { height: 75px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

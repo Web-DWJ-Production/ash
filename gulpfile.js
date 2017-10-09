@@ -22,10 +22,11 @@ var config = {
       'app/assets/libs/bootstrap/dist/js/bootstrap.min.js'
     ],
     libsCSS: [
-      'app/assets/libs/bootstrap/dist/css/bootstrap.min.css',
+      'app/assets/libs/bootstrap/dist/css/bootstrap.min.css',      
+      'app/assets/libs/font-awesome/css/font-awesome.min.css',
       'app/assets/libs/animate.css/animate.min.css'
     ],
-    libsFonts: ['app/assets/fonts/**', 'app/assets/libs/bootstrap/fonts/**'],
+    libsFonts: ['app/assets/fonts/**', 'app/assets/libs/bootstrap/fonts/**', 'app/assets/libs/font-awesome/fonts/**',],
     views: ['app/views/*.html'],
     htmlFiles: [
       { 'filename': 'index', 'locationname': 'index.html' },
@@ -42,7 +43,10 @@ var config = {
       ['{benifits}','underconstruction.html'],
       ['{services}','underconstruction.html'],
       ['{contact-us}','contactus.html'],
-      ['{employee-portal}','underconstruction.html']
+      ['{employee-portal}','underconstruction.html'],
+      ['{facebook-link}','underconstruction.html'],
+      ['{twitter-link}','underconstruction.html'],
+      ['{linkedin-link}','underconstruction.html']
     ],    
     htmlLocation: "app/templates/"
   },
