@@ -13,12 +13,15 @@
 @background: rgba(9,9,40,1);
 
 @color1: rgba(11,19,43,1);
-@color1-fade-8: rgba(11,19,43,0.8);
-@color1-fade-1: rgba(11,19,43,0.1);
+.color1(@prop,@val){
+  @{prop}: rgba(11,19,43,@val);
+}
 
 @color2: rgba(44,64,182,1);
 @color3: rgba(32,99,154,1);
-@color3-fade-1: rgba(32,99,154,0.1);
+.color3(@prop,@val){
+  @{prop}: rgba(32,99,154,@val);
+}
 
 @color4: rgba(31,152,75,1);
 @color4-fade-7: rgba(31,152,75,0.7);
@@ -60,7 +63,7 @@ body { color: rgba(255,255,255,1);}
   border: none;
   transition: @transition-time all ease-in-out;
   &.moved-header {
-    background-color: @color1-fade-8;
+    .color1(background-color, 0.8);
   }
   .navbar-header { 
     .navbar-toggle {
@@ -125,7 +128,7 @@ body { color: rgba(255,255,255,1);}
             }
         }
         .dropdown-menu { 
-          background:  @color1-fade-8;
+          .color1(background, 0.8);
           li {
             a { 
               color: rgba(255,255,255,1);              
@@ -150,6 +153,18 @@ body { color: rgba(255,255,255,1);}
         @media @mobile-screen { padding:50px 5%;}
         &.full {
           min-height: calc(~"100vh + "@angleHeight );
+        }
+        &.page-header-body {
+          .color3(background, 0.1);
+          //background: @color3;
+          padding-top: calc(~"30px + "@nav-height);
+          .page-header-container {
+            .page-title-container {
+              .page-subtitle { }
+              .page-title { margin-top:0; }
+            }
+            .page-header-img { }
+          }
         }
         /* Angles */
         &.afterAngle {

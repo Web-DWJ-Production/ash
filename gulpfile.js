@@ -29,6 +29,7 @@ var config = {
     views: ['app/views/*.html'],
     htmlFiles: [
       { 'filename': 'index', 'locationname': 'index.html' },
+      { 'filename': 'contactus', 'locationname': 'contactus.html' },
       { 'filename': 'underconstruction', 'locationname': 'underconstruction.html' },
     ],
     navigationLinks: [
@@ -40,6 +41,7 @@ var config = {
       ['{careers}','underconstruction.html'],
       ['{benifits}','underconstruction.html'],
       ['{services}','underconstruction.html'],
+      ['{contact-us}','contactus.html'],
       ['{employee-portal}','underconstruction.html']
     ],    
     htmlLocation: "app/templates/"
