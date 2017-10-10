@@ -1,4 +1,4 @@
-.home {
+.content-body {
     .content-section {
         .backImg {
             position: absolute;
@@ -66,6 +66,7 @@
             .content-box {
                 display: flex;
                 flex-direction: column;
+                &.full-width { width: 100%;}
                 .box-row {
                     display: flex;
                     flex: 1;
@@ -87,14 +88,15 @@
                             padding: 0px 10px;
                             &.center-content { text-align: center;}                            
                             &.btn-box { padding-top: 20px;}
+                            &.indent-content { padding-left: 20px;}
                             .content-title {
                                 margin-top: 0px;
                                 .text-highlight { color: @color2;}
                             }
 
                             .solution-img {
-                                border-radius: 50%;
-                                background: @color4-fade-7;
+                                border-radius: 50%;                                
+                                .color4(background, 0.7);
                                 display: inline-block;
                                 width: 150px;
                                 height: 150px; 

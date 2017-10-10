@@ -13,18 +13,20 @@
 @background: rgba(9,9,40,1);
 
 @color1: rgba(11,19,43,1);
-@color1-fade-8: rgba(11,19,43,0.8);
-@color1-fade-1: rgba(11,19,43,0.1);
+.color1(@prop,@val){ @{prop}: rgba(11,19,43,@val); }
 
 @color2: rgba(44,64,182,1);
+.color2(@prop,@val){ @{prop}: rgba(44,64,182,@val);}
+
 @color3: rgba(32,99,154,1);
-@color3-fade-1: rgba(32,99,154,0.1);
+.color3(@prop,@val){ @{prop}: rgba(32,99,154,@val);}
 
 @color4: rgba(31,152,75,1);
-@color4-fade-7: rgba(31,152,75,0.7);
+.color4(@prop,@val){ @{prop}: rgba(31,152,75,@val);}
 
 @color5: rgba(255,255,255,1);
-@color5-fade-3: rgba(255,255,255,0.3);
+.color5(@prop,@val){ @{prop}: rgba(255,255,255,@val);}
+
 
 /* Size Themes */
 @nav-height:90px;
@@ -60,7 +62,7 @@ body { color: rgba(255,255,255,1);}
   border: none;
   transition: @transition-time all ease-in-out;
   &.moved-header {
-    background-color: @color1-fade-8;
+    .color1(background-color, 0.8);
   }
   .navbar-header { 
     .navbar-toggle {
@@ -128,11 +130,11 @@ body { color: rgba(255,255,255,1);}
             }
         }
         .dropdown-menu { 
-          background:  @color1-fade-8;
+          .color1(background, 0.8);
           li {
             a { 
               color: rgba(255,255,255,1);              
-              &:hover { color: @color5-fade-3; }
+              &:hover { .color5(color, 0.3);}
             }
           }
         }
@@ -154,6 +156,20 @@ body { color: rgba(255,255,255,1);}
         &.full {
           min-height: calc(~"100vh + "@angleHeight );
         }
+        &.page-header-body {
+          .color3(background, 0.1);
+          padding-top: calc(~"30px + "@nav-height);          
+          .page-header-container {            
+            .page-title-container {
+              .page-subtitle { padding-left: 5px;}
+              .page-title { margin-top:0; font-size:3.5rem; }
+            }
+            .page-header-img { height: 370px; }
+          }
+        }
+        &.light-background {
+          background: rgba(255,255,255,0.3);
+        }
         /* Angles */
         &.afterAngle {
           padding-bottom: @angleHeight;
@@ -169,6 +185,12 @@ body { color: rgba(255,255,255,1);}
           &.angle-background {
             &::after {
               border-bottom: @angleHeight solid @background;
+              border-right: 100vw solid transparent;
+            }
+          }
+          &.angle-light-1 {
+            &::after {
+              border-bottom: @angleHeight solid rgba(83,84,105,1);
               border-right: 100vw solid transparent;
             }
           }
@@ -216,12 +238,48 @@ body { color: rgba(255,255,255,1);}
 
       &:hover { background: @color2; }
     }
+
+    /* Social Media Links */
+    .social-links {
+      position: fixed;
+      top: 50%;
+      left: 0;      
+      width: 50px;
+      z-index: 9999;
+    
+      @media @mobile-screen {
+        top:initial;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+      }
+      .social-icon {
+        color: rgba(255,255,255,1);
+        text-align: center;
+        padding: 10px;
+        font-size: .9rem;
+        opacity: 0.7;
+        transition: @transition-time all ease;
+        display: block;
+    
+        &+.social-icon { margin-top: 3px; @media @mobile-screen { margin: 0; }}
+        &:hover { opacity: 1; transform: translate3d(8px,0,0); }
+        @media @mobile-screen { display: inline-block; width: 25%; float: left; opacity: 1; height: 100%;}
+        &.facebook-theme { background-color: rgba(59, 89, 152,1);}
+        &.twitter-theme { background-color: rgba(85, 172, 238,1); }        
+        &.linkedin-theme { background-color: rgba(0, 123, 181,1);}
+        &.email-theme { background-color: rgba(100, 100, 100, 1);}
+      }
+    }
 }
 
 /* Footer */
-.bottom { 
-    
+.bottom {     
     .footer-container {
+      @media @mobile-screen { margin-bottom: 50px;}
         .row-layout { 
             display: flex;
             flex-direction: row;
@@ -263,6 +321,8 @@ body { color: rgba(255,255,255,1);}
         }
         .main-section {
           background-color: rgba(50,50,50,.5);
+          padding: 0px 5%;
+          @media @mobile-screen { padding: 0px; }
         }
         .sub-section { 
             height: 40px;

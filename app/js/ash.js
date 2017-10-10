@@ -9,7 +9,7 @@ loginCtrl.login = function () {
     }
     cinnabarisland.post('/api/auth', body, function (data) {
         loginCtrl.token = data.substring(1, data.length - 1);
-        console.log(loginCtrl.token);
+
         localStorage.setItem('SAToken', loginCtrl.token);
         linksCtrl.redirectToEmployees();
     }, null, true);
@@ -21,8 +21,6 @@ linksCtrl.redirectToEmployees = function () {
     var headers = {
         Authorization: 'Bearer ' + (loginCtrl.token || localStorage.getItem('SAToken'))
     };
-
-    console.log(headers);
 
     cinnabarisland.get('/employees', function (data) {
         document.open();

@@ -22,13 +22,15 @@ var config = {
       'app/assets/libs/bootstrap/dist/js/bootstrap.min.js'
     ],
     libsCSS: [
-      'app/assets/libs/bootstrap/dist/css/bootstrap.min.css',
+      'app/assets/libs/bootstrap/dist/css/bootstrap.min.css',      
+      'app/assets/libs/font-awesome/css/font-awesome.min.css',
       'app/assets/libs/animate.css/animate.min.css'
     ],
-    libsFonts: ['app/assets/fonts/**', 'app/assets/libs/bootstrap/fonts/**'],
+    libsFonts: ['app/assets/fonts/**', 'app/assets/libs/bootstrap/fonts/**', 'app/assets/libs/font-awesome/fonts/**',],
     views: ['app/views/*.html'],
     htmlFiles: [
       { 'filename': 'index', 'locationname': 'index.html' },
+      { 'filename': 'contactus', 'locationname': 'contactus.html' },
       { 'filename': 'underconstruction', 'locationname': 'underconstruction.html' },
       { 'filename': 'employees', 'locationname': 'employees.html' },
     ],
@@ -41,6 +43,11 @@ var config = {
       ['{careers}','underconstruction'],
       ['{benifits}','underconstruction'],
       ['{services}','underconstruction'],
+      ['{contact-us}','contactus'],
+      ['{employee-portal}','underconstruction'],
+      ['{facebook-link}','underconstruction'],
+      ['{twitter-link}','underconstruction'],
+      ['{linkedin-link}','underconstruction'],
       ['{employee-portal}','employees']
     ],    
     htmlLocation: "app/templates/"
