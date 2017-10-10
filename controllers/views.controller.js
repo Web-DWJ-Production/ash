@@ -6,9 +6,16 @@ var path = require('path');
 
 // ROUTES
 router.get('/', getIndex);
-router.get('/internal', expressJWT({secret: secret}), getInternal);
+router.get('/underconstruction', getUC);
+router.get('/employees', expressJWT({ secret: secret }), getEmployees);
 
 module.exports = router;
 
 function getIndex(req, res) { res.sendFile('index.html', { root: path.join(__dirname, '../dist') }) };
-function getInternal(req, res) {};
+function getUC(req, res) { res.sendFile('underconstruction.html', { root: path.join(__dirname, '../dist') }) };
+function getEmployees(req, res) {
+    console.log('Access granted to employees.');
+    res.sendFile('employees.html', {
+        root: path.join(__dirname, '../dist')
+    })
+};

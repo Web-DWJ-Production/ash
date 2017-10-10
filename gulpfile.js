@@ -30,17 +30,18 @@ var config = {
     htmlFiles: [
       { 'filename': 'index', 'locationname': 'index.html' },
       { 'filename': 'underconstruction', 'locationname': 'underconstruction.html' },
+      { 'filename': 'employees', 'locationname': 'employees.html' },
     ],
     navigationLinks: [
-      ['{home}','index.html'],
-      ['{about-us}','underconstruction.html'],
-      ['{leadership}','underconstruction.html'],
-      ['{company-history}','underconstruction.html'],
-      ['{services}','underconstruction.html'],
-      ['{careers}','underconstruction.html'],
-      ['{benifits}','underconstruction.html'],
-      ['{services}','underconstruction.html'],
-      ['{employee-portal}','underconstruction.html']
+      ['{home}','/'],
+      ['{about-us}','underconstruction'],
+      ['{leadership}','underconstruction'],
+      ['{company-history}','underconstruction'],
+      ['{services}','underconstruction'],
+      ['{careers}','underconstruction'],
+      ['{benifits}','underconstruction'],
+      ['{services}','underconstruction'],
+      ['{employee-portal}','employees']
     ],    
     htmlLocation: "app/templates/"
   },
@@ -160,4 +161,4 @@ gulp.task('local', gulpSequence('clean', 'build-local', ['lib-fonts', 'lib-css',
 gulp.task('dev', gulpSequence('clean', 'build-dev', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less'], 'build-html'));
 gulp.task('prod', gulpSequence('clean', 'build-production', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less'], 'build-html'));
 
-gulp.task('all', gulpSequence('clean', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less'], 'build-html'));
+gulp.task('all', gulpSequence('clean', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));

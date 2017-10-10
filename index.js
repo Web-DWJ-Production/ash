@@ -21,6 +21,11 @@ var port = process.env.PORT || 8080;
 // EXPRESS ROUTES
 app.use('/api/auth', require('./controllers/auth.controller.js'));
 app.use('/', require('./controllers/views.controller.js'));
+app.use(function (err, req, res, next) {
+    if (err.name === 'UnauthorizedError') {
+        res.sendFile('login.html', { root: path.join(__dirname, '/dist') })
+    }
+});
 
 // START THE SERVER
 app.listen(port, () => { console.log('ash listening at %s', port) });
