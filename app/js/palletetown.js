@@ -92,12 +92,15 @@ palletetown.getElementByIdentifier = function (identifier, index) {
  * @param {string} classname
  */
 
-palletetown.scrollcontrol = function(threshold, identifier, classname){
-    
+palletetown.scrollcontrol = function(threshold, identifier, classname, mobileDisable){
+    if(mobileDisable && event.currentTarget.innerWidth <= 640){
+        return;
+    }
+    else {
         var el = palletetown.getElementByIdentifier(identifier, 0);
         var scrollHeight = event.currentTarget.scrollY;
         if (!el) return;
-    
+
         if(scrollHeight > threshold){
             if(!el.className.includes(classname)){
                 el.className += " " + classname;
@@ -109,3 +112,4 @@ palletetown.scrollcontrol = function(threshold, identifier, classname){
             }
         }
     }
+}
