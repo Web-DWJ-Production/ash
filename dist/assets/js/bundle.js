@@ -368,8 +368,8 @@ window.addEventListener('scroll', function(e) {
     palletetown.scrollcontrol(10, 'navbar-fixed-top', 'moved-header', true);
 });
 
-//var carousel = new CeruleanCarousel(document.getElementsByClassName('carousel-item'), 10000, adjust);
-//carousel.start();
+var carousel = new CeruleanCarousel(document.getElementsByClassName('carousel-item'), 10000, adjust);
+carousel.start();
 
 function adjust(me) {
     var carouselBtns = document.getElementsByClassName('carousel-btn');
