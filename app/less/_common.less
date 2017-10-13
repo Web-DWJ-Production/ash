@@ -328,6 +328,7 @@ body { color: rgba(255,255,255,1);}
             height: 40px;
             background: rgba(0,0,0,1);
             padding: 10px 5%;
+            opacity: 0.4;            
     
             @media @mobile-screen { height: initial;}
             .row-layout {
@@ -347,8 +348,12 @@ body { color: rgba(255,255,255,1);}
                   color: rgba(230,230,230,0.8);
                   text-decoration: none;
                   transition: @transition-time all ease;
-                  border-top: 2px solid rgba(230,230,230,0.8);
-                  border-bottom: 2px solid rgba(230,230,230,0.8);
+                  // border-top: 2px solid rgba(230,230,230,0.8);
+                  // border-bottom: 2px solid rgba(230,230,230,0.8);
+                  img {
+                    height: 30px;
+                    margin: -8px 0 0 8px;
+                  }
                   &:hover { color: rgba(255,255,255,1);}
                 }
               }
