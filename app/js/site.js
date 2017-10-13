@@ -1,30 +1,3 @@
-// Check Browser Version
-var browserChecks = {
-    // Opera 8.0+
-    isOpera: false,
-    // Firefox 1.0+
-    isFirefox: false,
-    // Safari 3.0+ "[object HTMLElementConstructor]" 
-    isSafari:false,
-    // Internet Explorer 6-11
-    isIE:false,
-    // Edge 20+
-    isEdge:false,
-    // Chrome 1+
-    isChrome:false,    
-    // Blink engine detection
-    isBlink: false
-};
-
-browserChecks.isOpera= (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-browserChecks.isFirefox= typeof InstallTrigger !== 'undefined';
-browserChecks.isSafari=/constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
-browserChecks.isIE=/*@cc_on!@*/false || !!document.documentMode;
-browserChecks.isEdge=!browserChecks.isIE && !!window.StyleMedia;
-browserChecks.isChrome=!!window.chrome && !!window.chrome.webstore;
-browserChecks.isBlink= (browserChecks.isChrome || browserChecks.isOpera) && !!window.CSS;  
-
-
 window.addEventListener('scroll', function(e) {
     console.log("Scrolling");
     palletetown.scrollcontrol(10, 'navbar-fixed-top', 'moved-header', true);

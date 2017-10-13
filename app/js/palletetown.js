@@ -3,6 +3,7 @@
  * PallteTown is a JavaScript Library for animations. Compatible with most browsers.
  * 
  * Alex Goley
+ * Kris Redding
  */
 // Check Browser Version
 var browserChecks = {
@@ -28,8 +29,7 @@ browserChecks.isSafari=/constructor/i.test(window.HTMLElement) || (function (p) 
 browserChecks.isIE=/*@cc_on!@*/false || !!document.documentMode;
 browserChecks.isEdge=!browserChecks.isIE && !!window.StyleMedia;
 browserChecks.isChrome=!!window.chrome && !!window.chrome.webstore;
-browserChecks.isBlink= (browserChecks.isChrome || browserChecks.isOpera) && !!window.CSS;    
-
+browserChecks.isBlink= (browserChecks.isChrome || browserChecks.isOpera) && !!window.CSS;  
 
 // VARIABLES
 var palletetown = {}; // initialize the palletetowm object.
@@ -116,29 +116,26 @@ palletetown.getElementByIdentifier = function (identifier, index) {
  * @param {number} threshold - threshold number of change vertical value
  * @param {string} identifier
  * @param {string} classname
+ * @param {boolean} mobileDisable - if true will not call function is screen size is of mobile width
  */
 
 palletetown.scrollcontrol = function(threshold, identifier, classname, mobileDisable){
-    //var body = document.getElementsByTagName("body")[0];
+    // Check if mobile width
+    if(mobileDisable && window.innerWidth <= 640) return;
+        
+    var el = palletetown.getElementByIdentifier(identifier, 0);
+    var scrollHeight = (browserChecks.isIE ? window.pageYOffset : window.scrollY);
+        
+    if (!el) return;
 
-    if(mobileDisable && window.innerWidth <= 640){
-        return;
+    if(scrollHeight > threshold){
+        if(el.className.indexOf(classname) <= 0){
+            el.className += " " + classname;
+        }
     }
     else {
-        var el = palletetown.getElementByIdentifier(identifier, 0);
-        var scrollHeight = (browserChecks.isIE ? window.pageYOffset : window.scrollY);
-        
-        if (!el) return;
-
-        if(scrollHeight > threshold){
-            if(el.className.indexOf(classname) <= 0){
-                el.className += " " + classname;
-            }
+        if(el.className.indexOf(classname) > 0){
+            el.classList.remove(classname);
         }
-        else {
-            if(el.className.indexOf(classname) > 0){
-                el.classList.remove(classname);
-            }
-        }
-    }
+    }    
 }
