@@ -1,4 +1,76 @@
 .content-body {
+    &.home {
+        .carousel-navigation {
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            .carousel-nav-arrows {
+                .nav-ctrl {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+
+                    background: rgba(255,255,255,0.5);
+                    color: rgba(0,0,0,1);
+                    padding: 10px;
+                    height: 60px;
+
+                    &.nav-prev { 
+                        left: 0px;
+                        border-top-right-radius: 50%;
+                        border-bottom-right-radius: 50%;
+                    }
+                    &.nav-next { 
+                        right: 0px;
+                        border-top-left-radius: 50%;
+                        border-bottom-left-radius: 50%;
+                    }
+
+                    i { font-size: 40px; }
+                }
+            }
+
+            .carousel-indicator-container {
+                max-width: 50%;
+                position: absolute;
+                left: 50%;
+                bottom: 100px;
+                transform: translateX(-50%);
+                
+                .carousel-indicator {
+                    background: rgba(255,255,255,0.5);
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    &.active-btn { background: rgba(0,0,0,0.9);}
+                    &+.carousel-indicator { margin-left: 20px;}
+                }
+            }
+        }
+        .carousel-item-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            .carousel-item{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                overflow: hidden;
+                &.m1 { left: 0; }
+                &.m2 { left: @comp-content-width; }
+                &.m3 { left: @comp-content-width * 2; }
+
+                img { width: 100%; height: 100%; }
+            }
+        }
+    }
+
     .content-section {
         .backImg {
             position: absolute;
@@ -16,7 +88,7 @@
                 opacity: 0.3;
             }
             .img {
-                background-image: url('../images/home1.jpg');
+                
                 position: relative;
                 z-index: 0;
                 width: 100%;
@@ -27,6 +99,9 @@
 
                 -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
                 filter: grayscale(80%);
+
+                &.demoimg1{ background-image: url('../images/home1.jpg'); }
+                &.demoimg2{ background-image: url('../images/contactus.jpg'); }
             }
         }
         .carousel-switch{
@@ -41,13 +116,25 @@
             .switch-section{            
                 &.wd6 { width: 60%; }
                 &.wd4 { width: 40%; }
-                @media @mobile-screen { width: 100% !important; text-align: center; }  
-                .content-title {
-                    text-align: center;
-                    font-weight: bold;
-                    margin-bottom: 10px;
+                @media @mobile-screen { width: 100% !important; text-align: center; } 
+                .switch-content {
+                    display: none;
+                    -webkit-animation:1.5s  fadeOutLeft ease;
+                    animation:1.5s fadeOutLeft ease;
+
+                    &.active {
+                        display: block;
+                        -webkit-animation:1.5s  fadeInLeft ease;
+                        animation:1.5s fadeInLeft ease;
+                    }
+                    
+                    .content-title {
+                        text-align: center;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                    .content-text { font-size: 1.3rem; line-height: 3rem;}
                 }
-                .content-text { font-size: 1.3rem; line-height: 3rem;}
                 .css-object {            
                     &.css-computer { display: block; }
                     &.css-phone { display: none; }
@@ -55,7 +142,7 @@
                         &.css-computer { display: none;}
                         &.css-phone { display: block; }
                     }
-                }     
+                }                   
             }
         }
 
@@ -66,10 +153,11 @@
             .content-box {
                 display: flex;
                 flex-direction: column;
+                overflow-y: hidden;
                 &.full-width { width: 100%;}
                 .box-row {
                     display: flex;
-                    flex: 1;
+                    //flex: 1;
                     flex-direction: row;
                     @media @mobile-screen { flex-direction: column; border: none !important;}
 

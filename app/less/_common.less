@@ -32,6 +32,7 @@
 @nav-height:90px;
 @angleHeight: 50px;
 @transition-time: 0.5s;
+@comp-content-width: 540px;
 
 
 * {
@@ -157,6 +158,7 @@ body { color: rgba(255,255,255,1);}
           min-height: calc(~"100vh + "@angleHeight );
         }
         &.page-header-body {
+          min-height: 500px;
           .color3(background, 0.1);
           padding-top: calc(~"30px + "@nav-height);          
           .page-header-container {            
@@ -190,7 +192,7 @@ body { color: rgba(255,255,255,1);}
           }
           &.angle-light-1 {
             &::after {
-              border-bottom: @angleHeight solid rgba(83,84,105,1);
+              border-bottom: @angleHeight solid rgba(91,90,108,1);
               border-right: 100vw solid transparent;
             }
           }
@@ -242,7 +244,7 @@ body { color: rgba(255,255,255,1);}
     /* Social Media Links */
     .social-links {
       position: fixed;
-      top: 50%;
+      top: 20%;
       left: 0;      
       width: 50px;
       z-index: 9999;
@@ -286,7 +288,7 @@ body { color: rgba(255,255,255,1);}
 
             @media @mobile-screen { flex-direction: column;}
             .row-column {                
-                padding: 15px;
+                padding: 25px 15px;
                 flex: 1;                
                 .column-row {
                     overflow: hidden;
@@ -436,10 +438,10 @@ body { color: rgba(255,255,255,1);}
     }
   }
   .content {
-    width: 510px;
+    width: @comp-content-width;
     height: 240px;
     left: 50%;
-    margin-left: -240px;
+    margin-left: -270px;
     overflow: hidden;
     &:before {
       content: "";

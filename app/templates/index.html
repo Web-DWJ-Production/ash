@@ -4,18 +4,53 @@
             <div class="overlay"></div>
             <div class="img demoimg1"></div>
         </div>
-        <div class="carousel-switch">
+        <!-- Carousel Nav -->
+        <div class="carousel-navigation">
+            <div class="carousel-nav-arrows">
+                <div class="nav-ctrl nav-prev" onclick="directionalChange('prev')"><i class="material-icons">&#xE5CB;</i></div>
+                <div class="nav-ctrl nav-next" onclick="directionalChange('next')"><i class="material-icons">&#xE5CC;</i></div>
+            </div>
+
+            <div class="carousel-indicator-container">
+                <div class="carousel-indicator active-btn carousel-btn" onclick="go(0)"></div>
+                <div class="carousel-indicator carousel-btn" onclick="go(1)"></div>
+                <div class="carousel-indicator carousel-btn" onclick="go(2)"></div>
+            </div>
+        </div>
+        <!-- Carousel -->
+        <div class="carousel-switch">            
             <div class="switch-section wd4">
-                <h1 class="content-title">Who We Are</h1>
-                <div class="content-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <!-- Strategic Analytix -->
+                <div class="switch-content active">
+                    <h1 class="content-title">Strategic Analytix</h1>
+                    <div class="content-text">
+                            We serve NSA and the Intelligence Community with TS/SCI personnel providing services in countless areas.
+                    </div>
+                </div>
+                <!-- Who We Are -->
+                <div class="switch-content">
+                    <h1 class="content-title">Who We Are</h1>
+                    <div class="content-text">
+                            We are minority owned small disvantaged business who recognizes that successful partnerships 
+                            are based on open and direct communication, mutual respect and the ability to adapt to evolving 
+                            capabilities within National Security.
+                    </div>
+                </div>
+                <!-- Out Specialists -->
+                <div class="switch-content">
+                    <h1 class="content-title">Our Specialists</h1>
+                    <div class="content-text">
+                            Our specialists hold numerous credentials including Top Secret/SCI security clearances, PMP, 
+                            ITIL, CSM and CPA certifications, Professional Development certifications and post-graduate 
+                            degrees.
+                    </div>
                 </div>
             </div>
             <div class="switch-section wd6">
                 <!-- Computer -->
                 <div class="css-object css-computer screen">
                     <div class="content">
-                        <div class="pg">
+                        <!--<div class="pg">
                         <ul class="btns">
                             <li ng-repeat="i in cc.getNumber(3) track by $index"></li>
                         </ul>
@@ -23,6 +58,11 @@
                             <li ng-repeat="i in cc.getNumber(2) track by $index"></li>
                             <li class="thin" ng-repeat="i in cc.getNumber(3) track by $index"></li>
                         </ul>
+                        </div>-->
+                        <div class="carousel-item-container">
+                            <div class="m1 carousel-item"><img src="images/demo2.jpg"></div>
+                            <div class="m2 carousel-item"><img src="images/demo3.jpg"></div>
+                            <div class="m3 carousel-item"><img src="images/demo4.jpg"></div> 
                         </div>
                     </div>
                     <div class="base">
