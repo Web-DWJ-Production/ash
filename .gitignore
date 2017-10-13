@@ -1,6 +1,5 @@
 /app/assets/libs
 /node_modules
 /public
-/dist
 npm-debug.log
 db.json
