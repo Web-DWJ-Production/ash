@@ -42,56 +42,29 @@ linksCtrl.redirectToEmployees = function () {
 var ceruleancity = {}; // Initialize the ceruleancity object.
 
 // CLASSES
-class CeruleanCarousel {
+/**
+ * 
+ * @param { HTMLElement[] } mems - Members of the carousel. Each must share the same parent and have position set to absolute.
+ * @param { number } milliseconds- Time to wait for each turn.
+ * @param { Function } callback - Function to be called on each turn.
+ * @param { boolean } auto - If true auto starts the carousel. Defaults to true.
+ */
+function CeruleanCarousel(mems, milliseconds, callback, auto) {
+    this.members = mems;
+    this.callback = callback;
+    this.milliseconds = milliseconds;
+    this.auto = auto;
 
-    /**
-     * 
-     * @param { HTMLElement[] } mems - Members of the carousel. Each must share the same parent and have position set to absolute.
-     * @param { number } milliseconds- Time to wait for each turn.
-     * @param { Function } callback - Function to be called on each turn.
-     * @param { boolean } auto - If true auto starts the carousel. Defaults to true.
-     */
-    constructor(mems, milliseconds, callback, auto) {
-        this.members = mems;
-        this.callback = callback;
-        this.milliseconds = milliseconds;
-        this.auto = auto;
+    this.currId = 0; // currId: number
+    this.paused = false; // paused: boolean
+    this.originalOffsetLeft = this.members[0].offsetLeft;
+    this.isRunning = false;
 
-        this.currId = 0; // currId: number
-        this.paused = false; // paused: boolean
-        this.originalOffsetLeft = this.members[0].offsetLeft;
-        this.isRunning = false;
-
-        var that = this;
-        // Starts the carousel based on auto parameter.
-        setTimeout(that.automatic(), milliseconds);
-
-        var waitTime = (that.milliseconds * 2);
-        // Handle window focus.
-        window.onblur = function () { that.stop() }; // Stop on blur.
-        window.onfocus = function () { setTimeout(that.automatic(), waitTime) }// Start on focus.
-    }
-
-    goTo(id) {
-        this.stop();
-
-        var currEl = this.members[this.currId];
-        var targetMember = this.members[id];
-        this.currId = id;
-        
-        targetMember.style.top = currEl.clientTop + 'px';
-        targetMember.style.left = this.originalOffsetLeft + 'px';
-
-        currEl.style.top = currEl.clientTop + 'px';
-        currEl.style.left = currEl.clientWidth + 'px';
-        
-        this.automatic();
-    }
-
-    start() {
+    // CAROUSEL FUNCTIONS
+    this.start = function () {
         if (this.isRunning) {
             return;
-        } 
+        }
         if (!palletetown) {
             console.error('ceruleancity: missing dependency palletetown.js');
             return;
@@ -133,11 +106,11 @@ class CeruleanCarousel {
         next.apply(that);
     }
 
-    stop() {
+    this.stop = function () {
         this.paused = true;
     }
 
-    automatic() {
+    this.automatic = function () {
         var autostart = (typeof this.auto === 'undefined') ? true : this.auto;
         var that = this;
         if (autostart) {
@@ -147,8 +120,49 @@ class CeruleanCarousel {
             }, that.milliseconds)
         }
     }
-}
 
+    this.goTo = function (id, callback) {
+        if (this.currId === id) return;
+
+        var currEl = this.members[this.currId];
+        var targetMember = this.members[id];
+
+        // Don't do anything if the current element is moving.
+        var x1 = currEl.style.left;
+        var that = this;
+        setTimeout(function () {
+            var x2 = currEl.style.left;
+
+            if (x1 != x2) {
+                return;
+            } else {
+                that.stop();
+
+                that.currId = id;
+
+                targetMember.style.top = currEl.clientTop + 'px';
+                targetMember.style.left = that.originalOffsetLeft + 'px';
+
+                currEl.style.top = currEl.clientTop + 'px';
+                currEl.style.left = currEl.clientWidth + 'px';
+
+                callback(id);
+                that.automatic();
+            }
+
+        }, 10);
+    }
+
+    // CAROUSEL ON INIT
+    var that = this;
+    // Starts the carousel based on auto parameter.
+    setTimeout(that.automatic(), that.milliseconds);
+
+    var waitTime = (that.milliseconds * 2);
+    // Handle window focus.
+    window.onblur = function () { that.stop() }; // Stop on blur.
+    window.onfocus = function () { that.automatic() }// Start on focus.
+}
 
 // FUNCTIONS
 /**
@@ -404,7 +418,7 @@ function directionalChange(dir){
     var carouselBtns = document.getElementsByClassName('carousel-btn');
     var activeLoc = 0;
     for (var i = 0; i < carouselBtns.length; i++) {
-        if(carouselBtns[i].className.includes('active-btn')){
+        if(carouselBtns[i].className.indexOf('active-btn') >= 0){
             activeLoc = i;
             break;
         }
