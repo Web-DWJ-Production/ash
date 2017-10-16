@@ -56,13 +56,12 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
     this.auto = auto;
 
     this.currId = 0; // currId: number
-    this.paused = false; // paused: boolean
     this.originalOffsetLeft = this.members[0].offsetLeft;
     this.isRunning = false;
 
     // CAROUSEL FUNCTIONS
     this.start = function () {
-        if (this.isRunning) {
+        if (this.isRunning || this.blurred) {
             return;
         }
         if (!palletetown) {
@@ -75,7 +74,7 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
         // Function to progress the carousel.
         var next = function () {
 
-            if (that.paused) return; // Exit first if paused.
+            if (that.paused || that.blurred) return; // Exit first if paused.
 
             var nextId = (that.currId == (that.members.length - 1)) ? 0 : (that.currId + 1);
             var currEl = that.members[that.currId];
@@ -93,7 +92,7 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
 
             var me = that;
             setTimeout(function () {
-                if (!me.paused) {
+                if (!me.paused && !me.blurred) {
                     if (me.callback) me.callback(me); // Pass the object into the callback.
                     next.apply(me);
                 } else {
@@ -115,10 +114,13 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
     this.automatic = function () {
         var autostart = (typeof this.auto === 'undefined') ? true : this.auto;
         var that = this;
-        if (autostart) {
+        if (autostart && !that.blurred) {
             // Auto start the carousel
-            setTimeout(function () {
-                that.start()
+            var me = that;
+            setTimeout(function () {   
+                if (!me.blurred) {
+                    that.start();
+                }
             }, that.milliseconds)
         }
     }
@@ -149,21 +151,23 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
                 currEl.style.left = currEl.clientWidth + 'px';
 
                 callback(id);
-                that.automatic();
+                if (!that.blurred) {
+                    that.automatic();
+                }
             }
-
         }, 10);
     }
 
     // CAROUSEL ON INIT
+    this.paused = (typeof this.auto === 'undefined') ? false : this.auto;
     var that = this;
     // Starts the carousel based on auto parameter.
     setTimeout(that.automatic(), that.milliseconds);
 
     var waitTime = (that.milliseconds * 2);
     // Handle window focus.
-    window.onblur = function () { that.stop() }; // Stop on blur.
-    window.onfocus = function () { that.automatic() }// Start on focus.
+    window.onblur = function () { that.blurred = true; that.paused = true; }; // Stop on blur.
+    window.onfocus = function () { that.blurred = false; that.automatic(); }; // Start on focus.
 }
 
 // FUNCTIONS
