@@ -194,7 +194,7 @@ body { color: rgba(255,255,255,1);}
           }
           &.angle-light-1 {
             &::after {
-              border-bottom: @angleHeight solid rgba(91,90,108,1);
+              border-bottom: @angleHeight solid rgba(83,84,105,1);
               border-right: 100vw solid transparent;
             }
           }
@@ -236,11 +236,12 @@ body { color: rgba(255,255,255,1);}
       display: inline-block;            
       border-radius: 25px;
       padding: 5px 20px;
-      background: @color4;
+      .color4(background, 0.5);
+      //background: @color4;
       transition: @transition-time all ease-in-out;
       margin: 10px 0px;
 
-      &:hover { background: @color2; }
+      &:hover { background: @color4; }
     }
 
     /* Social Media Links */

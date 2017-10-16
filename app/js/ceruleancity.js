@@ -45,6 +45,8 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
         // Function to progress the carousel.
         var next = function () {
 
+            if (me.paused) return; // Exit first if paused.
+
             var nextId = (that.currId == (that.members.length - 1)) ? 0 : (that.currId + 1);
             var currEl = that.members[that.currId];
             var nextEl = that.members[nextId];
