@@ -420,7 +420,7 @@ function directionalChange(dir){
     var carouselBtns = document.getElementsByClassName('carousel-btn');
     var activeLoc = 0;
     for (var i = 0; i < carouselBtns.length; i++) {
-        if(carouselBtns[i].className.includes('active-btn')){
+        if(carouselBtns[i].className.indexOf('active-btn') >= 0){
             activeLoc = i;
             break;
         }
