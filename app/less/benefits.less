@@ -1,0 +1,54 @@
+.benefits{
+    .content-section {
+        .content-box-container{
+            .content-box {
+                .flex-row{
+                    .flex-column{
+                        &.benefit-img {
+                            position: relative;
+                            //width: 30%;
+                            overflow: hidden; 
+                            img { width: 100%; }
+                        }
+                        &.benefits-content { 
+                            .benefit-row {
+                                display: flex;
+                                padding: 10px;
+                                .benefit-icon{
+                                    display: inline-block;
+                                    padding: 5px;
+                                    .icon-container {
+                                        border: 2px solid rgba(255,255,255,1);
+                                        border-radius: 50%;
+                                        width: 40px;
+                                        height: 40px;
+                                        position: relative;
+                                        i { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+                                    }
+                                }
+                                .benefit-info {
+                                    display: inline-block;
+                                    padding: 5px;
+                                    .benefit-title { 
+                                        display: block;
+                                        font-weight: bold; 
+                                        font-size: 1.1rem;
+                                        margin-bottom: 5px;
+                                    }
+                                    .benefit-text {
+                                        padding: 5px;
+                                        &.special-text {
+                                            border-radius: 5px;
+                                            background: rgba(255,255,255,0.2);
+                                            font-style: italic;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -33,6 +33,7 @@ var config = {
       { 'filename': 'contactus', 'locationname': 'contactus.html' },
       { 'filename': 'underconstruction', 'locationname': 'underconstruction.html' },
       { 'filename': 'employees', 'locationname': 'employees.html' },
+      { 'filename': 'benefits', 'locationname': 'benefits.html' },
     ],
     navigationLinks: [
       ['{home}','/'],
@@ -41,7 +42,7 @@ var config = {
       ['{company-history}','underconstruction'],
       ['{services}','underconstruction'],
       ['{careers}','underconstruction'],
-      ['{benifits}','underconstruction'],
+      ['{benefits}','benefits'],
       ['{services}','underconstruction'],
       ['{contact-us}','contactus'],
       ['{employee-portal}','underconstruction'],
