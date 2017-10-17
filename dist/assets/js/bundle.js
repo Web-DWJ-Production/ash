@@ -389,7 +389,6 @@ window.addEventListener('scroll', function(e) {
 });
 
 var carousel = new CeruleanCarousel(document.getElementsByClassName('carousel-item'), 10000, adjust);
-carousel.start();
 
 function adjust(me) {
     var carouselBtns = document.getElementsByClassName('carousel-btn');
@@ -406,18 +405,18 @@ function adjust(me) {
 }
 
 function go(id) {
-    var carouselBtns = document.getElementsByClassName('carousel-btn');
-    var carouselContent = document.getElementsByClassName('switch-content');
+    carousel.goTo(id, function(){
+        var carouselBtns = document.getElementsByClassName('carousel-btn');
+        var carouselContent = document.getElementsByClassName('switch-content');
+        
+        for (var i = 0; i < carouselBtns.length; i++) {
+            carouselBtns[i].classList.remove('active-btn');
+            carouselContent[i].classList.remove('active');
+        }
     
-    for (var i = 0; i < carouselBtns.length; i++) {
-        carouselBtns[i].classList.remove('active-btn');
-        carouselContent[i].classList.remove('active');
-    }
-
-    carouselBtns[id].classList.add('active-btn');
-    carouselContent[id].classList.add('active');
-
-    carousel.goTo(id);
+        carouselBtns[id].classList.add('active-btn');
+        carouselContent[id].classList.add('active');
+    });
 }
 
 function directionalChange(dir){
