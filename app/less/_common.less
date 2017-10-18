@@ -218,7 +218,14 @@ body { color: rgba(255,255,255,1);}
               border-top: @angleHeight solid @background;
               border-right: 100vw solid transparent;
             }
-          }          
+          }
+          
+          &.angle-light-1 {
+            &::before {
+              border-top: @angleHeight solid rgba(83,84,105,1);
+              border-right: 100vw solid transparent;
+            }
+          }
         }
         /* background colors */
         &.light-3 {
@@ -227,6 +234,10 @@ body { color: rgba(255,255,255,1);}
         /* Components */
         .section-title {
           text-align: center;
+        }
+        .section-text {
+          text-align: center;
+          //padding: 15px;
         }
       }
     }
