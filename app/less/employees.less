@@ -1,5 +1,11 @@
 .employees-body {
     margin-top: 96px;
+    width: 100%;
+
+    #employees-admin-component {
+        display: none;
+    }
+    
     .sa-security-banner {
         width: 100%;
         display: inline-block;
@@ -12,5 +18,55 @@
         -webkit-box-shadow: 0 4px 4px -2px #000000;
         -moz-box-shadow: 0 4px 4px -2px #000000;
              box-shadow: 0 4px 4px -2px #000000;
+    }
+
+    .employees-app-container {
+        position: relative;
+        width: calc(~"100% - 100px");
+        margin: 50px;
+        padding: 25px;  
+        display: inline-block;      
+
+        .employees-email-app {
+            min-width: 400px;
+            width: calc(~"100% - 425px");
+            height: 400px;
+            background-color: @color2;
+            display: inline-block;        
+        }
+
+        .employees-time-app {
+            width: 400px;
+            height: 400px;
+            background-color: @color4;
+            display: inline-block;        
+        }
+
+        .employees-settings-app {
+            background-color: rgba(50,50,50,.75);
+            width: 400px;
+            height: 400px;
+            display: inline-block; 
+            text-align: center;
+            position: relative;
+            &:hover {
+                background-color: rgba(50,50,50,.50);
+                cursor: pointer;
+            }
+
+            .app-label {
+                position: relative;
+                top: 75px;
+                font-size: 24px;
+            }
+
+            .settings-app-icon {
+                height: 250px;
+                display: block;
+                margin: auto;
+                position: relative;
+                top: 50px;
+            }
+        }
     }
 }
