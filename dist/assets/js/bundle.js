@@ -28,6 +28,7 @@ linksCtrl.redirectToEmployees = function () {
         document.close();
     }, headers, true);
 }
+<<<<<<< HEAD
 
 
 function EmployeesCtrl() {
@@ -56,6 +57,8 @@ function EmployeesCtrl() {
         }, headers, true);
     }
 }
+=======
+>>>>>>> 7a1554034297e4bd6659793785e42b0a154a555b
 /**
  * CERULEANCITY JS
  * CERULEANCITY is a light JavaScript Framework for data binding and common web interfaces. Compatible with most browsers.
@@ -198,6 +201,7 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
     window.onfocus = function () { that.blurred = false; that.automatic(); }; // Start on focus.
 }
 
+<<<<<<< HEAD
 /**
  * 
  * @param { HTMLElement } element 
@@ -229,6 +233,9 @@ function SparkIf(element, viewable) {
     // init
     this.reconcile();
 }
+=======
+// FUNCTIONS
+>>>>>>> 7a1554034297e4bd6659793785e42b0a154a555b
 /**
  * CINNABARISLAND JS
  * CINNABARISLAND is a JavaScript Library for http calls. Compatible with most browsers.
