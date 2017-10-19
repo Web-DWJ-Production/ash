@@ -103,6 +103,20 @@
                 &.demoimg1{ background-image: url('../images/home1.jpg'); }
                 &.demoimg2{ background-image: url('../images/contactus.jpg'); }
             }
+            .scroll-anchor {
+                background: rgba(255,255,255,0.5);
+                color: @background;
+                position: absolute;
+                bottom: 50px;
+                right: 0px;
+                transform: translateY(-50px);
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+                z-index: 2;
+                padding: 10px 20px;
+                display: flex;
+                .scroll-item {  height: 24px; font-weight: bold; }                
+            }
         }
         .carousel-switch{
             display: flex;
@@ -159,8 +173,10 @@
                     display: flex;
                     flex-direction: row;
                     justify-content: space-around;
+                    @media @mobile-screen { flex-direction: column; }
                     .flex-column {
                         padding: 10px;
+                        @media @mobile-screen { width: 100%;}
                     }
                 }
                 .box-row {
