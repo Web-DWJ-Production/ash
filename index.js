@@ -20,6 +20,7 @@ var port = process.env.PORT || 8080;
 
 // EXPRESS ROUTES
 app.use('/api/auth', require('./controllers/auth.controller.js'));
+app.use('/api/users', require('./controllers/users.controller.js'));
 app.use('/', require('./controllers/views.controller.js'));
 app.use(function (err, req, res, next) {
     if (err.name === 'UnauthorizedError') {

@@ -28,6 +28,34 @@ linksCtrl.redirectToEmployees = function () {
         document.close();
     }, headers, true);
 }
+
+
+function EmployeesCtrl() {
+    this.adminIf = new SparkIf(document.getElementById('employees-admin-component'), false);
+    this.homeIf = new SparkIf(document.getElementById('employees-home-component'), true);
+    this.users = null;
+
+
+    this.getUsers = function() {
+        var headers = {
+            Authorization: 'Bearer ' + (loginCtrl.token || localStorage.getItem('SAToken'))
+        };
+
+        cinnabarisland.get('/api/users', function (data) {
+            var json = JSON.parse(data);
+            var temp = document.getElementById('users-template');
+            var cln = temp.cloneNode(true);
+            console.log(cln);
+            
+            
+
+            for (var i = 0; i < json.length; i++) {
+                temp.parentNode.appendChild(cln);
+            }
+
+        }, headers, true);
+    }
+}
 /**
  * CERULEANCITY JS
  * CERULEANCITY is a light JavaScript Framework for data binding and common web interfaces. Compatible with most browsers.
@@ -170,7 +198,37 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
     window.onfocus = function () { that.blurred = false; that.automatic(); }; // Start on focus.
 }
 
-// FUNCTIONS
+/**
+ * 
+ * @param { HTMLElement } element 
+ * @param { boolean } viewable 
+ */
+function SparkIf(element, viewable) {
+    this.element = element;
+    this.viewable = viewable;
+    this.display = this.element.style.display? this.element.style.display : 'inline';
+
+    this.hide = function() {
+        this.viewable = false;
+        this.element.style.display = 'none';
+    }
+
+    this.show = function() {
+        this.viewable = true;
+        this.element.style.display = this.display;
+    }
+
+    this.reconcile = function() {
+        if (this.viewable) {
+            this.show();
+        } else {
+            this.hide();
+        }
+    }
+
+    // init
+    this.reconcile();
+}
 /**
  * CINNABARISLAND JS
  * CINNABARISLAND is a JavaScript Library for http calls. Compatible with most browsers.
