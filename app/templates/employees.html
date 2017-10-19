@@ -2,15 +2,52 @@
     <div id="employees-home-component">
         <!-- <div class="sa-security-banner">Strategic Analytix Employee Portal </div> -->
         <div class="employees-app-container">
-            <div class="employees-email-app"></div>
-            <div class="employees-time-app"></div>
-            <div class="employees-settings-app">
+            <div class="employees-email-app raised"></div>
+            <div class="employees-time-app raised"></div>
+            <div class="employees-settings-app raised" onclick="onAdminClick()">
                 <img class="settings-app-icon" src="images/gears.svg" alt="Settings">
                 <span class="app-label">Administration</span>
             </div>
         </div>
     </div>
     <div id="employees-admin-component">
-        Admin component works!
+        <div class="admin-usr-table raised">
+            <div class="admin-usr-table-header">
+                <span class="title">Accounts</span>
+                <span class="backToHome" onclick="onHomeClick()"><i class="material-icons">&#xE15E;</i> back to employees home</span>
+                <div class="clearfix"></div>
+            </div>
+            <span>
+                <div id="users-template" class="user-row">
+                    <div class="email-col">email</div>
+                    <div class="password-col">reset password</div> 
+                    <div class="admin-col">admin</div> 
+                    <div class="delete-col">delete</div> 
+                    <div class="clearfix"></div>
+                </div>
+           </span>
+        </div>
     </div>
 </div>
+<script>
+    var ctrl = new EmployeesCtrl();
+
+    function onAdminClick() {
+        ctrl.adminIf.viewable = true;
+        ctrl.homeIf.viewable = false;
+        ctrl.adminIf.reconcile();
+        ctrl.homeIf.reconcile();
+        window.scroll(0, 0);
+        if (!ctrl.users) ctrl.getUsers();
+    }
+
+
+    function onHomeClick() {
+        ctrl.adminIf.viewable = false;
+        ctrl.homeIf.viewable = true;
+        ctrl.adminIf.reconcile();
+        ctrl.homeIf.reconcile();
+        window.scroll(0, 0);
+    }
+
+</script>

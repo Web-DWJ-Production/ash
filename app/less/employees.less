@@ -2,8 +2,90 @@
     margin-top: 96px;
     width: 100%;
 
-    #employees-admin-component {
-        display: none;
+    .raised {
+        box-shadow: inset 0 0 1em rgba(50,50,50,.5), 0 0 1em rgba(0,0,0,.5);        
+    }
+
+    .admin-usr-table {
+        display: block;
+        width: calc(~"100% - 200px");
+        max-width: 800px;
+        margin: auto;
+
+        .user-row {
+            display: inline-block;
+            background-color: rgba(20,20,20,.75);
+            width: 100%;
+            border-bottom: 1px solid rgba(50,50,50,.75);
+            padding: 5px;
+            color: rgba(170,170,170,.5); 
+
+            div {
+                display: inline-block;
+            }
+
+            .delete-col {
+                float: right;
+            }
+        }
+
+        .admin-usr-table-header {
+            background-color: rgba(50,50,50,.75);
+            border-bottom: 1px solid rgba(100,100,100,.5);
+            padding: 10px;
+            
+            span.title {
+                color: rgba(170,170,170,.5); 
+                position: relative;
+                top: 10px;
+            }
+
+            span.backToHome {
+                color: rgba(170,170,170,.5); 
+                float: right;
+
+                &:hover {
+                    cursor: pointer;
+                    color: rgba(200,200,200,.7); 
+                }
+
+                i {
+                    position: relative;
+                    top: 5px;
+                    padding-right: 5px;
+                }
+            }
+        }
+
+        @media @mobile-screen {
+            width: 100%;
+        }
+    }
+
+    .admin-header {
+        display: block;
+        width: calc(~"100% - 200px");
+        max-width: 800px;
+        margin: auto;
+        padding: 15px;
+
+        .admin-header-title {
+            font-size: 20px;
+            position: relative;
+            top: 15px;
+        }
+
+        .admin-header-button {
+            float: right;
+            border: 1px solid rgba(31,152,75,1);
+            background-color: rgba(31,152,75,1);
+            border: none;
+            padding: 10px;
+        }
+
+        @media @mobile-screen {
+            width: 100%;
+        }
     }
     
     .sa-security-banner {

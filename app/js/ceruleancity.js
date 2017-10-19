@@ -140,4 +140,34 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
     window.onfocus = function () { that.blurred = false; that.automatic(); }; // Start on focus.
 }
 
-// FUNCTIONS
+/**
+ * 
+ * @param { HTMLElement } element 
+ * @param { boolean } viewable 
+ */
+function SparkIf(element, viewable) {
+    this.element = element;
+    this.viewable = viewable;
+    this.display = this.element.style.display? this.element.style.display : 'inline';
+
+    this.hide = function() {
+        this.viewable = false;
+        this.element.style.display = 'none';
+    }
+
+    this.show = function() {
+        this.viewable = true;
+        this.element.style.display = this.display;
+    }
+
+    this.reconcile = function() {
+        if (this.viewable) {
+            this.show();
+        } else {
+            this.hide();
+        }
+    }
+
+    // init
+    this.reconcile();
+}
