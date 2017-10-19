@@ -58,59 +58,101 @@
 
         <div class="mainBody">
             <!-- Page Body -->            
-            <div class="employees-body">
-    <div id="employees-home-component">
-        <!-- <div class="sa-security-banner">Strategic Analytix Employee Portal </div> -->
-        <div class="employees-app-container">
-            <div class="employees-email-app raised"></div>
-            <div class="employees-time-app raised"></div>
-            <div class="employees-settings-app raised" onclick="onAdminClick()">
-                <img class="settings-app-icon" src="images/gears.svg" alt="Settings">
-                <span class="app-label">Administration</span>
-            </div>
+            <div class="content-body about-us">
+    <div class="content-section page-header-body afterAngle angle-background">
+        <div class="backImg">
+            <div class="overlay"></div>
+            <div class="img meetingimg"></div>
         </div>
-    </div>
-    <div id="employees-admin-component">
-        <div class="admin-usr-table raised">
-            <div class="admin-usr-table-header">
-                <span class="title">Accounts</span>
-                <span class="backToHome" onclick="onHomeClick()"><i class="material-icons">&#xE15E;</i> back to employees home</span>
-                <div class="clearfix"></div>
-            </div>
-            <span>
-                <div id="users-template" class="user-row">
-                    <div class="email-col">email</div>
-                    <div class="password-col">reset password</div> 
-                    <div class="admin-col">admin</div> 
-                    <div class="delete-col">delete</div> 
-                    <div class="clearfix"></div>
+        <div class="page-header-container content-box-container">
+            <div class="content-box full-width about-back">
+                <div class="box-row">
+                    <div class="box-column">
+                        <div class="page-title-container">
+                            <div class="page-subtitle">Meet Strategic Analytix</div>
+                            <h1 class="page-title">About Us</h1>
+                        </div>
+                    </div>
                 </div>
-           </span>
+            </div>
         </div>
     </div>
+
+    <!-- Who We Are -->
+    <div class="content-section">
+        <div class="content-section-container">
+            <h2 class="section-title">Who We Are</h2>
+            <div class="content-box-container">
+                <div class="content-box full-width"> 
+                    <div class="flex-row">
+                        <div class="flex-column bulk-text">
+                            <p>
+                                Strategic Analytix is a reputable and growing firm that focuses on mission critical services to the Federal Government including the Department of Defense, Department of Homeland Security, and various intelligence agencies and organizations. 
+                                With a reputation for innovation and development, Strategic Analytic has become a trusted partner through adopting unique skills and experience in order to secure a strong track record of customer success. 
+                            </p>
+                            <p>
+                                Our talented team of industry experts provide full life cycle development and mission support with a focus in - cyber security, systems engineering, intelligence analysis, voice analytics, and program management and support. 
+                                Strategic Analytix is a privately held small-business headquartered in Columbia, MD just outside of Fort Meade and the National Security Agency.
+                            </p>
+                        </div>
+                    </div>               
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMG Divider -->
+    <div class="content-section page-header-body beforeAngle afterAngle angle-background">
+        <div class="backImg">
+            <div class="overlay all-color4"></div>
+            <div class="img office1img parallax"></div>
+        </div>
+    </div>
+
+    <!-- Goals, Mission, Vision -->
+    <div class="content-section">
+         <div class="content-box-container">
+            <div class="content-box">
+                <div class="box-row line-row">
+                    <!-- Sensible -->
+                    <div class="box-column line-column">                        
+                        <div class="box-content box-text">
+                            <h2 class="content-title"><span class="text-highlight-4">Our Company Mission</span></h2>
+                            <div class="content-text">To become the leading innovator and provider in security and defense services.</div>
+                        </div>
+                    </div>
+                    <!-- Foward -->
+                    <div class="box-column line-column">
+                        <div class="box-content box-text">
+                            <h2 class="content-title"><span class="text-highlight-4">The SA Promise</span></h2>
+                            <div class="content-text">Our promise is found in our dedication to our clients. Its the mutual interests as well as the shared challenges and successes that fuel this promise as we work side by side to achieve our client’s goals and objectives.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-row line-row">
+                    <!-- Our Client Strategy -->
+                    <div class="box-column line-column">
+                        <div class="box-content box-text">
+                            <h2 class="content-title"><span class="text-highlight-4">The SA Philosophy</span></h2>
+                            <div class="content-text">Our philosophy is vitality – to stay dynamic and agile in an ever changing and challenging world; to continue to develop and more importantly foster development both internally and in our industry; and to keep our competitive spark by taking risks and investing in new talent and new ideas.</div>
+                        </div>
+                    </div>
+                    <!-- Beyond The Box -->
+                    <div class="box-column line-column">
+                        <div class="box-content box-text">
+                            <h2 class="content-title"><span class="text-highlight-4">How We Deliver</span></h2>
+                            <div class="content-text">Its our highly talented team – recognized as leaders in their industry, trusted advisers, and technical experts in their respective fields – that has helped SA deliver success time and again. And its our commitment in continuing to secure and develop this top talent that will keep SA delivering in the future.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
 </div>
-<script>
-    var ctrl = new EmployeesCtrl();
-
-    function onAdminClick() {
-        ctrl.adminIf.viewable = true;
-        ctrl.homeIf.viewable = false;
-        ctrl.adminIf.reconcile();
-        ctrl.homeIf.reconcile();
-        window.scroll(0, 0);
-        if (!ctrl.users) ctrl.getUsers();
-    }
 
 
-    function onHomeClick() {
-        ctrl.adminIf.viewable = false;
-        ctrl.homeIf.viewable = true;
-        ctrl.adminIf.reconcile();
-        ctrl.homeIf.reconcile();
-        window.scroll(0, 0);
-    }
 
-</script>
             <!-- Social Media Links -->
             <div class="social-links">
                 <a class="social-icon facebook-theme" href="underconstruction" target="_blank"><i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a>

@@ -86,9 +86,10 @@
                 height: 100%; 
                 background: linear-gradient(to right, @color3, @color4); 
                 opacity: 0.3;
+
+                &.all-color4 { background: @color4;}
             }
-            .img {
-                
+            .img {    
                 position: relative;
                 z-index: 0;
                 width: 100%;
@@ -99,11 +100,13 @@
 
                 -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
                 filter: grayscale(80%);
-
+                &.parallax { background-attachment: fixed;  } 
                 &.demoimg1{ background-image: url('../images/home1.jpg'); }
                 &.demoimg2{ background-image: url('../images/contactus.jpg'); }
                 &.serviceimg {  background-image: url('../images/services.jpg');}
                 &.benefitsimg {  background-image: url('../images/benefits.jpg');}
+                &.office1img {  background-image: url('../images/office1.jpg');}
+                &.meetingimg {  background-image: url('../images/meeting1.jpg');}
             }
             .scroll-anchor {
                 background: rgba(255,255,255,0.5);
@@ -224,6 +227,7 @@
                             .content-title {
                                 margin-top: 0px;
                                 .text-highlight { color: @color2;}
+                                .text-highlight-4 { color: @color4;}
                             }
 
                             .solution-img {

@@ -34,11 +34,12 @@ var config = {
       { 'filename': 'underconstruction', 'locationname': 'underconstruction.html' },
       { 'filename': 'employees', 'locationname': 'employees.html' },
       { 'filename': 'benefits', 'locationname': 'benefits.html' },
-      { 'filename': 'services', 'locationname': 'services.html' }
+      { 'filename': 'services', 'locationname': 'services.html' },
+      { 'filename': 'aboutus', 'locationname': 'aboutus.html' }
     ],
     navigationLinks: [
       ['{home}','/'],
-      ['{about-us}','underconstruction'],
+      ['{about-us}','aboutus'],
       ['{leadership}','underconstruction'],
       ['{company-history}','underconstruction'],
       ['{careers}','underconstruction'],
