@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Strategic Analytix</title>
+    <meta name="description" content="Stragtegic Analytix">
+    <meta name="author" content="DWJ Production">
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
+    <link href="css/libs.min.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
+</head>
+
+<!--<body onscroll="palletetown.scrollcontrol(10, 'navbar-fixed-top', 'moved-header', true)">-->
+<body>
+    <div class="page-wrapper">
+
+        <!-- Header -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+                        <i class="material-icons closeIcon">close</i>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <span class="img-logo"><img src="images/logo.png"></span>                        
+                    </a>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="nav-txt">Our Company <span class="caret"></span></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="underconstruction"><span class="nav-txt">About Us</span></a></li>                                
+                                <li><a href="underconstruction"><span class="nav-txt">Our Leadership</span></a></li>
+                                <li><a href="underconstruction"><span class="nav-txt">Company History</span></a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="underconstruction"><span class="nav-txt">Services</span></a></li>
+                        <li><a href="underconstruction"><span class="nav-txt">Careers</span></a></li>
+                        <li><a href="benefits"><span class="nav-txt">Benefits</span></a></li>
+                        <li><a href="contactus"><span class="nav-txt">Contact Us</span></a></li>
+                        <li><button class="lame-btn" onclick="linksCtrl.redirectToEmployees()"><i class="material-icons">&#xE853;</i></button></li>                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="mainBody">
+            <!-- Page Body -->            
+            <div class="content-body home">
+    <div class="content-section full afterAngle angle-background ceruleanCarousel">
+        <div class="backImg">
+            <div class="overlay"></div>
+            <div class="img demoimg1"></div>
+            <div class="scroll-anchor">
+                <div class="scroll-item">Scroll</div>
+                <div class="scroll-item"><i class="material-icons">&#xE313;</i></div>
+            </div>
+        </div>
+        <!-- Carousel Nav -->
+        <div class="carousel-navigation">
+            <div class="carousel-indicator-container">
+                <div class="carousel-indicator active-btn carousel-btn" onclick="go(0)"></div>
+                <div class="carousel-indicator carousel-btn" onclick="go(1)"></div>
+                <div class="carousel-indicator carousel-btn" onclick="go(2)"></div>
+            </div>
+        </div>
+        <!-- Carousel -->
+        <div class="carousel-switch">            
+            <div class="switch-section wd4">
+                <!-- Strategic Analytix -->
+                <div class="switch-content active">
+                    <h1 class="content-title">Strategic Analytix</h1>
+                    <div class="content-text">
+                            We serve NSA and the Intelligence Community with TS/SCI personnel providing services in countless areas.
+                    </div>
+                </div>
+                <!-- Who We Are -->
+                <div class="switch-content">
+                    <h1 class="content-title">Who We Are</h1>
+                    <div class="content-text">
+                            We are minority owned small disvantaged business who recognizes that successful partnerships 
+                            are based on open and direct communication, mutual respect and the ability to adapt to evolving 
+                            capabilities within National Security.
+                    </div>
+                </div>
+                <!-- Out Specialists -->
+                <div class="switch-content">
+                    <h1 class="content-title">Our Specialists</h1>
+                    <div class="content-text">
+                            Our specialists hold numerous credentials including Top Secret/SCI security clearances, PMP, 
+                            ITIL, CSM and CPA certifications, Professional Development certifications and post-graduate 
+                            degrees.
+                    </div>
+                </div>
+            </div>
+            <div class="switch-section wd6">
+                <!-- Computer -->
+                <div class="css-object css-computer screen">
+                    <div class="content">                        
+                        <div class="carousel-item-container">
+                            <div class="m1 carousel-item"><img src="images/demo2.jpg"></div>
+                            <div class="m2 carousel-item"><img src="images/demo3.jpg"></div>
+                            <div class="m3 carousel-item"><img src="images/demo4.jpg"></div> 
+                        </div>
+                    </div>
+                    <div class="base">
+                        <div class="grey-shadow"></div>
+                        <div class="foot top"></div>
+                        <div class="foot bottom"></div>
+                        <div class="shadow"></div>
+                        <div class="keyboard">
+                        <div class="btm"></div>
+                        <ul class="keys">
+                            <li ng-repeat="i in cc.getNumber(4) track by $index"></li>
+                        </ul>
+                        <div class="shadow"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="css-object css-phone">
+                    <div class="screen">
+                        <div class="content">
+                        <ul class="txt">
+                            <li ng-repeat="i in $ctrl.getNumber(3) track by $index"></li>
+                        </ul>
+                        </div>
+                    </div>
+
+                    <div class="shadow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Content section-->
+     <div class="content-section">
+         <div class="content-box-container">
+            <div class="content-box">
+                <div class="box-row line-row">
+                    <!-- Sensible -->
+                    <div class="box-column line-column">
+                        <div class="box-content box-icon"><img src="images/sensible_icon.png"></div>
+                        <div class="box-content box-text">
+                            <h2 class="content-title"><span class="text-highlight">Sensible</span> Solutions</h2>
+                            <div class="content-text">We provide you with practical and easy solutions for your business.</div>
+                        </div>
+                    </div>
+                    <!-- Foward -->
+                    <div class="box-column line-column">
+                        <div class="box-content box-icon"><img src="images/forward_icon.png"></div>
+                        <div class="box-content box-text">
+                            <h2 class="content-title"><span class="text-highlight">Forward</span> Thinking</h2>
+                            <div class="content-text">Our consultants are leading experts in hundreds of industries.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-row line-row">
+                    <!-- Our Client Strategy -->
+                    <div class="box-column line-column">
+                        <div class="box-content box-icon"><img src="images/client_icon.png"></div>
+                        <div class="box-content box-text">
+                            <h2 class="content-title"><span class="text-highlight">Our</span> Client <span class="text-highlight">Strategy</span>  </h2>
+                            <div class="content-text">We help our clients achieve and retain the greatest possible success.</div>
+                        </div>
+                    </div>
+                    <!-- Beyond The Box -->
+                    <div class="box-column line-column">
+                        <div class="box-content box-icon"><img src="images/box_icon.png"></div>
+                        <div class="box-content box-text">
+                            <h2 class="content-title">Beyond <span class="text-highlight">The Box</span></h2>
+                            <div class="content-text">We strongly believe in delivering innovative strategies to your ideas.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- Solutions -->
+     <div class="content-section light-3 beforeAngle angle-background">
+        <h2 class="section-title">Featured Services</h2>
+        <div class="content-box-container">
+            <div class="content-box">
+                <div class="box-row">
+                    <!-- Cybersecurity -->
+                    <div class="box-column column-flex">
+                        <div class="box-content center-content"><div class="solution-img"><i class="material-icons">&#xE32A;</i></div></div>
+                        <div class="box-content center-content"><h3>Cybersecurity</h3></div>
+                        <div class="box-content"><div class="content-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div></div>
+                        <div class="box-content center-content btn-box"><div class="cir-btn">Read More</div></div>
+                    </div>
+                    <!-- Systems Engineering -->
+                    <div class="box-column column-flex">
+                        <div class="box-content center-content"><div class="solution-img"><i class="material-icons">&#xE1B1;</i></div></div>
+                        <div class="box-content center-content"><h3>Systems Engineering</h3></div>
+                        <div class="box-content"><div class="content-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div></div>
+                        <div class="box-content center-content btn-box"><div class="cir-btn">Read More</div></div>
+                    </div>
+                    <!-- Programmatic & Acquisition -->
+                    <div class="box-column column-flex">
+                        <div class="box-content center-content"><div class="solution-img"><i class="material-icons">&#xE32B;</i></div></div>
+                        <div class="box-content center-content"><h3>Programmatic & Acquisition</h3></div>
+                        <div class="box-content"><div class="content-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div></div>
+                        <div class="box-content center-content btn-box"><div class="cir-btn">Read More</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <a class="social-icon facebook-theme" href="underconstruction" target="_blank"><i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a>
+                <a class="social-icon twitter-theme" href="underconstruction" target="_blank"><i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a>
+                <a class="social-icon linkedin-theme" href="underconstruction" target="_blank"><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a>
+                <a class="social-icon email-theme" href="contactus"><i class="fa fa-2x fa-envelope" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="push"></div>
+    </div>
+
+    <div class="bottom">
+        <!-- footer -->
+        <div class="footer-container">
+            <div class="main-section row-layout">
+                <div class="row-column">
+                    <div class="column-row"><img src="images/logo.png"></div>                    
+                </div>
+                <div class="row-column">
+                    <div class="sub-row"><div class="footer-title">Contact Us</div></div>
+                    <div class="sub-row row-table">
+                        <table>
+                            <tr>
+                                <td>Address: </td>
+                                <td>
+                                    <div class="sub-row1">123 Test Ct.</div>
+                                    <div class="sub-row1">Columbia, MD. 21040</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Email: </td>
+                                <td><a class="sub-row1 footer-email" href="mailto:info@cybersmartpros.com">info@strategic-analytix.com</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row-column">
+                    <div class="sub-row"><div class="footer-title">Quick Links</div></div>
+                    <div class="sub-row indent-links"><a href="/">Home</a></div>
+                    <div class="sub-row indent-links"><a href="{our-company}">Our Company</a></div>
+                    <div class="sub-row indent-links"><a href="underconstruction">Services</a></div>
+                    <div class="sub-row indent-links"><a href="underconstruction">Careers</a></div>
+                </div>                
+            </div>
+            <div class="sub-section">
+                <div class="row-layout">
+                    <div class="row-column left">STRATEGIC ANALYTIX © COPYRIGHT 2017</div>
+                    <div class="row-column right muted">SITE BY <a href="http://dwjproduction.com/" target="_blank"><img class="site-by-img" src="images/dwj-site-by.png"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="js/libs.min.js"></script>
+    <script src="js/bundle.js"></script>
+</body>
+
+</html>
