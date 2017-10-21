@@ -6,15 +6,33 @@
         box-shadow: inset 0 0 1em rgba(50,50,50,.5), 0 0 1em rgba(0,0,0,.5);        
     }
 
+
+    span.backToHome {
+        color: rgba(170,170,170,.5); 
+        float: right;
+        margin: 10px 0;
+
+        &:hover {
+            cursor: pointer;
+            color: rgba(200,200,200,.7); 
+        }
+
+        i {
+            position: relative;
+            top: 7px;
+            padding-left: 5px;
+        }
+    }
+
     .admin-usr-table {
         display: block;
         width: calc(~"100% - 200px");
-        max-width: 800px;
+        max-width: 1000px;
         margin: auto;
 
-        .user-row {
+        .header-row {
             display: inline-block;
-            background-color: rgba(20,20,20,.75);
+            background-color: rgba(11,11,11, .75) !important;
             width: 100%;
             border-bottom: 1px solid rgba(50,50,50,.75);
             padding: 5px;
@@ -24,8 +42,138 @@
                 display: inline-block;
             }
 
-            .delete-col {
+            .admin-title {
                 float: right;
+            }
+            
+        }
+
+        .new-user-row {
+            background-color: rgba(20,20,20,.75);
+            width: 100%;
+            border-bottom: 1px solid rgba(50,50,50,.75);
+            padding: 10px;
+            color: rgba(170,170,170,.5); 
+
+            div {
+                display: inline-block;
+            }
+
+            input {
+                background-color: rgba(11,11,11, .75);
+                color: rgba(170,170,170,.5); 
+                border: 1px solid rgba(50,50,50,.75);
+                width: 100%;
+                margin-top: 2px;
+            }
+
+            .new-email-col {
+                width: calc(~"38%");
+            }
+
+            .new-password-col {
+                width: calc(~"38%");
+            }
+
+            .new-cancel-col {
+                float: right;
+                i {
+                    position: relative;
+                    top: 7px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: rgba(200,200,200,.7); 
+                    }
+                }
+            }
+
+            .new-save-col {
+                float: right;
+                i {
+                    position: relative;
+                    top: 7px;
+                    padding-right: 5px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: rgba(200,200,200,.7); 
+                    }
+                }
+            }
+
+            .new-admin-col {
+                i {
+                    position: relative;
+                    top: 7px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: rgba(200,200,200,.7); 
+                    }
+                }
+            }
+        }
+
+        .user-row {
+            display: inline-block;
+            background-color: rgba(20,20,20,.75);
+            width: 100%;
+            border-bottom: 1px solid rgba(50,50,50,.75);
+            padding: 5px;
+            color: rgba(170,170,170,.5); 
+
+            i {
+                position: relative;
+                top: 4px;
+            }
+
+            div {
+                display: inline-block;
+            }
+
+            .email-col {
+                width: calc(~"100% - 250px");
+                margin-top: 3px;
+            }
+
+            .password-col {
+                width: 140px;
+                float: right;
+                padding: 0 10px 0 0;
+
+                button {
+                    background-color: rgba(50,50,50,.75);
+                    color: rgba(170,170,170,.5);
+                    border: none;
+                    position: relative;
+                    top: 2px;
+
+                    &:hover {
+                        color: rgba(200,200,200,.7); 
+                    }
+                }
+            }
+
+            .admin-col {
+                width: 50px;                
+                float: right;
+                padding: 0 10px 0 0;
+
+                &:hover {
+                    cursor: pointer;
+                    color: rgba(200,200,200,.7); 
+                }
+                
+            }
+
+            .delete-col {
+                width: 20px;                
+                cursor: pointer;
+                float: right;
+                &:hover {
+                    color: rgba(200,200,200,.7); 
+                }
             }
         }
 
@@ -40,19 +188,13 @@
                 top: 10px;
             }
 
-            span.backToHome {
+            i.addico {
                 color: rgba(170,170,170,.5); 
                 float: right;
 
                 &:hover {
                     cursor: pointer;
                     color: rgba(200,200,200,.7); 
-                }
-
-                i {
-                    position: relative;
-                    top: 5px;
-                    padding-right: 5px;
                 }
             }
         }
@@ -107,7 +249,13 @@
         width: calc(~"100% - 100px");
         margin: 50px;
         padding: 25px;  
-        display: inline-block;      
+        display: inline-block;  
+
+        @media @mobile-screen {
+            width: 100%;
+            margin: 0;
+            padding: 5px;
+        }
 
         .employees-email-app {
             min-width: 400px;

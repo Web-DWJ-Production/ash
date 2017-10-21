@@ -4,6 +4,11 @@
       "email": "web@dwjproduction.com",
       "password": "$2a$10$fobDVjVoKpAWXGwDY42pZeladtiqM9VRo6i8KiH98DEfkVbB2T/TW",
       "admin": true
+    },
+    {
+      "email": "test@dwjproduction.com",
+      "password": "$2a$10$wfh1P6Wih.06FfGkw57d6O6mIl8eIaZao2g9jL8a/52FI1uoEhdBm",
+      "admin": true
     }
   ]
 }

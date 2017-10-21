@@ -19,7 +19,8 @@ var linksCtrl = {};
 
 linksCtrl.redirectToEmployees = function () {
     var headers = {
-        Authorization: 'Bearer ' + (loginCtrl.token || localStorage.getItem('SAToken'))
+        Authorization: 'Bearer ' + (loginCtrl.token || localStorage.getItem('SAToken')),
+        ContentType: 'application/json'
     };
 
     cinnabarisland.get('/employees', function (data) {
@@ -33,28 +34,76 @@ linksCtrl.redirectToEmployees = function () {
 function EmployeesCtrl() {
     this.adminIf = new SparkIf(document.getElementById('employees-admin-component'), false);
     this.homeIf = new SparkIf(document.getElementById('employees-home-component'), true);
+    this.newUserIf = new SparkIf(document.getElementsByClassName('new-user-row')[0], false);
     this.users = null;
+    this.usersFor = new SkFor(document.getElementById('users-template'), null, null);
+    this.newAccount = { email: null, password: null, admin: false};
 
+    this.updateUser = function (email, password, admin, el) {
+        var headers = {
+            Authorization: 'Bearer ' + (loginCtrl.token || localStorage.getItem('SAToken'))
+        };
+
+        var that = this;
+        var body = { email: email, password: password, admin: admin };
+        cinnabarisland.put('/api/users/' + email, body, function (data) {
+            that.getUsers();
+        }, headers, true);
+    }
+
+    this.deleteUser = function (email) {
+        var headers = {
+            Authorization: 'Bearer ' + (loginCtrl.token || localStorage.getItem('SAToken'))
+        };
+
+        var that = this;
+        cinnabarisland.delete('/api/users/' + email, function (data) {
+            that.getUsers();
+        }, headers, true);
+    }
+
+    this.postUser = function () {
+        var headers = {
+            Authorization: 'Bearer ' + (loginCtrl.token || localStorage.getItem('SAToken')),
+            ContentType: 'application/json'
+        };
+
+        var that = this;
+        var body = {
+            email: this.newAccount.email,
+            password: this.newAccount.password,
+            admin: this.newAccount.admin
+        }
+
+        cinnabarisland.post('/api/users', body, function (data) { 
+            that.getUsers();
+            document.getElementById('new-acc-email').value = "";
+            document.getElementById('new-acc-password').value = "";
+            that.newAccount.admin = false;
+            document.getElementById('new-acc-admin').innerHTML = "&#xE835;";
+            that.newUserIf.viewable = false;
+            that.newUserIf.reconcile();
+        }, headers, true);
+    }
 
     this.getUsers = function() {
         var headers = {
             Authorization: 'Bearer ' + (loginCtrl.token || localStorage.getItem('SAToken'))
         };
 
+        var that = this;
         cinnabarisland.get('/api/users', function (data) {
             var json = JSON.parse(data);
             var temp = document.getElementById('users-template');
             var cln = temp.cloneNode(true);
-            console.log(cln);
-            
-            
 
-            for (var i = 0; i < json.length; i++) {
-                temp.parentNode.appendChild(cln);
-            }
+            that.usersFor.arr = json;
+            that.usersFor.reconcile();
 
         }, headers, true);
     }
+
+    // INIT
 }
 /**
  * CERULEANCITY JS
@@ -145,7 +194,7 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
         if (autostart && !that.blurred) {
             // Auto start the carousel
             var me = that;
-            setTimeout(function () {   
+            setTimeout(function () {
                 if (!me.blurred) {
                     that.start();
                 }
@@ -206,19 +255,19 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
 function SparkIf(element, viewable) {
     this.element = element;
     this.viewable = viewable;
-    this.display = this.element.style.display? this.element.style.display : 'inline';
+    this.display = this.element.style.display ? this.element.style.display : 'inline';
 
-    this.hide = function() {
+    this.hide = function () {
         this.viewable = false;
         this.element.style.display = 'none';
     }
 
-    this.show = function() {
+    this.show = function () {
         this.viewable = true;
         this.element.style.display = this.display;
     }
 
-    this.reconcile = function() {
+    this.reconcile = function () {
         if (this.viewable) {
             this.show();
         } else {
@@ -228,6 +277,72 @@ function SparkIf(element, viewable) {
 
     // init
     this.reconcile();
+}
+
+function SkFor(element, arr, name) {
+    this.parent = element.parentNode;
+    this.element = element;
+    this.arr = arr;
+
+    this.reconcile = function () {
+        var clone = this.element.cloneNode(true);
+
+        while (this.parent.firstChild) {
+            this.parent.removeChild(this.parent.firstChild);
+        }
+
+        if (!this.arr) return;
+
+        for (var i = 0; i < this.arr.length; i++) {
+            var currNode = clone.cloneNode(clone);
+            this.fillNode(currNode, this.arr[i], name)
+            this.parent.appendChild(currNode);
+        }
+    }
+
+    this.fillNode = function (template, data, name) {
+        var finalHTML = template.innerHTML;
+        if (typeof data === 'object') {
+
+            for (var f in data) {
+                finalHTML = ceruleancity.insert(finalHTML, f, data[f]);
+            }
+        }
+        template.innerHTML = finalHTML;
+    }
+}
+
+
+// FUNCTIONS
+
+ceruleancity.insert = function (html, name, value) {
+    var res = html;
+
+    if (typeof value === 'boolean') {
+        var start = html.indexOf('{{if ' + name);
+        var end = html.substring(start).indexOf('}}') + 2;
+        var target = html.substring(start, (start + end));
+        var insert;
+        var matchStart;
+        var matchEnd
+
+        if (value) {
+            matchStart = target.indexOf('(+') + 2;
+            matchEnd = target.indexOf('+)');
+            insert = target.substring(matchStart, matchEnd);
+        } else {
+            matchStart = target.indexOf('(-') + 2;
+            matchEnd = target.indexOf('-)');
+            insert = target.substring(matchStart, matchEnd);
+        }
+
+        res = html.substring(0, start) + insert + html.substring((start + end));
+    }
+
+    var regex = new RegExp("\{\{" + name + "\}\}", 'g');
+    res = res.replace(regex, value);
+
+    return res;
 }
 /**
  * CINNABARISLAND JS
@@ -283,10 +398,61 @@ cinnabarisland.post = function (url, body, next, headers, async) {
         }
     };
 
-    xhttp.open("POST", url, isAsync);    
-    var isAsync = (typeof async === 'undefined') ? false : async;
+    var isAsync = (typeof async === 'undefined') ? false : async;    
+    xhttp.open("POST", url, isAsync);  
+    if (headers) {
+        for (var key in headers) {
+            if (headers.hasOwnProperty(key)) {
+                xhttp.setRequestHeader(key, headers[key]);
+            }
+        }
+    }  
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(body));
+}
+
+cinnabarisland.put = function(url, body, next, headers, async) {
+    var xhttp = cinnabarisland.getHTTPObject(); 
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            next(this.responseText);
+        }
+    };
+       
+    var isAsync = (typeof async === 'undefined') ? false : async;        
+    xhttp.open('PUT', url, true);  
+    if (headers) {
+        for (var key in headers) {
+            if (headers.hasOwnProperty(key)) {
+                xhttp.setRequestHeader(key, headers[key]);
+            }
+        }
+    }  
+    xhttp.setRequestHeader("Content-type", "application/json");    
+    xhttp.send(JSON.stringify(body));
+}
+
+/**
+ * Send a DELETE Request.
+ */
+cinnabarisland.delete = function(url, next, headers, async) {
+    var xhttp = cinnabarisland.getHTTPObject(); 
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            next(this.responseText);
+        }
+    };
+       
+    var isAsync = (typeof async === 'undefined') ? false : async;        
+    xhttp.open('DELETE', url, true);  
+    if (headers) {
+        for (var key in headers) {
+            if (headers.hasOwnProperty(key)) {
+                xhttp.setRequestHeader(key, headers[key]);
+            }
+        }
+    }  
+    xhttp.send();
 }
 
 /**

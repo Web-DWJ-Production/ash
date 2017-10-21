@@ -10,6 +10,7 @@ var app = express();
 app.use(cors()); // enable cors
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 app.use(express.static(path.join(__dirname, 'dist/assets')));
 
 // JWT CONFIG

@@ -87,7 +87,7 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
         if (autostart && !that.blurred) {
             // Auto start the carousel
             var me = that;
-            setTimeout(function () {   
+            setTimeout(function () {
                 if (!me.blurred) {
                     that.start();
                 }
@@ -148,19 +148,19 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
 function SparkIf(element, viewable) {
     this.element = element;
     this.viewable = viewable;
-    this.display = this.element.style.display? this.element.style.display : 'inline';
+    this.display = this.element.style.display ? this.element.style.display : 'inline';
 
-    this.hide = function() {
+    this.hide = function () {
         this.viewable = false;
         this.element.style.display = 'none';
     }
 
-    this.show = function() {
+    this.show = function () {
         this.viewable = true;
         this.element.style.display = this.display;
     }
 
-    this.reconcile = function() {
+    this.reconcile = function () {
         if (this.viewable) {
             this.show();
         } else {
@@ -170,4 +170,70 @@ function SparkIf(element, viewable) {
 
     // init
     this.reconcile();
+}
+
+function SkFor(element, arr, name) {
+    this.parent = element.parentNode;
+    this.element = element;
+    this.arr = arr;
+
+    this.reconcile = function () {
+        var clone = this.element.cloneNode(true);
+
+        while (this.parent.firstChild) {
+            this.parent.removeChild(this.parent.firstChild);
+        }
+
+        if (!this.arr) return;
+
+        for (var i = 0; i < this.arr.length; i++) {
+            var currNode = clone.cloneNode(clone);
+            this.fillNode(currNode, this.arr[i], name)
+            this.parent.appendChild(currNode);
+        }
+    }
+
+    this.fillNode = function (template, data, name) {
+        var finalHTML = template.innerHTML;
+        if (typeof data === 'object') {
+
+            for (var f in data) {
+                finalHTML = ceruleancity.insert(finalHTML, f, data[f]);
+            }
+        }
+        template.innerHTML = finalHTML;
+    }
+}
+
+
+// FUNCTIONS
+
+ceruleancity.insert = function (html, name, value) {
+    var res = html;
+
+    if (typeof value === 'boolean') {
+        var start = html.indexOf('{{if ' + name);
+        var end = html.substring(start).indexOf('}}') + 2;
+        var target = html.substring(start, (start + end));
+        var insert;
+        var matchStart;
+        var matchEnd
+
+        if (value) {
+            matchStart = target.indexOf('(+') + 2;
+            matchEnd = target.indexOf('+)');
+            insert = target.substring(matchStart, matchEnd);
+        } else {
+            matchStart = target.indexOf('(-') + 2;
+            matchEnd = target.indexOf('-)');
+            insert = target.substring(matchStart, matchEnd);
+        }
+
+        res = html.substring(0, start) + insert + html.substring((start + end));
+    }
+
+    var regex = new RegExp("\{\{" + name + "\}\}", 'g');
+    res = res.replace(regex, value);
+
+    return res;
 }

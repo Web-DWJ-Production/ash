@@ -52,10 +52,61 @@ cinnabarisland.post = function (url, body, next, headers, async) {
         }
     };
 
-    xhttp.open("POST", url, isAsync);    
-    var isAsync = (typeof async === 'undefined') ? false : async;
+    var isAsync = (typeof async === 'undefined') ? false : async;    
+    xhttp.open("POST", url, isAsync);  
+    if (headers) {
+        for (var key in headers) {
+            if (headers.hasOwnProperty(key)) {
+                xhttp.setRequestHeader(key, headers[key]);
+            }
+        }
+    }  
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(body));
+}
+
+cinnabarisland.put = function(url, body, next, headers, async) {
+    var xhttp = cinnabarisland.getHTTPObject(); 
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            next(this.responseText);
+        }
+    };
+       
+    var isAsync = (typeof async === 'undefined') ? false : async;        
+    xhttp.open('PUT', url, true);  
+    if (headers) {
+        for (var key in headers) {
+            if (headers.hasOwnProperty(key)) {
+                xhttp.setRequestHeader(key, headers[key]);
+            }
+        }
+    }  
+    xhttp.setRequestHeader("Content-type", "application/json");    
+    xhttp.send(JSON.stringify(body));
+}
+
+/**
+ * Send a DELETE Request.
+ */
+cinnabarisland.delete = function(url, next, headers, async) {
+    var xhttp = cinnabarisland.getHTTPObject(); 
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            next(this.responseText);
+        }
+    };
+       
+    var isAsync = (typeof async === 'undefined') ? false : async;        
+    xhttp.open('DELETE', url, true);  
+    if (headers) {
+        for (var key in headers) {
+            if (headers.hasOwnProperty(key)) {
+                xhttp.setRequestHeader(key, headers[key]);
+            }
+        }
+    }  
+    xhttp.send();
 }
 
 /**

@@ -6,31 +6,67 @@
             <div class="employees-time-app raised"></div>
             <div class="employees-settings-app raised" onclick="onAdminClick()">
                 <img class="settings-app-icon" src="images/gears.svg" alt="Settings">
-                <span class="app-label">Administration</span>
+                <span class="app-label">Settings</span>
             </div>
         </div>
     </div>
     <div id="employees-admin-component">
-        <div class="admin-usr-table raised">
-            <div class="admin-usr-table-header">
-                <span class="title">Accounts</span>
-                <span class="backToHome" onclick="onHomeClick()"><i class="material-icons">&#xE15E;</i> back to employees home</span>
-                <div class="clearfix"></div>
-            </div>
-            <span>
-                <div id="users-template" class="user-row">
-                    <div class="email-col">email</div>
-                    <div class="password-col">reset password</div> 
-                    <div class="admin-col">admin</div> 
-                    <div class="delete-col">delete</div> 
+        <div class="admin-usr-table">
+            <span class="backToHome" onclick="onHomeClick()">
+                Home <i class="material-icons">&#xE5C8;</i>
+            </span>
+            <div class="clearfix"></div>
+
+            <div class="raised">
+                <div class="admin-usr-table-header">
+                    <span class="title">Accounts</span>
+                    <i class="material-icons addico" title="Add New" onclick="onAddAccount()">&#xE7FE;</i>
                     <div class="clearfix"></div>
                 </div>
-           </span>
+
+                <div>
+                    <div class="new-user-row" style="display: inline-block">
+                        <div class="new-email-col">
+                            <input id="new-acc-email" type="text" title="Email" placeholder="email" />
+                        </div>
+                        <div class="new-password-col">
+                            <input id="new-acc-password" type="password" title="Password" placeholder="password" />
+                        </div>
+                        <div class="new-admin-col">
+                            <i id="new-acc-admin" onclick="onNewAdminClick()" class="material-icons" title="Admin">&#xE835;</i>
+                        </div>
+                        <div class="new-cancel-col">
+                            <i onclick="onCancelAccount()" class="material-icons" title="Cancel">&#xE5C9;</i>
+                        </div>
+                        <div class="new-save-col">
+                            <i onclick="onSaveClick()" class="material-icons" title="Save">&#xE161;</i>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+
+                <div class="header-row">
+                    <div class="email-col">email</div>
+                    <div class="admin-title" style="padding-right: 175px;">admin</div>
+                    <div class="clearfix"></div>
+                </div>
+                <span id="users-template-parent">
+                    <div id="users-template" class="user-row">
+                        <div class="email-col">{{email}}</div>
+                        <div class="delete-col"><i onclick="onDeleteClick('{{email}}')" class="material-icons">&#xE872;</i></div> 
+                        <div class="password-col"><button>reset password</button></div> 
+                        <div class="admin-col" onclick="onUpdateAdminClick('{{email}}', '{{admin}}', this)" >{{if admin (+<i class="material-icons">&#xE834;</i>+) (-<i class="material-icons">&#xE835;</i>-)}}</div>                     
+                        <div class="clearfix"></div>
+                    </div>
+                </span>
+            </div>
         </div>
     </div>
 </div>
+
 <script>
-    var ctrl = new EmployeesCtrl();
+    var ctrl = ctrl ? ctrl : new EmployeesCtrl();
 
     function onAdminClick() {
         ctrl.adminIf.viewable = true;
@@ -48,6 +84,44 @@
         ctrl.adminIf.reconcile();
         ctrl.homeIf.reconcile();
         window.scroll(0, 0);
+    }
+
+    function onAddAccount() {
+        ctrl.newUserIf.viewable = true;
+        ctrl.newUserIf.reconcile();
+    }
+
+    function onCancelAccount() {
+        ctrl.newUserIf.viewable = false;
+        ctrl.newUserIf.reconcile();
+    }
+
+    function onNewAdminClick(event) {
+        var e = document.getElementById('new-acc-admin');
+        ctrl.newAccount.admin = !ctrl.newAccount.admin;
+        if (ctrl.newAccount.admin) {
+            e.innerHTML = '&#xE834;';
+        } else {
+            e.innerHTML = '&#xE835;';
+        }
+    }
+
+    function onSaveClick() {
+        ctrl.newAccount.email = document.getElementById('new-acc-email').value;
+        ctrl.newAccount.password = document.getElementById('new-acc-password').value;
+        ctrl.postUser();
+    }
+
+    function onDeleteClick(email) {
+        var r = confirm("Are you sure you want to delete " + email + "?");
+        if (r == true) {
+            ctrl.deleteUser(email);
+        }
+    }
+
+    function onUpdateAdminClick(email, admin, el) {
+        var b = !JSON.parse(admin);
+        ctrl.updateUser(email, null, b);
     }
 
 </script>

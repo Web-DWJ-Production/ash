@@ -6,7 +6,14 @@ var usersService = require('../services/users.service.js');
 
 // ROUTES
 router.get('', expressJWT({ secret: secret }), getAll);
+router.post('', expressJWT({ secret: secret }), postUser);
+router.route('/:email')
+    .delete(expressJWT({ secret: secret }), deleteUser)
+    .put(expressJWT({ secret: secret }), updateUser);
 
 module.exports = router;
 
 function getAll(req, res) { usersService.getAll(req, res) };
+function postUser(req, res) { usersService.postUser(req, res) };
+function deleteUser(req, res) { usersService.deleteUser(req, res) };
+function updateUser(req, res) { usersService.updateUser(req, res) };
