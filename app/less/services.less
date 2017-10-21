@@ -1,0 +1,29 @@
+.services{
+    .section-text { text-align: left !important;}
+    .content-box-container {
+        margin-top: 20px;
+        .content-box {
+            .flex-row {
+                width: 100%;
+                position: relative;
+                .flex-column {
+                    flex:1;
+                    &.service-browser {}
+                    &.service-content{ 
+                        font-size: 1.1rem;
+                        width: 50%;
+                        .content-txt { margin-bottom: 10px;}
+                        ul {
+                            li {
+                                
+                                &+li {
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

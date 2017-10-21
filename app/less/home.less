@@ -86,9 +86,10 @@
                 height: 100%; 
                 background: linear-gradient(to right, @color3, @color4); 
                 opacity: 0.3;
+
+                &.all-color4 { background: @color4;}
             }
-            .img {
-                
+            .img {    
                 position: relative;
                 z-index: 0;
                 width: 100%;
@@ -99,9 +100,13 @@
 
                 -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
                 filter: grayscale(80%);
-
+                &.parallax { background-attachment: fixed;  } 
                 &.demoimg1{ background-image: url('../images/home1.jpg'); }
                 &.demoimg2{ background-image: url('../images/contactus.jpg'); }
+                &.serviceimg {  background-image: url('../images/services.jpg');}
+                &.benefitsimg {  background-image: url('../images/benefits.jpg');}
+                &.office1img {  background-image: url('../images/office1.jpg');}
+                &.meetingimg {  background-image: url('../images/meeting1.jpg');}
             }
             .scroll-anchor {
                 background: rgba(255,255,255,0.5);
@@ -126,11 +131,20 @@
             width: 80%;
             top: 50%;
             transform: translateY(-50%);
-            @media @mobile-screen { flex-direction: column;}       
+            @media @mobile-screen { 
+                flex-direction: column;
+                width: calc(~"100% - 40px");
+                top: 130px;
+                transform: initial;
+            }       
             .switch-section{            
                 &.wd6 { width: 60%; }
                 &.wd4 { width: 40%; }
-                @media @mobile-screen { width: 100% !important; text-align: center; } 
+                @media @mobile-screen { 
+                    width: 100% !important; 
+                    text-align: center;
+                    &+.switch-section { margin-top: 10px;}
+                } 
                 .switch-content {
                     display: none;
                     -webkit-animation:1.5s  fadeOutLeft ease;
@@ -147,7 +161,14 @@
                         font-weight: bold;
                         margin-bottom: 10px;
                     }
-                    .content-text { font-size: 1.3rem; line-height: 3rem;}
+                    .content-text { 
+                        font-size: 1.3rem; 
+                        line-height: 3rem;
+                        @media @mobile-screen { 
+                            font-size: 1.1rem;
+                            line-height: 2rem;
+                        }
+                    }
                 }
                 .css-object {            
                     &.css-computer { display: block; }
@@ -206,6 +227,7 @@
                             .content-title {
                                 margin-top: 0px;
                                 .text-highlight { color: @color2;}
+                                .text-highlight-4 { color: @color4;}
                             }
 
                             .solution-img {
