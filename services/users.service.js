@@ -54,11 +54,17 @@ service.deleteUser = (req, res) => {
 service.updateUser = (req, res) => {
     var email = req.params.email;
 
-    if (typeof req.body.admin != 'undefined') {
-        var b = JSON.parse(req.body.admin);
+    if (typeof req.body.admin ===  'boolean') {
         db.get('users')
             .find({ email: req.body.email })
-            .assign({ admin: b })
+            .assign({ admin: req.body.admin })
+            .write();
+    }
+
+    if (typeof req.body.password == 'string') {
+        db.get('users')
+            .find({ email: req.body.email })
+            .assign({ password: bcrypt.hashSync(req.body.password, 10) })
             .write();
     }
 

@@ -6,6 +6,12 @@
         box-shadow: inset 0 0 1em rgba(50,50,50,.5), 0 0 1em rgba(0,0,0,.5);        
     }
 
+    i {
+        &:hover {
+            cursor: pointer;
+            color: rgba(200,200,200,.9) !important; 
+        }
+    }
 
     span.backToHome {
         color: rgba(170,170,170,.5); 
@@ -14,7 +20,7 @@
 
         &:hover {
             cursor: pointer;
-            color: rgba(200,200,200,.7); 
+            color: rgba(200,200,200,.9); 
         }
 
         i {
@@ -30,13 +36,21 @@
         max-width: 1000px;
         margin: auto;
 
+        input {
+            background-color: rgba(11,11,11, .75);
+            color: rgba(170,170,170,.5); 
+            border: 1px solid rgba(50,50,50,.75);
+            width: 100%;
+            margin-top: 2px;
+        }
+
         .header-row {
             display: inline-block;
             background-color: rgba(11,11,11, .75) !important;
             width: 100%;
             border-bottom: 1px solid rgba(50,50,50,.75);
             padding: 5px;
-            color: rgba(170,170,170,.5); 
+            color: rgba(170,170,170,.8); 
 
             div {
                 display: inline-block;
@@ -53,19 +67,12 @@
             width: 100%;
             border-bottom: 1px solid rgba(50,50,50,.75);
             padding: 10px;
-            color: rgba(170,170,170,.5); 
+            color: rgba(170,170,170,.8); 
 
             div {
                 display: inline-block;
             }
 
-            input {
-                background-color: rgba(11,11,11, .75);
-                color: rgba(170,170,170,.5); 
-                border: 1px solid rgba(50,50,50,.75);
-                width: 100%;
-                margin-top: 2px;
-            }
 
             .new-email-col {
                 width: calc(~"38%");
@@ -80,11 +87,6 @@
                 i {
                     position: relative;
                     top: 7px;
-
-                    &:hover {
-                        cursor: pointer;
-                        color: rgba(200,200,200,.7); 
-                    }
                 }
             }
 
@@ -95,10 +97,6 @@
                     top: 7px;
                     padding-right: 5px;
 
-                    &:hover {
-                        cursor: pointer;
-                        color: rgba(200,200,200,.7); 
-                    }
                 }
             }
 
@@ -106,11 +104,6 @@
                 i {
                     position: relative;
                     top: 7px;
-
-                    &:hover {
-                        cursor: pointer;
-                        color: rgba(200,200,200,.7); 
-                    }
                 }
             }
         }
@@ -121,7 +114,7 @@
             width: 100%;
             border-bottom: 1px solid rgba(50,50,50,.75);
             padding: 5px;
-            color: rgba(170,170,170,.5); 
+            color: rgba(170,170,170,.8); 
 
             i {
                 position: relative;
@@ -130,6 +123,34 @@
 
             div {
                 display: inline-block;
+            }
+
+            .new-pwd-col-1 {
+                width: 38%;
+                display: inline-block;
+                input {
+                    width: 100%;
+                }
+            }
+
+            .new-pwd-col-2 {
+                width: 38%;
+                display: inline-block;
+                input {
+                    width: 100%;
+                }
+            }
+
+            .new-pwd-col-3 {
+                float: right;
+            }
+
+            .new-pwd-col-4 {
+                float: right;
+
+                i {
+                    padding-right: 5px;
+                }
             }
 
             .email-col {
@@ -144,7 +165,7 @@
 
                 button {
                     background-color: rgba(50,50,50,.75);
-                    color: rgba(170,170,170,.5);
+                    color: rgba(170,170,170,.8);
                     border: none;
                     position: relative;
                     top: 2px;
@@ -183,19 +204,14 @@
             padding: 10px;
             
             span.title {
-                color: rgba(170,170,170,.5); 
+                color: rgba(170,170,170,.8); 
                 position: relative;
                 top: 10px;
             }
 
             i.addico {
-                color: rgba(170,170,170,.5); 
+                color: rgba(170,170,170,.8); 
                 float: right;
-
-                &:hover {
-                    cursor: pointer;
-                    color: rgba(200,200,200,.7); 
-                }
             }
         }
 

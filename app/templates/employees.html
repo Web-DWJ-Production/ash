@@ -53,11 +53,23 @@
                 </div>
                 <span id="users-template-parent">
                     <div id="users-template" class="user-row">
-                        <div class="email-col">{{email}}</div>
-                        <div class="delete-col"><i onclick="onDeleteClick('{{email}}')" class="material-icons">&#xE872;</i></div> 
-                        <div class="password-col"><button>reset password</button></div> 
-                        <div class="admin-col" onclick="onUpdateAdminClick('{{email}}', '{{admin}}', this)" >{{if admin (+<i class="material-icons">&#xE834;</i>+) (-<i class="material-icons">&#xE835;</i>-)}}</div>                     
-                        <div class="clearfix"></div>
+                            <div class="email-col hide-on-reset">{{email}}</div>
+                            <div class="delete-col hide-on-reset"><i onclick="onDeleteClick('{{email}}')" class="material-icons">&#xE872;</i></div> 
+                            <div class="password-col hide-on-reset"><button  onclick="onResetPwdClick('{{email}}', this)">reset password</button></div> 
+                            <div class="admin-col hide-on-reset" onclick="onUpdateAdminClick('{{email}}', '{{admin}}', this)" >{{if admin (+<i class="material-icons">&#xE834;</i>+) (-<i class="material-icons">&#xE835;</i>-)}}</div>                     
+                            <div class="new-pwd-col-1 show-on-reset" style="display: none">
+                                <input type="password" placeholder="new password"/>
+                            </div>
+                            <div class="new-pwd-col-2 show-on-reset" style="display: none">
+                                <input type="password" placeholder="repeat new password"/>
+                            </div>
+                            <div class="new-pwd-col-3 show-on-reset" style="display: none">
+                                <i class="material-icons" onclick="onCancelReset(this)" title="Cancel">&#xE5C9;</i>    
+                            </div>
+                            <div class="new-pwd-col-4 show-on-reset" style="display: none">
+                                <i class="material-icons" onclick="onSaveReset('{{email}}', this)" title="Save">&#xE161;</i>
+                            </div>
+                            <div class="clearfix"></div>                                                        
                     </div>
                 </span>
             </div>
@@ -124,4 +136,51 @@
         ctrl.updateUser(email, null, b);
     }
 
+    function onResetPwdClick(email, el) {
+        var cols = el.parentNode.parentNode.childNodes;
+        for (var i = 0; i < cols.length; i++) {
+            if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+                cols[i].style.display = 'none';
+            } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')){
+                cols[i].style.display = 'inline-block';
+            }
+        }
+    }
+
+    function onCancelReset(el) {
+        var cols = el.parentNode.parentNode.childNodes;
+        for (var i = 0; i < cols.length; i++) {
+            if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+                cols[i].style.display = 'inline-block';
+            } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')){
+                cols[i].style.display = 'none';
+            }
+        }
+    }
+
+    function onSaveReset(email, el) {
+        var cols = el.parentNode.parentNode.childNodes;
+        var newpass, repeatpass;
+
+        for (var i = 0; i < cols.length; i++) {
+            if (cols[i].classList && cols[i].classList.contains('new-pwd-col-1')) {
+                newpass = cols[i].childNodes[1].value;
+            }
+            if (cols[i].classList && cols[i].classList.contains('new-pwd-col-2')) {
+                repeatpass = cols[i].childNodes[1].value;
+            }
+        }
+
+        if (newpass == null || newpass == '') {
+            alert('Password reset failed: passwords must not be empty.');
+            return;
+        }
+
+        if (newpass != repeatpass) {
+            alert('Password reset failed: passwords must match.');
+            return;
+        }
+
+        ctrl.updateUser(email, newpass, null);
+    }
 </script>

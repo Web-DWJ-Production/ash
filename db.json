@@ -7,8 +7,8 @@
     },
     {
       "email": "test@dwjproduction.com",
-      "password": "$2a$10$wfh1P6Wih.06FfGkw57d6O6mIl8eIaZao2g9jL8a/52FI1uoEhdBm",
-      "admin": true
+      "password": "$2a$10$efMdMhLZpBMxaWArup.6h.y9fnZuiyQ0xmO.H4EhfncCkfpLHQyMO",
+      "admin": false
     }
   ]
 }
