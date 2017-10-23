@@ -23,15 +23,15 @@
                     <div class="user-card-email">
                         <h3>{{email}}</h3>
                     </div>
-                    <div class="user-card-pw-1 show-on-reset" style="display: none">
+                    <div class="user-card-pw-1 new-pwd-col-1 show-on-reset" style="display: none">
                         <input type="password" placeholder="new password" />
                     </div>
-                    <div class="user-card-pw-2 show-on-reset" style="display: none">
+                    <div class="user-card-pw-2 new-pwd-col-2 show-on-reset" style="display: none">
                         <input type="password" placeholder="repeat password" />
                     </div>
                     <div class="user-card-pw-3 show-on-reset" style="display: none">
                         <i class="material-icons" onclick="onNonAdminCancelReset(this)" title="Cancel">&#xE5C9;</i>
-                        <i class="material-icons" style="padding-right: 5px;" title="Save">&#xE161;</i>
+                        <i class="material-icons" onclick="onSaveReset('{{email}}', this); onNonAdminCancelReset(this)" style="padding-right: 5px;" title="Save">&#xE161;</i>
                     </div>
                     <div class="clearfix"></div>
                     <div class="user-card-reset-pw hide-on-reset">
