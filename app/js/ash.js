@@ -3,13 +3,23 @@
 var loginCtrl = {};
 
 loginCtrl.login = function () {
+
+    function parseJwt (token) {
+        var base64Url = token.split('.')[1];
+        var base64 = base64Url.replace('-', '+').replace('_', '/');
+        return JSON.parse(window.atob(base64));
+    };
+
     var body = {
         email: document.getElementById('login_email_input').value,
         password: document.getElementById('login_password_input').value
     }
+
     cinnabarisland.post('/api/auth', body, function (data) {
         loginCtrl.token = data.substring(1, data.length - 1);
 
+        loginCtrl.user = parseJwt(loginCtrl.token);
+        localStorage.setItem('SAUser', JSON.stringify(loginCtrl.user));
         localStorage.setItem('SAToken', loginCtrl.token);
         linksCtrl.redirectToEmployees();
     }, null, true);
@@ -33,11 +43,14 @@ linksCtrl.redirectToEmployees = function () {
 
 function EmployeesCtrl() {
     this.adminIf = new SparkIf(document.getElementById('employees-admin-component'), false);
+    this.usrAdminIf = new SparkIf(document.getElementById('admin-usr-table'), false);
+    this.usrCardIf = new SparkIf(document.getElementById('user-card'), false);
     this.homeIf = new SparkIf(document.getElementById('employees-home-component'), true);
     this.newUserIf = new SparkIf(document.getElementsByClassName('new-user-row')[0], false);
     this.users = null;
     this.usersFor = new SkFor(document.getElementById('users-template'), null, null);
     this.newAccount = { email: null, password: null, admin: false};
+    this.usrCardBind = new SkBind(document.getElementById('user-card'), null);
 
     this.updateUser = function (email, password, admin, el) {
         var headers = {

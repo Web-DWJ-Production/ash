@@ -11,13 +11,36 @@
         </div>
     </div>
     <div id="employees-admin-component">
+
         <div class="admin-usr-table">
             <span class="backToHome" onclick="onHomeClick()">
                 Home <i class="material-icons">&#xE5C8;</i>
             </span>
             <div class="clearfix"></div>
 
-            <div class="raised">
+            <div id="user-card-parent">
+                <div id="user-card" class="user-card raised" style="display: inline-block">
+                    <div class="user-card-email">
+                        <h3>{{email}}</h3>
+                    </div>
+                    <div class="user-card-pw-1 show-on-reset" style="display: none">
+                        <input type="password" placeholder="new password" />
+                    </div>
+                    <div class="user-card-pw-2 show-on-reset" style="display: none">
+                        <input type="password" placeholder="repeat password" />
+                    </div>
+                    <div class="user-card-pw-3 show-on-reset" style="display: none">
+                        <i class="material-icons" onclick="onNonAdminCancelReset(this)" title="Cancel">&#xE5C9;</i>
+                        <i class="material-icons" style="padding-right: 5px;" title="Save">&#xE161;</i>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="user-card-reset-pw hide-on-reset">
+                        <button onclick="onNonAdminResetPwd('{{email}}', this)" class="user-card-reset-pw">reset password</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="admin-usr-table" class="raised">
                 <div class="admin-usr-table-header">
                     <span class="title">Accounts</span>
                     <i class="material-icons addico" title="Add New" onclick="onAddAccount()">&#xE7FE;</i>
@@ -79,6 +102,7 @@
 
 <script>
     var ctrl = ctrl ? ctrl : new EmployeesCtrl();
+    var user = JSON.parse(localStorage.getItem('SAUser'));
 
     function onAdminClick() {
         ctrl.adminIf.viewable = true;
@@ -87,6 +111,16 @@
         ctrl.homeIf.reconcile();
         window.scroll(0, 0);
         if (!ctrl.users) ctrl.getUsers();
+        ctrl.usrAdminIf.viewable = user.admin;
+        ctrl.usrAdminIf.reconcile();
+        ctrl.usrCardIf.viewable = !user.admin;
+        ctrl.usrCardIf.reconcile();
+
+        if (!user.admin) {
+            ctrl.usrCardBind.obj = user;
+            ctrl.usrCardBind.reconcile();
+        }
+
     }
 
 
@@ -141,7 +175,7 @@
         for (var i = 0; i < cols.length; i++) {
             if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
                 cols[i].style.display = 'none';
-            } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')){
+            } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
                 cols[i].style.display = 'inline-block';
             }
         }
@@ -152,7 +186,7 @@
         for (var i = 0; i < cols.length; i++) {
             if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
                 cols[i].style.display = 'inline-block';
-            } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')){
+            } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
                 cols[i].style.display = 'none';
             }
         }
@@ -183,4 +217,27 @@
 
         ctrl.updateUser(email, newpass, null);
     }
+
+    function onNonAdminResetPwd(email, el) {
+        var cols = el.parentNode.parentNode.childNodes;
+        for (var i = 0; i < cols.length; i++) {
+            if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+                cols[i].style.display = 'none';
+            } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
+                cols[i].style.display = 'inline';
+            }
+        }
+    }
+
+    function onNonAdminCancelReset(el) {
+        var cols = el.parentNode.parentNode.childNodes;
+        for (var i = 0; i < cols.length; i++) {
+            if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+                cols[i].style.display = 'inline';
+            } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
+                cols[i].style.display = 'none';
+            }
+        }
+    }
+
 </script>

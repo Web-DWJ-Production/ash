@@ -188,25 +188,43 @@ function SkFor(element, arr, name) {
 
         for (var i = 0; i < this.arr.length; i++) {
             var currNode = clone.cloneNode(clone);
-            this.fillNode(currNode, this.arr[i], name)
+            ceruleancity.fillNode(currNode, this.arr[i], name)
             this.parent.appendChild(currNode);
         }
     }
+}
 
-    this.fillNode = function (template, data, name) {
-        var finalHTML = template.innerHTML;
-        if (typeof data === 'object') {
+function SkBind(element, obj) {
+    this.parent = element.parentNode;
+    this.element = element;
+    this.obj = obj;
 
-            for (var f in data) {
-                finalHTML = ceruleancity.insert(finalHTML, f, data[f]);
-            }
+    this.reconcile = function () {
+        var clone = this.element.cloneNode(true);
+
+        while (this.parent.firstChild) {
+            this.parent.removeChild(this.parent.firstChild);
         }
-        template.innerHTML = finalHTML;
+        
+        ceruleancity.fillNode(clone, this.obj, name);
+        this.parent.appendChild(clone);
     }
 }
 
 
 // FUNCTIONS
+
+ceruleancity.fillNode = function (template, data, name) {
+    var finalHTML = template.innerHTML;
+
+    if (typeof data === 'object') {
+
+        for (var f in data) {
+            finalHTML = ceruleancity.insert(finalHTML, f, data[f]);
+        }
+    }
+    template.innerHTML = finalHTML;
+}
 
 ceruleancity.insert = function (html, name, value) {
     var res = html;
