@@ -119,6 +119,72 @@ function EmployeesCtrl() {
 
     // INIT
 }
+
+function CareersCtrl() {
+    this.options = {
+        valueNames: ['id','title','category','skillLevel','description','capabilities','qualifications'],
+        item:'<li><div class="position-container"><div class="position-section position-icon"></div><div class="position-section position-info"><div class="position-row"><span class="title"></span></div><div class="position-row flex-row"><div class="category"></div><div>Full-time</div><div class="position-skill">Skill Level: <span class="skillLevel"></span></div></div></div><div class="position-section position-details"><a href="" class="cir-btn"><span>More Information</span></a></div></div></li>'
+    }
+    this.values = [
+        {
+            id: 1,
+            title:'Test Job Manager',
+            category: 'Mangement',
+            skillLevel:0,
+            description:' This is a test Description',
+            capabilities:['ctest1', 'ctest2', 'ctest3'],
+            qualifications:['qtest0', 'qtest1']
+        },
+        {
+            id: 2,
+            title:'Test Job Manager',
+            category: 'Mangement',
+            skillLevel:1,
+            description:' This is a test Description Job 1',
+            capabilities:['ctest1', 'ctest2', 'ctest3'],
+            qualifications:['qtest0', 'qtest1']
+        },
+        {
+            id: 3,
+            title:'Test Job Employee',
+            category: 'Employee',
+            skillLevel: 0,
+            description:' This is a test Description Job 2',
+            capabilities:['ctest1', 'ctest2', 'ctest3'],
+            qualifications:['qtest0', 'qtest1']
+        },
+        {
+            id: 4,
+            title:'Test Job Employee',
+            category: 'Employee',
+            skillLevel: 1,
+            description:' This is a test Description Job 2',
+            capabilities:['ctest1', 'ctest2', 'ctest3'],
+            qualifications:['qtest0', 'qtest1']
+        },
+        {
+            id: 5,
+            title:'Test Job Employee',
+            category: 'Employee',
+            skillLevel: 2,
+            description:' This is a test Description Job 2',
+            capabilities:['ctest1', 'ctest2', 'ctest3'],
+            qualifications:['qtest0', 'qtest1']
+        },
+        {
+            id: 6,
+            title:'Test Job Engineer',
+            category: 'Engineering',
+            skillLevel: 2,
+            description:' This is a test Description Job 2',
+            capabilities:['ctest1', 'ctest2', 'ctest3'],
+            qualifications:['qtest0', 'qtest1']
+        }
+    ];
+
+    //this.jobList = new List('jobs', this.options, this.values);
+    // INIT 
+}
 /**
  * CERULEANCITY JS
  * CERULEANCITY is a light JavaScript Framework for data binding and common web interfaces. Compatible with most browsers.
