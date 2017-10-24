@@ -61,7 +61,7 @@ function EmployeesCtrl() {
         var body = { email: email, password: password, admin: admin };
         cinnabarisland.put('/api/users/' + email, body, function (data) {
             that.getUsers();
-            alert(email + " has be succesfully updated.")
+            alert(email + " has been succesfully updated.")
         }, headers, true);
     }
 

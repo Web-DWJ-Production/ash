@@ -301,14 +301,61 @@
             width: calc(~"100% - 425px");
             height: 400px;
             background-color: @color2;
-            display: inline-block;        
+            display: inline-block; 
+            text-align: center;
+            position: relative;
+            vertical-align: top;
+            margin-bottom: 5px;
+            
+            .email-app-icon {
+                height: 225px;
+                display: block;
+                margin: auto;
+                position: relative;
+                top: 50px;
+            }
+
+            .app-label {
+                position: relative;
+                top: 75px;
+                font-size: 24px;
+            }
+
+            &:hover {
+                .color2(background-color, 0.7);
+                cursor: pointer;
+            }
+            
         }
 
         .employees-time-app {
             width: 400px;
             height: 400px;
             background-color: @color4;
-            display: inline-block;        
+            display: inline-block; 
+            text-align: center;
+            position: relative;
+            vertical-align: top;
+            margin-bottom: 5px; 
+            
+            .time-app-icon {
+                height: 225px;
+                display: block;
+                margin: auto;
+                position: relative;
+                top: 50px;
+            }
+
+            .app-label {
+                position: relative;
+                top: 75px;
+                font-size: 24px;
+            }
+
+            &:hover {
+                .color4(background-color, 0.7);
+                cursor: pointer;
+            }
         }
 
         .employees-settings-app {
@@ -318,6 +365,8 @@
             display: inline-block; 
             text-align: center;
             position: relative;
+            margin-bottom: 5px;
+
             &:hover {
                 background-color: rgba(50,50,50,.50);
                 cursor: pointer;

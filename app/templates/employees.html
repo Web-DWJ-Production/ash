@@ -1,12 +1,17 @@
 <div class="employees-body">
     <div id="employees-home-component">
-        <!-- <div class="sa-security-banner">Strategic Analytix Employee Portal </div> -->
         <div class="employees-app-container">
-            <div class="employees-email-app raised"></div>
-            <div class="employees-time-app raised"></div>
+            <div onclick="openInNewTab('https://sso.secureserver.net/?app=email&realm=pass');" class="employees-email-app raised">
+                <img class="email-app-icon" src="images/envelope.svg" alt="Email">
+                <span class="app-label">Email</span>
+            </div>
+            <div class="employees-time-app raised">
+                <img class="time-app-icon" src="images/timer.svg" alt="Time Keeping">
+                <span class="app-label">Time Keeping</span>
+            </div>
             <div class="employees-settings-app raised" onclick="onAdminClick()">
                 <img class="settings-app-icon" src="images/gears.svg" alt="Settings">
-                <span class="app-label">Settings</span>
+                <span class="app-label">Account</span>
             </div>
         </div>
     </div>
@@ -31,7 +36,8 @@
                     </div>
                     <div class="user-card-pw-3 show-on-reset" style="display: none">
                         <i class="material-icons" onclick="onNonAdminCancelReset(this)" title="Cancel">&#xE5C9;</i>
-                        <i class="material-icons" onclick="onSaveReset('{{email}}', this); onNonAdminCancelReset(this)" style="padding-right: 5px;" title="Save">&#xE161;</i>
+                        <i class="material-icons" onclick="onSaveReset('{{email}}', this); onNonAdminCancelReset(this)" style="padding-right: 5px;"
+                            title="Save">&#xE161;</i>
                     </div>
                     <div class="clearfix"></div>
                     <div class="user-card-reset-pw hide-on-reset">
@@ -238,6 +244,11 @@
                 cols[i].style.display = 'none';
             }
         }
+    }
+
+    function openInNewTab(url) {
+        var win = window.open(url, '_blank');
+        win.focus();
     }
 
 </script>
