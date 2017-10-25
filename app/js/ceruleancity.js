@@ -146,6 +146,11 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
  * @param { boolean } viewable 
  */
 function SparkIf(element, viewable) {
+    if (!element) {
+        console.debug('ceruleancity: SkIf failed, element doesnt exist.');
+        return;        
+    }
+
     this.element = element;
     this.viewable = viewable;
     this.display = this.element.style.display ? this.element.style.display : 'inline';
