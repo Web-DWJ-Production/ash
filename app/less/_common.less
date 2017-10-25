@@ -1,5 +1,5 @@
 /*Screen Sizes*/
-@mobile-screen: ~"only screen and (max-width: 640px)";
+@mobile-screen: ~"only screen and (max-width: 870px)";
 
 /* Fonts */
 @font-size: 16px;
@@ -67,8 +67,18 @@ body { color: rgba(255,255,255,1);}
   border-color: rgba(0,0,0,0);
   border: none;
   transition: @transition-time all ease-in-out;
+  width: 100%;
+
+  .container {
+    width: 100%;
+  }
+
   &.moved-header {
     .color1(background-color, 0.8);
+    
+    .img-logo {
+      height: 60px !important;
+    }
   }
   @media @mobile-screen { .color1(background-color, 0.8); }
   .navbar-header { 
@@ -95,8 +105,17 @@ body { color: rgba(255,255,255,1);}
       height: @nav-height;
       .img-logo {
         display: inline-block;
-        height: 100%;
-        img { height: 100%; vertical-align: top; }
+        height: 100px;
+        transition: height @transition-time;
+        
+        @media @mobile-screen {
+          height: 100%;
+        }
+        
+        img { 
+          height: 100%; 
+          vertical-align: top; 
+        }
       }
       .title-logo { padding-left: 5px; }
     }
@@ -325,6 +344,28 @@ body { color: rgba(255,255,255,1);}
 /* Footer */
 .bottom {     
     .footer-container {
+
+      .footer-logo-container {
+        display: inline-block;
+        margin: 25px;
+        img {
+          height: 60px;
+        }
+      }
+
+      .footer-links-container {
+        margin: 25px;
+        float: right;
+        color: rgba(200,200,200,1); 
+
+        a { 
+          color: rgba(200,200,200,1); 
+          text-decoration: none;
+          transition: @transition-time all ease;
+          &:hover { color: rgba(255,255,255,1);}
+        }
+      }
+
       @media @mobile-screen { margin-bottom: 50px;}
         .row-layout { 
             display: flex;
@@ -336,7 +377,7 @@ body { color: rgba(255,255,255,1);}
                 flex: 1;                
                 .column-row {
                     overflow: hidden;
-                    img { width: 40%; }
+                    img { height: 60px; }
                 }
                 .sub-row {
                     &.row-table {                        
@@ -374,7 +415,7 @@ body { color: rgba(255,255,255,1);}
             height: 40px;
             background: rgba(0,0,0,1);
             padding: 10px 5%;
-            opacity: 0.4;            
+            opacity: 0.2;            
     
             @media @mobile-screen { height: initial;}
             .row-layout {
