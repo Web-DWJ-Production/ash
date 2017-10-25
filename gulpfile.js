@@ -19,7 +19,8 @@ var config = {
     appImgs: ['app/assets/images/**'],
     libsJs: [
       'app/assets/libs/jquery/dist/jquery.min.js',
-      'app/assets/libs/bootstrap/dist/js/bootstrap.min.js'
+      'app/assets/libs/bootstrap/dist/js/bootstrap.min.js',
+      'app/assets/libs/list.js/dist/list.min.js'
     ],
     libsCSS: [
       'app/assets/libs/bootstrap/dist/css/bootstrap.min.css',      
@@ -35,14 +36,15 @@ var config = {
       { 'filename': 'employees', 'locationname': 'employees.html' },
       { 'filename': 'benefits', 'locationname': 'benefits.html' },
       { 'filename': 'services', 'locationname': 'services.html' },
-      { 'filename': 'aboutus', 'locationname': 'aboutus.html' }
+      { 'filename': 'aboutus', 'locationname': 'aboutus.html' },
+      { 'filename': 'careers', 'locationname': 'careers.html' }
     ],
     navigationLinks: [
       ['{home}','/'],
       ['{about-us}','aboutus'],
       ['{leadership}','underconstruction'],
       ['{company-history}','underconstruction'],
-      ['{careers}','underconstruction'],
+      ['{careers}','careers'],
       ['{benefits}','benefits'],
       ['{services}','services'],
       ['{cyber-security}','services#cyber-security'],
@@ -66,7 +68,7 @@ var config = {
   },
   builds:{
     local:{
-      apiUrl: 'http://localhost:8080'
+      apiUrl: 'http://localhost:8081'
     },
     dev:{
       apiUrl: 'https://strategic-analytix-demo.herokuapp.com'
