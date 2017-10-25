@@ -706,12 +706,14 @@ palletetown.scrollcontrol = function(threshold, identifier, classname, mobileDis
         }
     }    
 }
+var carCtrl = carCtrl ? carCtrl : new CareersCtrl();
+var jobList = new List('jobs', carCtrl.options, carCtrl.values);
+
 window.addEventListener('scroll', function(e) {
     palletetown.scrollcontrol(10, 'navbar-fixed-top', 'moved-header', true);
 });
 
 var carousel = null;
-// ceruleanCarousel
 if(document.getElementsByClassName('ceruleanCarousel') != null && document.getElementsByClassName('ceruleanCarousel').length > 0){
     setCarousel();
 }

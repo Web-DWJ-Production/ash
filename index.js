@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, 'dist/assets')));
 var secret = process.env.JWT_SECRET || 'changeme';
 
 // SERVER CONFIG
-var port = process.env.PORT || 8081;
+var port = process.env.PORT || 8080;
 
 // EXPRESS ROUTES
 app.use('/api/auth', require('./controllers/auth.controller.js'));

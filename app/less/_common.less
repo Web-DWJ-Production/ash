@@ -11,6 +11,7 @@
 
 /* Color Themes */
 @background: rgba(9,9,40,1);
+.background(@prop,@val){ @{prop}: rgba(9,9,40,@val); }
 
 @color1: rgba(11,19,43,1);
 .color1(@prop,@val){ @{prop}: rgba(11,19,43,@val); }
@@ -204,6 +205,12 @@ body { color: rgba(255,255,255,1);}
               border-right: 100vw solid transparent;
             }
           }
+          &.angle-color2 {
+            &::after {
+              border-bottom: @angleHeight solid rgba(44,64,182,0.65);
+              border-right: 100vw solid transparent;
+            }
+          }
         }
 
         &.beforeAngle {
@@ -232,10 +239,19 @@ body { color: rgba(255,255,255,1);}
               border-right: 100vw solid transparent;
             }
           }
+          &.angle-color2 {
+            &::before {
+              border-top: @angleHeight solid rgba(44,64,182,0.65);
+              border-right: 100vw solid transparent;
+            }
+          }
         }
         /* background colors */
         &.light-3 {
           background-color: rgba(255,255,255,0.3);
+        }
+        &.background-2 {
+          .color2(background-color, 0.65);
         }
         .content-section-container {
           padding: 10px 0px;
@@ -257,12 +273,16 @@ body { color: rgba(255,255,255,1);}
       display: inline-block;            
       border-radius: 25px;
       padding: 5px 20px;
-      .color4(background, 0.5);
+      .background(background, 0.5);
       color: rgba(255,255,255,1);
       transition: @transition-time all ease-in-out;
       margin: 10px 0px;
+      &:hover { background: @background; text-decoration: none; color: rgba(255,255,255,1); }
 
-      &:hover { background: @color4; text-decoration: none; color: rgba(255,255,255,1); }
+      &.c4 {
+        .color4(background, 0.5);
+        &:hover { background: @color4; text-decoration: none; color: rgba(255,255,255,1); }
+      }
     }
 
     /* Social Media Links */
