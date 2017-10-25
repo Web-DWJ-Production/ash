@@ -83,36 +83,80 @@
         </div>
     </div>
     <!-- Careers List -->
-    <div class="content-section">
-        <h2 class="section-title">Avaliable Positions</h2>
-        <div class="content-box-container">
-            <div class="content-box">
-                <div id="jobs">
-                    <input class="search" placeholder="Search" />
-                    <button class="sort" data-sort="title">Sort by title</button>
-                  
-                    <ul class="list">
-                        <!--<li>
-                            <div class="position-container">
-                                <div class="position-section position-icon"></div>
-                                <div class="position-section position-info">
-                                    <div class="position-row"><span class="title"></span></div>
-                                    <div class="position-row flex-row">
-                                        <div class="category"></div>
-                                        <div>Full-time</div>
-                                        <div class="position-skill">Skill Level: <span class="skillLevel"></span></div>
+    <div class="template-section" id="careers-all-pos">
+        <div class="content-section">
+            <h2 class="section-title">Avaliable Positions</h2>
+            <div class="content-box-container">
+                <div class="content-box">
+                    <div id="jobs">
+                        <div class="search-box">
+                            <input class="search-item search" placeholder="Search" />
+                            <button class="search-item sort cir-btn c4" data-sort="title">Sort by title</button>
+                            <button class="search-item sort cir-btn c4" data-sort="id">Sort by id</button>
+                        </div>
+                        <ul class="list">
+                            <!--<li>
+                                <div class="position-container">
+                                    <div class="position-section position-icon"></div>
+                                    <div class="position-section position-info">
+                                        <div class="position-row"><span class="title"></span></div>
+                                        <div class="position-row flex-row">
+                                            <div class="category"></div>
+                                            <div>Full-time</div>
+                                            <div class="position-skill">Skill Level: <span class="skillLevel"></span></div>
+                                        </div>
                                     </div>
+                                    <div class="position-section position-details">
+                                        <a href="" class="cir-btn"><span>More Information</span></a>
+                                    </div>                               
                                 </div>
-                                <div class="position-section position-details">
-                                    <a href="" class="cir-btn"><span>More Information</span></a>
-                                </div>                               
-                            </div>
-                        </li>-->
-                    </ul>                  
+                            </li>-->
+                        </ul>
+                        <ul class="pagination"></ul>                  
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Selected Career -->
+    <div class="template-section" id="careers-info">
+        <div class="content-section" id="careers-info-content">
+            <div class="return-btn" onclick="ReturnAllCareers()"><i class="material-icons">&#xE5C4;</i> Return To All Careers</div>
+            <h2 class="section-title">{{title}} Level {{skillLevel}}</h2>
+            <div class="content-box-container">
+                <div class="content-box">
+                    <!-- Description -->
+                    <div class="info-section">
+                        <h3 class="info-title">Position Description:</h3>
+                        <div class="info-content info-text">{{description}}</div>
+                    </div>                
+                    <!-- Capabilities -->
+                    <div class="info-section">
+                        <h3 class="info-title">Applicant shall possess the following capabilities:</h3>
+                        <div class="info-content info-list">
+                            <ul class="capabilities-list">
+                                <li id="capabilities-item">{{text}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Qualifications -->
+                    <div class="info-section">
+                        <h3 class="info-title">Qualifications</h3>
+                        <div class="info-content info-list">
+                            <ul class="qualifications-list">
+                                <li id="qualifications-item">{{text}}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="btn-section"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <script>

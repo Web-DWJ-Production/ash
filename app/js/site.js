@@ -1,13 +1,47 @@
-var carCtrl = carCtrl ? carCtrl : new CareersCtrl();
-var jobList = new List('jobs', carCtrl.options, carCtrl.values);
-
+/* Home Page */
 window.addEventListener('scroll', function(e) {
-    palletetown.scrollcontrol(10, 'navbar-fixed-top', 'moved-header', true);
+    palletetown.scrollcontrol(10, 'navbar-fixed-top', 'moved-header', true);    
 });
 
 var carousel = null;
-if(document.getElementsByClassName('ceruleanCarousel') != null && document.getElementsByClassName('ceruleanCarousel').length > 0){
+var homeCarousel = document.getElementsByClassName('ceruleanCarousel');
+if(homeCarousel != null && homeCarousel.length > 0){
     setCarousel();
+    var carouselHeight = homeCarousel[0].clientHeight;
+    var hideLoc = carouselHeight - (window.innerHeight * .70) - 44;
+    window.addEventListener('scroll', function(e) {
+        palletetown.scrollcontrol(hideLoc, 'scroll-anchor', 'hide-direction', false);    
+    });    
+}
+
+/* Careers Page */
+var carCtrl = carCtrl ? carCtrl : new CareersCtrl();
+var jobList = new List('jobs', carCtrl.options, carCtrl.values);
+
+
+
+/* Private Methods */
+function onCareerInfoClick(elem){
+    // Get id
+    var id = $(elem).attr("data-id");
+    
+    carCtrl.positions.viewable = false;
+    carCtrl.info.viewable = true;
+    carCtrl.positions.reconcile();
+    carCtrl.info.reconcile();
+
+    window.scroll(0, 0);
+    carCtrl.getPosition(id);
+}
+
+function ReturnAllCareers() {
+    carCtrl.positions.viewable = true;
+    carCtrl.info.viewable = false;
+    
+    carCtrl.positions.reconcile();
+    carCtrl.info.reconcile();
+
+    window.scroll(0, 0);
 }
 
 function setCarousel(){

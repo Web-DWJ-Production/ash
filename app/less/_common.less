@@ -233,6 +233,12 @@ body { color: rgba(255,255,255,1);}
               border-right: 100vw solid transparent;
             }
           }
+          &.angle-dark-1 {
+            &::after {
+              border-bottom: @angleHeight solid rgba(0,0,0,0.7);
+              border-right: 100vw solid transparent;
+            }
+          }
         }
 
         &.beforeAngle {
@@ -267,10 +273,19 @@ body { color: rgba(255,255,255,1);}
               border-right: 100vw solid transparent;
             }
           }
+          &.angle-dark-1 {
+            &::before {
+              border-top: @angleHeight solid rgba(0,0,0,0.7);
+              border-right: 100vw solid transparent;
+            }
+          }
         }
         /* background colors */
         &.light-3 {
           background-color: rgba(255,255,255,0.3);
+        }
+        &.dark-1 {
+          background-color: rgba(0,0,0,0.7);
         }
         &.background-2 {
           .color2(background-color, 0.65);
