@@ -48,7 +48,14 @@
                         <li><a href="careers"><span class="nav-txt">Careers</span></a></li>
                         <li><a href="benefits"><span class="nav-txt">Benefits</span></a></li>
                         <li><a href="contactus"><span class="nav-txt">Contact Us</span></a></li>
-                        <li><button class="lame-btn" onclick="linksCtrl.redirectToEmployees()"><i class="material-icons">&#xE853;</i></button></li>
+                        <li id="signin-btn" style="display: list-item;"><button class="lame-btn" onclick="linksCtrl.redirectToEmployees()"><span class="nav-txt"><i class="material-icons">&#xE853;</i></span></button></li>
+                        <li id="signout-btn" class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="material-icons">&#xE853;</i></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a onclick="linksCtrl.redirectToEmployees()"><span class="nav-txt">Employee Apps</span></a></li>
+                                    <li ><a onclick="loginCtrl.signout()" href="/"><span class="nav-txt">Sign out</span></a></li>                                                            
+                                </ul>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -170,41 +177,6 @@
                         <span class="indent-links"><a href="careers">Careers</a></span> /
                         <span class="indent-links"><a href="contactus">Contact</a></span>
                     </div>
-            <!-- <div class="main-section row-layout">
-                <div class="row-column">
-                    <div class="column-row"><img src="images/logo.svg"></div>
-                </div>
-                <div>
-                    <span class="indent-links"><a href="careers">Careers</a></span> /
-                    <span class="indent-links"><a href="services">Services</a></span>
-                </div> -->
-                <!-- <div class="row-column">
-                    <div class="sub-row"><div class="footer-title">Contact Us</div></div>
-                    <div class="sub-row row-table">
-                        <table>
-                            <tr>
-                                <td>Address: </td>
-                                <td>
-                                    <div class="sub-row1">123 Test Ct.</div>
-                                    <div class="sub-row1">Columbia, MD. 21040</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Email: </td>
-                                <td><a class="sub-row1 footer-email" href="mailto:info@cybersmartpros.com">info@strategic-analytix.com</a></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div> -->
-
-                <!-- <div class="row-column">
-                    <div class="sub-row"><div class="footer-title">Quick Links</div></div>
-                    <div class="sub-row indent-links"><a href="/">Home</a></div>
-                    <div class="sub-row indent-links"><a href="{our-company}">Our Company</a></div>
-                    <div class="sub-row indent-links"><a href="services">Services</a></div>
-                    <div class="sub-row indent-links"><a href="careers">Careers</a></div>
-                </div>                 -->
-            <!-- </div> -->
             <div class="sub-section">
                 <div class="row-layout">
                     <div class="row-column left">STRATEGIC ANALYTIX © COPYRIGHT 2017</div>

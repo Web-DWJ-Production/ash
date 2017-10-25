@@ -1,10 +1,31 @@
 // APP JS
 
 var loginCtrl = {};
+loginCtrl.siginIf = new SparkIf(document.getElementById('signin-btn'), true, 'list-item');
+loginCtrl.signoutIf = new SparkIf(document.getElementById('signout-btn'), false, 'list-item');
+loginCtrl.token = localStorage.getItem('SAToken');
+
+loginCtrl.reconcile = function () {
+
+    if (loginCtrl.siginIf.reconcile && loginCtrl.signoutIf.reconcile) {
+        if (loginCtrl.token) {
+            loginCtrl.siginIf.viewable = false;
+            loginCtrl.siginIf.reconcile();
+            loginCtrl.signoutIf.viewable = true;
+            loginCtrl.signoutIf.reconcile();
+        } else {
+            loginCtrl.siginIf.viewable = true;
+            loginCtrl.siginIf.reconcile();
+            loginCtrl.signoutIf.viewable = false;
+            loginCtrl.signoutIf.reconcile();
+        }
+    }
+}
+loginCtrl.reconcile();
 
 loginCtrl.login = function () {
 
-    function parseJwt (token) {
+    function parseJwt(token) {
         var base64Url = token.split('.')[1];
         var base64 = base64Url.replace('-', '+').replace('_', '/');
         return JSON.parse(window.atob(base64));
@@ -22,7 +43,12 @@ loginCtrl.login = function () {
         localStorage.setItem('SAUser', JSON.stringify(loginCtrl.user));
         localStorage.setItem('SAToken', loginCtrl.token);
         linksCtrl.redirectToEmployees();
+        loginCtrl.reconcile();
     }, null, true);
+}
+
+loginCtrl.signout = function () {
+    localStorage.clear();
 }
 
 var linksCtrl = {};
@@ -49,7 +75,7 @@ function EmployeesCtrl() {
     this.newUserIf = new SparkIf(document.getElementsByClassName('new-user-row')[0], false);
     this.users = null;
     this.usersFor = new SkFor(document.getElementById('users-template'), null, null);
-    this.newAccount = { email: null, password: null, admin: false};
+    this.newAccount = { email: null, password: null, admin: false };
     this.usrCardBind = new SkBind(document.getElementById('user-card'), null);
 
     this.updateUser = function (email, password, admin, el) {
@@ -89,7 +115,7 @@ function EmployeesCtrl() {
             admin: this.newAccount.admin
         }
 
-        cinnabarisland.post('/api/users', body, function (data) { 
+        cinnabarisland.post('/api/users', body, function (data) {
             that.getUsers();
             document.getElementById('new-acc-email').value = "";
             document.getElementById('new-acc-password').value = "";
@@ -100,7 +126,7 @@ function EmployeesCtrl() {
         }, headers, true);
     }
 
-    this.getUsers = function() {
+    this.getUsers = function () {
         var headers = {
             Authorization: 'Bearer ' + (loginCtrl.token || localStorage.getItem('SAToken'))
         };
@@ -122,63 +148,63 @@ function EmployeesCtrl() {
 
 function CareersCtrl() {
     this.options = {
-        valueNames: ['id','title','category','skillLevel','description','capabilities','qualifications'],
-        item:'<li><div class="position-container"><div class="position-section position-icon"></div><div class="position-section position-info"><div class="position-row"><span class="title"></span></div><div class="position-row flex-row"><div class="category"></div><div>Full-time</div><div class="position-skill">Skill Level: <span class="skillLevel"></span></div></div></div><div class="position-section position-details"><a href="" class="cir-btn"><span>More Information</span></a></div></div></li>'
+        valueNames: ['id', 'title', 'category', 'skillLevel', 'description', 'capabilities', 'qualifications'],
+        item: '<li><div class="position-container"><div class="position-section position-icon"></div><div class="position-section position-info"><div class="position-row"><span class="title"></span></div><div class="position-row flex-row"><div class="category"></div><div>Full-time</div><div class="position-skill">Skill Level: <span class="skillLevel"></span></div></div></div><div class="position-section position-details"><a href="" class="cir-btn"><span>More Information</span></a></div></div></li>'
     }
     this.values = [
         {
             id: 1,
-            title:'Test Job Manager',
+            title: 'Test Job Manager',
             category: 'Mangement',
-            skillLevel:0,
-            description:' This is a test Description',
-            capabilities:['ctest1', 'ctest2', 'ctest3'],
-            qualifications:['qtest0', 'qtest1']
+            skillLevel: 0,
+            description: ' This is a test Description',
+            capabilities: ['ctest1', 'ctest2', 'ctest3'],
+            qualifications: ['qtest0', 'qtest1']
         },
         {
             id: 2,
-            title:'Test Job Manager',
+            title: 'Test Job Manager',
             category: 'Mangement',
-            skillLevel:1,
-            description:' This is a test Description Job 1',
-            capabilities:['ctest1', 'ctest2', 'ctest3'],
-            qualifications:['qtest0', 'qtest1']
+            skillLevel: 1,
+            description: ' This is a test Description Job 1',
+            capabilities: ['ctest1', 'ctest2', 'ctest3'],
+            qualifications: ['qtest0', 'qtest1']
         },
         {
             id: 3,
-            title:'Test Job Employee',
+            title: 'Test Job Employee',
             category: 'Employee',
             skillLevel: 0,
-            description:' This is a test Description Job 2',
-            capabilities:['ctest1', 'ctest2', 'ctest3'],
-            qualifications:['qtest0', 'qtest1']
+            description: ' This is a test Description Job 2',
+            capabilities: ['ctest1', 'ctest2', 'ctest3'],
+            qualifications: ['qtest0', 'qtest1']
         },
         {
             id: 4,
-            title:'Test Job Employee',
+            title: 'Test Job Employee',
             category: 'Employee',
             skillLevel: 1,
-            description:' This is a test Description Job 2',
-            capabilities:['ctest1', 'ctest2', 'ctest3'],
-            qualifications:['qtest0', 'qtest1']
+            description: ' This is a test Description Job 2',
+            capabilities: ['ctest1', 'ctest2', 'ctest3'],
+            qualifications: ['qtest0', 'qtest1']
         },
         {
             id: 5,
-            title:'Test Job Employee',
+            title: 'Test Job Employee',
             category: 'Employee',
             skillLevel: 2,
-            description:' This is a test Description Job 2',
-            capabilities:['ctest1', 'ctest2', 'ctest3'],
-            qualifications:['qtest0', 'qtest1']
+            description: ' This is a test Description Job 2',
+            capabilities: ['ctest1', 'ctest2', 'ctest3'],
+            qualifications: ['qtest0', 'qtest1']
         },
         {
             id: 6,
-            title:'Test Job Engineer',
+            title: 'Test Job Engineer',
             category: 'Engineering',
             skillLevel: 2,
-            description:' This is a test Description Job 2',
-            capabilities:['ctest1', 'ctest2', 'ctest3'],
-            qualifications:['qtest0', 'qtest1']
+            description: ' This is a test Description Job 2',
+            capabilities: ['ctest1', 'ctest2', 'ctest3'],
+            qualifications: ['qtest0', 'qtest1']
         }
     ];
 
