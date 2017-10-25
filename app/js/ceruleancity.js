@@ -145,7 +145,7 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
  * @param { HTMLElement } element 
  * @param { boolean } viewable 
  */
-function SparkIf(element, viewable) {
+function SparkIf(element, viewable, display) {
     if (!element) {
         console.debug('ceruleancity: SkIf failed, element doesnt exist.');
         return;        
@@ -153,7 +153,7 @@ function SparkIf(element, viewable) {
 
     this.element = element;
     this.viewable = viewable;
-    this.display = this.element.style.display ? this.element.style.display : 'inline';
+    this.display = display || this.element.style.display || this.element.style.display || 'initial';
 
     this.hide = function () {
         this.viewable = false;

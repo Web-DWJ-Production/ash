@@ -1,8 +1,8 @@
 // APP JS
 
 var loginCtrl = {};
-loginCtrl.siginIf = new SparkIf(document.getElementById('signin-btn'), true);
-loginCtrl.signoutIf = new SparkIf(document.getElementById('signout-btn'), false);
+loginCtrl.siginIf = new SparkIf(document.getElementById('signin-btn'), true, 'list-item');
+loginCtrl.signoutIf = new SparkIf(document.getElementById('signout-btn'), false, 'list-item');
 loginCtrl.token = localStorage.getItem('SAToken');
 
 loginCtrl.reconcile = function () {
