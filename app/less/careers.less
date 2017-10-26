@@ -1,37 +1,100 @@
 .careers {
-    .content-box {
-        width: 100%;
-        .list {
-            list-style-type: none;
-            padding: 0;
-            li {
-                &+li { border-top: 1px solid rgba(255,255,255,0.5);}
-                .position-container {
-                    background: rgba(255,255,255,0.2);
-                    display: flex;
-                    flex-direction: row;
-                    padding: 10px;
-                    .position-section {
-                        padding: 10px 5px;
-                        &.position-icon { 
-                            width: 10%;
-                        }
-                        &.position-info {
-                            width: 70%; 
-                            .position-row { 
-                                display: block;
-                                &.flex-row { color: rgba(150,150,150,1); display: flex; justify-content: space-between;}
+    .return-btn {
+        display: flex;
+        .color4(color, 0.5);
+        transition: @transition-time all ease;
+        cursor: pointer;
+        font-weight: bold; 
+        i { margin-right: 5px; }
+
+        &:hover { color: @color4;}
+    }
+    .content-section {        
+        .content-box {
+            width: 100%;
+            .search-box {
+                display: block;
+                padding: 10px;
+                text-align: center;
+                .search-item  {
+                    border: 1px solid rgba(0,0,0,0);
+                    &+.search-item { margin-left: 10px; }
+                    &.search {
+                        border-radius: 25px;
+                        padding: 5px 20px;
+                        background: @background;                    
+                        border: 1px solid @color5;
+                        &::-webkit-input-placeholder { color: @color5; }
+                        &::-moz-placeholder { color: @color5; }
+                        &:-ms-input-placeholder { color: @color5; }
+                        &::-moz-placeholder { color: @color5; }
+                    }
+                }
+            }
+            .list {
+                list-style-type: none;
+                padding: 0;
+                border-top: 1px solid rgba(255,255,255,0.5);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+                li {
+                    transition: @transition-time all ease;
+                    cursor: pointer;
+                    &+li { border-top: 1px solid rgba(255,255,255,0.5);}
+                    &:hover { .color4(background-color, 0.5);}
+                    .position-container {
+                        //background: rgba(255,255,255,0.2);
+                        display: flex;
+                        flex-direction: row;
+                        padding: 10px;
+                        .position-section {
+                            padding: 10px 5px;
+                            &.position-icon { 
+                                width: 10%;
                             }
-                            .title {font-size: 1.4rem;}
-                            .skillLevel { display: inline-block; }
+                            &.position-info {
+                                width: 70%; 
+                                .position-row { 
+                                    display: block;
+                                    &.flex-row { color: rgba(150,150,150,1); display: flex; justify-content: space-between;}
+                                }
+                                .title {font-size: 1.4rem;}
+                                .skillLevel { display: inline-block; }
+                            }
+                            &.position-details { 
+                                width: 20%;
+                                text-align: center;
+                                .cir-btn { border: 1px solid @color4; }
+                            }
                         }
-                        &.position-details { 
-                            width: 20%;
-                            text-align: center;
+                    }
+                }
+            } 
+
+            .pagination {
+                li {
+                    &+li { a{ margin-left: 5px;} }
+                    a { 
+                        border-radius: 50%;
+                        .color5(background, 0.5);
+                        color: rgba(0,0,0,1);
+                        border: none;
+                    }
+                    &.active { 
+                        a{
+                            .color4(background, 0.7); 
+                            color: @color5;
                         }
                     }
                 }
             }
-        } 
-    }   
+
+            .info-section {
+                .info-title { }
+                .info-content { 
+                    &.info-text { }
+                    &.info-list { }
+                }
+            }
+        }  
+    } 
 }

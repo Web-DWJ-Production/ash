@@ -283,23 +283,66 @@
              box-shadow: 0 4px 4px -2px #000000;
     }
 
+    .employees-dls-container {
+        position: relative;
+        width: calc(~"100% - 100px");
+        max-width: 1200px;
+        margin: auto;
+        padding: 25px;  
+        display: block;  
+
+
+        .dl-tile {
+            height: 150px;
+            width: 150px;
+            display: inline-block; 
+            position: relative;
+            margin-bottom: 5px;
+            transition: @transition-time all ease;
+            background-color: rgba(91,96,81,1);
+            
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(91,96,81,0.7);                                
+            }
+
+            .dl-label {
+                position: relative;
+                top: 40px;
+                font-size: 14px;
+                display: block;
+                width: 100px;
+                margin: auto;
+            }
+
+            .dl-icon {
+                height: 24px;
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+        }
+    }
+
     .employees-app-container {
         position: relative;
         width: calc(~"100% - 100px");
-        margin: 50px;
+        max-width: 1200px;
+        margin: auto;
         padding: 25px;  
-        display: inline-block;  
+        display: block;  
 
         @media @mobile-screen {
             width: 100%;
-            margin: 0;
+            margin: 25px;            
             padding: 5px;
         }
 
         .employees-email-app {
-            min-width: 400px;
-            width: calc(~"100% - 425px");
-            height: 400px;
+            min-width: 300px;
+            width: calc(~"100% - 610px");
+            height: 300px;
             background-color: @color2;
             display: inline-block; 
             text-align: center;
@@ -309,7 +352,7 @@
             transition: @transition-time all ease;
 
             .email-app-icon {
-                height: 225px;
+                height: 125px;
                 display: block;
                 margin: auto;
                 position: relative;
@@ -330,8 +373,8 @@
         }
 
         .employees-time-app {
-            width: 400px;
-            height: 400px;
+            width: 300px;
+            height: 300px;
             background-color: @color4;
             display: inline-block; 
             text-align: center;
@@ -341,7 +384,7 @@
             transition: @transition-time all ease;
 
             .time-app-icon {
-                height: 225px;
+                height: 125px;
                 display: block;
                 margin: auto;
                 position: relative;
@@ -362,8 +405,8 @@
 
         .employees-settings-app {
             background-color: rgba(50,50,50,.75);
-            width: 400px;
-            height: 400px;
+            width: 300px;
+            height: 300px;
             display: inline-block; 
             text-align: center;
             position: relative;
@@ -382,12 +425,73 @@
             }
 
             .settings-app-icon {
-                height: 250px;
+                height: 150px;
                 display: block;
                 margin: auto;
                 position: relative;
                 top: 50px;
             }
         }
+
+        .app-tile {
+            height: 300px;
+            display: inline-block; 
+            text-align: center;
+            position: relative;
+            margin-bottom: 5px;
+            transition: @transition-time all ease;
+            
+            &:hover {
+                cursor: pointer;
+            }
+
+            .app-label {
+                position: relative;
+                top: 75px;
+                font-size: 24px;
+            }
+
+            .app-icon {
+                height: 150px;
+                display: block;
+                margin: auto;
+                position: relative;
+                top: 50px;
+            }
+        }
+
+        .square-tile {
+            width: 300px;
+        }
+
+        .stretch-tile {
+            min-width: 300px;
+            width: calc(~"100% - 610px");            
+        }
+
+        .deltek-tile {
+            background-color: rgba(255,55,0,0.7);
+
+            &:hover {
+                background-color: rgba(255,55,0,0.5);                
+            }
+        }
+
+        .trow-tile {
+            background-color: rgba(51,124,150,1);
+
+            &:hover {
+                background-color: rgba(51,124,150,0.7);                
+            }
+        }
+
+        .payroll-tile {
+            background-color: rgba(3,121,13,1);
+            
+            &:hover {
+                background-color: rgba(3,121,13,0.7);                
+            }
+        }
+
     }
 }
