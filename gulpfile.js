@@ -68,7 +68,7 @@ var config = {
   },
   builds:{
     local:{
-      apiUrl: 'http://localhost:8081'
+      apiUrl: 'http://localhost:8080'
     },
     dev:{
       apiUrl: 'https://strategic-analytix-demo.herokuapp.com'

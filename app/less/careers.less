@@ -42,17 +42,19 @@
                     &+li { border-top: 1px solid rgba(255,255,255,0.5);}
                     &:hover { .color4(background-color, 0.5);}
                     .position-container {
-                        //background: rgba(255,255,255,0.2);
                         display: flex;
                         flex-direction: row;
                         padding: 10px;
+                        @media @mobile-screen { flex-direction: column; }
                         .position-section {
                             padding: 10px 5px;
                             &.position-icon { 
                                 width: 10%;
+                                @media @mobile-screen { width: 100%;}
                             }
                             &.position-info {
                                 width: 70%; 
+                                @media @mobile-screen { width: 100%;}
                                 .position-row { 
                                     display: block;
                                     &.flex-row { color: rgba(150,150,150,1); display: flex; justify-content: space-between;}
@@ -63,6 +65,7 @@
                             &.position-details { 
                                 width: 20%;
                                 text-align: center;
+                                @media @mobile-screen { width: 100%;}
                                 .cir-btn { border: 1px solid @color4; }
                             }
                         }
