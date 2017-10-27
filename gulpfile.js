@@ -3,6 +3,7 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var less = require('gulp-less');
 var minifyCSS = require('gulp-minify-css');
+var minifyJs = require('gulp-js-minify');
 var runSequence = require('run-sequence');
 var del = require('del');
 
@@ -85,10 +86,28 @@ var config = {
 gulp.task('clean', function () {
   return del([config.dest.base + '/*']);
 });
+/* Minify JS */
+gulp.task('app-js-min', function () {
+  // Bundle all JS files into one files
+  return gulp.src(config.src.appJs)
+    .pipe(concat('bundle.min.js'))
+    .pipe(minifyJs())
+    .pipe(gulp.dest(config.dest.appJs));
+});
+
+gulp.task('lib-js-min', function () {
+  // Bundle all JS Library files into one files
+  return gulp.src(config.src.libsJs)
+    .pipe(concat('libs.min.js'))
+    .pipe(minifyJs())
+    .pipe(gulp.dest(config.dest.appJs));
+});
+
+/* Regular JS */
 gulp.task('app-js', function () {
   // Bundle all JS files into one files
   return gulp.src(config.src.appJs)
-    .pipe(concat('bundle.js'))
+    .pipe(concat('bundle.min.js'))
     .pipe(gulp.dest(config.dest.appJs));
 });
 
@@ -117,6 +136,7 @@ gulp.task('lib-css', function () {
   // Bundle all JS Library files into one files
   return gulp.src(config.src.libsCSS)
     .pipe(concat('libs.min.css'))
+    .pipe(minifyCSS())
     .pipe(gulp.dest(config.dest.appCSS));
 });
 
@@ -173,9 +193,13 @@ gulp.task('build-production', function(){
   }))
   .pipe(gulp.dest("./"));
 });
-
+/* Local Builds */
 gulp.task('local', gulpSequence('clean', 'build-local', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));
+
+/* Development Build */
 gulp.task('dev', gulpSequence('clean', 'build-dev', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));
+
+/* Production Build */
 gulp.task('prod', gulpSequence('clean', 'build-production', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));
 
 gulp.task('all', gulpSequence('clean', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));
