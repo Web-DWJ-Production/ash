@@ -178,6 +178,10 @@ function SparkIf(element, viewable, display) {
 }
 
 function SkFor(element, arr, name) {
+    if (!element) {
+        console.debug('ceruleancity: SkFor failed, element doesnt exist.');
+        return;        
+    }
     this.parent = element.parentNode;
     this.element = element;
     this.arr = arr;
@@ -200,6 +204,10 @@ function SkFor(element, arr, name) {
 }
 
 function SkBind(element, obj) {
+    if (!element) {
+        console.debug('ceruleancity: SkBind failed, element doesnt exist.');
+        return;        
+    }
     this.parent = element.parentNode;
     this.element = element;
     this.obj = obj;
