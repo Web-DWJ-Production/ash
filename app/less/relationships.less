@@ -1,0 +1,31 @@
+.relationships {
+    .content-box-container {
+        .content-box {
+            .flex-row {
+                .flex-column {
+                    &.bulk-text { 
+                        line-height: 2rem;                         
+                    }
+                    .partner-logos-container {
+                        width: 750px;
+                        display: block;
+                        margin: auto;    
+                        background-color: rgba(255,255,255,0.2);
+                        padding: 10px;
+                        position: relative;
+                        top: 25px;
+                        border-radius: 3px;
+
+                        @media @mobile-screen {
+                            display: inline;
+                        }
+                        
+                        img {
+                            padding: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -38,13 +38,15 @@ var config = {
       { 'filename': 'services', 'locationname': 'services.html' },
       { 'filename': 'aboutus', 'locationname': 'aboutus.html' },
       { 'filename': 'careers', 'locationname': 'careers.html' },
-      { 'filename': 'leadership', 'locationname': 'leadership.html' }
+      { 'filename': 'leadership', 'locationname': 'leadership.html' },
+      { 'filename': 'relationships', 'locationname': 'relationships.html' }
+      
     ],
     navigationLinks: [
       ['{home}','/'],
       ['{about-us}','aboutus'],
       ['{leadership}','leadership'],
-      ['{company-history}','underconstruction'],
+      ['{business-relationships}','business-relationships'],
       ['{careers}','careers'],
       ['{benefits}','benefits'],
       ['{services}','services'],
