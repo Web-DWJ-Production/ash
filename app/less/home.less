@@ -79,6 +79,26 @@
     }
 
     .content-section {
+        .scroll-anchor {
+            background: rgba(255,255,255,0.5);
+            color: @background;
+            position: fixed;
+            top: 70%;
+            right: 0px;
+            transform: translateY(-70%);
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            z-index: 10;
+            padding: 10px 20px;
+            display: flex;
+            transition: 1s all ease;
+
+            .scroll-item {  height: 24px; font-weight: bold; } 
+            &.hide-direction { 
+                right: -100%;
+            }               
+        }
+
         .backImg {
             position: absolute;
             z-index: 0;
@@ -117,26 +137,7 @@
                 &.meetingimg {  background-image: url('../images/meeting1.jpg');}
                 &.careersimg {  background-image: url('../images/career-img.jpg');}
                 &.contactimg{ background-image: url('../images/contactus.jpg'); }
-            }
-            .scroll-anchor {
-                background: rgba(255,255,255,0.5);
-                color: @background;
-                position: fixed;
-                top: 70%;
-                right: 0px;
-                transform: translateY(-70%);
-                border-top-left-radius: 25px;
-                border-bottom-left-radius: 25px;
-                z-index: 2;
-                padding: 10px 20px;
-                display: flex;
-                transition: 1s all ease;
-
-                .scroll-item {  height: 24px; font-weight: bold; } 
-                &.hide-direction { 
-                    right: -100%;
-                }               
-            }
+            }            
         }
         .carousel-switch{
             display: flex;

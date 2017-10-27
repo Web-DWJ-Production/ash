@@ -98,6 +98,58 @@
                     &.info-list { }
                 }
             }
+
+            .btn-section {
+                padding: 10px;
+                text-align: center;
+            }
         }  
+
+        .contact-us-form-container {
+            justify-content: center;
+            padding-top: 20px;
+            .content-box{
+                width: 640px;
+                @media @mobile-screen { width: 100%;}
+                .form-container {
+                    width: 100%;
+                    .form-row {
+                        width: 100%;
+                        padding: 10px 0px;
+                        &.btn-box { text-align: center;}
+                        input{
+                            width: 100%;
+                            height: 2.5rem;
+                            color: rgba(255,255,255,1);
+                            border-radius: 5px;
+                            padding: 0px 10px;
+                            border: 0;
+                            background-color: rgba(255,255,255,0.4);
+                            &::-webkit-input-placeholder { color: @color5; }
+                            &::-moz-placeholder { color: @color5; }
+                            &:-ms-input-placeholder { color: @color5; }
+                            &::-moz-placeholder { color: @color5; }
+
+                            &:read-only { .color3(background, 0.4); }
+                            &:-moz-read-only { .color3(background, 0.4); }
+                        }
+                        textarea{
+                            color: rgba(255,255,255,1);
+                            width: 100%;
+                            height: 150px;
+                            resize: none;
+                            border-radius: 5px;
+                            padding: 10px;
+                            border: 0;
+                            background-color: rgba(255,255,255,0.4);
+                            &::-webkit-input-placeholder { color: @color5; }
+                            &::-moz-placeholder { color: @color5; }
+                            &:-ms-input-placeholder { color: @color5; }
+                            &::-moz-placeholder { color: @color5; }
+                        }
+                    }
+                }
+            }
+        }
     } 
 }

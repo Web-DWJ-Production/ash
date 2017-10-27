@@ -86,15 +86,37 @@
                     </div>
 
                     <!-- Button -->
-                    <div class="btn-section"></div>
+                    <div class="btn-section">
+                        <a class="cir-btn c4" onclick="PositionContact()"><span>Contact Us</span></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-</div>
+    <!-- Position Contact -->
+    <div class="template-section" id="careers-contact">
+        <div class="content-section" id="careers-contact-content">
+            <div class="return-btn" onclick="ReturnPosition()"><i class="material-icons">&#xE5C4;</i> Return To "{{title}}"</div>
+            <h2 class="section-title">Contact Us About: <br> {{title}} Level {{skillLevel}}</h2>
 
-<script>
-    //var ctrl = ctrl ? ctrl : new CareersCtrl();
-    //var jobList = new List('jobs', ctrl.options, ctrl.values);
-</script>
+            <div class="contact-us-form-container content-box-container">
+                <form id="careersForm" class="content-box" action="javascript:EmailSend('careersForm')">                
+                    <div class="form-container">
+                        <!-- Name -->
+                        <div class="form-row"><input type="text" name="msgName" placeholder="Name *"></div>                               
+                        <!-- Email -->                
+                        <div class="form-row"><input type="text" name="msgEmail" placeholder="Email Address *"></div>                
+                        <!-- Subject -->                
+                        <div class="form-row"><input type="text" name="msgSubject" value="Position Inquiry: {{title}}" readonly></div>                
+                        <!-- Message -->                
+                        <div class="form-row"><textarea type="text" name="msgMessage" placeholder="Please Copy your Resume Here*"></textarea></div>
+                        <!-- Submit Button -->
+                        <div class="form-row btn-box"><button class="cir-btn c4" type="submit">Submit</button></div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

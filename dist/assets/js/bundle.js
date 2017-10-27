@@ -59,7 +59,7 @@ loginCtrl.signout = function () {
 loginCtrl.resetPwd = function () {
     var email = document.getElementById('login_email_input').value;
     if (!email) {
-        alert('Enter your email address, then click reset password.');
+        alert('Enter your email address, then click forgot password.');
         return;
     }
     var body = { email: document.getElementById('login_email_input').value }
@@ -165,6 +165,10 @@ function EmployeesCtrl() {
 
 function CareersCtrl() {
     this.positions = new SparkIf(document.getElementById('careers-all-pos'), true);
+
+    this.positionContact = new SparkIf(document.getElementById('careers-contact'), false);
+    this.positionContactFor = new SkBind(document.getElementById('careers-contact-content'), null);  
+
     this.info = new SparkIf(document.getElementById('careers-info'), false);
     this.infoFor = new SkBind(document.getElementById('careers-info-content'), null);   
     
@@ -186,6 +190,10 @@ function CareersCtrl() {
         
         var qualificationsFor = new SkFor(document.getElementById('qualifications-item'), this.selectedCareer.qualifications, "text");
         qualificationsFor.reconcile();
+    }
+    this.bindPositionContact = function(){
+        this.positionContactFor.obj = this.selectedCareer;
+        this.positionContactFor.reconcile();
     }
 
     this.options = {
@@ -1480,6 +1488,7 @@ palletetown.scrollcontrol = function(threshold, identifier, classname, mobileDis
         }
     }    
 }
+var defaultEmail = 'web@dwjproduction.com';
 /* Home Page */
 window.addEventListener('scroll', function(e) {
     palletetown.scrollcontrol(10, 'navbar-fixed-top', 'moved-header', true);    
@@ -1500,15 +1509,100 @@ if(homeCarousel != null && homeCarousel.length > 0){
 var carCtrl = carCtrl ? carCtrl : new CareersCtrl();
 var jobList = new List('jobs', carCtrl.options, carCtrl.values);
 
+/* Email Form */
+function EmailSend(formName){
+    var formData = $('#'+formName).serializeArray();
+    var errMsg = ValidateForm(formData);
 
+    if(errMsg == ''){
+        // Build Object
+        var email = BuildForm(formData);
+        cinnabarisland.post('/api/mail', email, function (data) {
+            alert('Thank you for reaching out to use we will get back to you soon.');
+
+            // Send Confirmation Email
+            email.text ='Message Set To: ' + email.to +' (' + email.text +')';
+            email.to = email.from;
+            cinnabarisland.post('/api/mail', email, function (data) {
+                // clear form
+                document.getElementById(formName).reset();
+            }, null, true);
+            
+        }, null, true);
+    }
+    else {
+        alert('Unable to submit form:\n' + errMsg);
+    }    
+}
+
+function ValidateForm(formData) {
+    var msg = '';
+    var emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    for(var i =0; i < formData.length; i++){
+        var inputStg = null;
+        if(formData[i].value == null || formData[i].value.length == 0){
+            switch(formData[i].name){
+                case 'msgName':
+                    inputStg = "Name";
+                    break;
+                case 'msgEmail':
+                    inputStg = "Email Address";                
+                    break;
+                case 'msgSubject':                
+                    inputStg = "Subject";
+                    break;
+                case 'msgMessage':                
+                    inputStg = "Message";
+                    break;
+                default:
+                    break;
+            } 
+            msg += (msg.length > 0 ? '\n' : '') +"- Please enter a proper " + inputStg +" ";       
+        }
+        else if(formData[i].name == 'msgEmail' && !emailRegEx.test(formData[i].value)) {
+            msg += (msg.length > 0 ? '\n' : '') +"- Please enter a valid Email Address (ex. 'test@testmail.com')";
+        }
+    }
+    return msg;
+}
+
+function BuildForm(formData){
+    var mailObj = { to:defaultEmail, subject:'', text:'', html:'', from:'' };
+    var subjectInfo = '';
+    for(var i =0; i < formData.length; i++){                
+        switch(formData[i].name){
+            case 'msgName':
+                subjectInfo += (subjectInfo.length > 0 ? ', ' : '') +'Name: ' + formData[i].value;
+                break;
+            case 'msgEmail':
+                mailObj.from = formData[i].value;
+                subjectInfo += (subjectInfo.length > 0 ? ', ' : '') +'Email: ' + formData[i].value;          
+                break;
+            case 'msgSubject':                
+                mailObj.subject = formData[i].value;
+                break;
+            case 'msgMessage':                
+                mailObj.text = formData[i].value;
+                break;
+            default:
+                break;
+        }                         
+    }
+    mailObj.text += '\n\n' + subjectInfo;
+
+    return mailObj;
+}
 
 /* Private Methods */
 function onCareerInfoClick(elem){
     // Get id
     var id = $(elem).attr("data-id");
     
+    carCtrl.positionContact.viewable = false;
     carCtrl.positions.viewable = false;
     carCtrl.info.viewable = true;
+
+    carCtrl.positionContact.reconcile();
     carCtrl.positions.reconcile();
     carCtrl.info.reconcile();
 
@@ -1519,7 +1613,33 @@ function onCareerInfoClick(elem){
 function ReturnAllCareers() {
     carCtrl.positions.viewable = true;
     carCtrl.info.viewable = false;
+    carCtrl.positionContact.viewable = false;
     
+    carCtrl.positions.reconcile();
+    carCtrl.info.reconcile();
+    carCtrl.positionContact.reconcile();
+
+    window.scroll(0, 0);
+}
+
+function PositionContact(){
+    carCtrl.positionContact.viewable = true;
+    carCtrl.positions.viewable = false;
+    carCtrl.info.viewable = false;
+    
+    carCtrl.positionContact.reconcile();
+    carCtrl.positions.reconcile();
+    carCtrl.info.reconcile();
+
+    window.scroll(0, 0);
+    carCtrl.bindPositionContact();
+}
+function ReturnPosition(){
+    carCtrl.positionContact.viewable = false;
+    carCtrl.positions.viewable = false;
+    carCtrl.info.viewable = true;
+
+    carCtrl.positionContact.reconcile();
     carCtrl.positions.reconcile();
     carCtrl.info.reconcile();
 

@@ -10,7 +10,7 @@
                     <div class="box-column">
                         <div class="page-title-container">
                             <div class="page-subtitle">Share Your Ideas</div>
-                            <h1 class="page-title">Contact Us</h1>
+                            <h1 class="page-title">Contact</h1>
                         </div>
                     </div>
                 </div>
@@ -21,7 +21,7 @@
     <div class="content-section afterAngle angle-dark-1">
         <h2 class="section-title">Send Us A Message</h2>
         <div class="contact-us-form-container content-box-container">
-            <form class="content-box">                
+            <form id="contactUsForm" class="content-box" action="javascript:EmailSend('contactUsForm')">                
                 <div class="form-container">
                     <!-- Name -->
                     <div class="form-row"><input type="text" name="msgName" placeholder="Name *"></div>                               
@@ -32,7 +32,7 @@
                     <!-- Message -->                
                     <div class="form-row"><textarea type="text" name="msgMessage" placeholder="Message *"></textarea></div>
                     <!-- Submit Button -->
-                    <div class="form-row btn-box"><div class="cir-btn c4">Submit</div></div>
+                    <div class="form-row btn-box"><button class="cir-btn c4" type="submit">Submit</button></div>
                 </div>
             </form>
         </div>
@@ -50,8 +50,8 @@
                         <div class="box-content img-content"><img src="images/logo.png"></div>
                         <!-- -->
                         <div class="box-content"><h3>Address</h3></div>
-                        <div class="box-content indent-content"><div>1234 Testville Dr.</div></div>
-                        <div class="box-content indent-content"><div>Columbia, MD. 21040</div></div>
+                        <div class="box-content indent-content"><div>P.O. Box 188</div></div>
+                        <div class="box-content indent-content"><div>Fulton, MD. 20759</div></div>
                         <!-- -->
                         <div class="box-content"><h3>Email Us:</h3></div>
                         <div class="box-content indent-content"><div>info@strategic-analytix.com</div></div>                        
@@ -65,9 +65,9 @@
 <!-- Map Scripts -->
 <script>
     function initMap() {
-        var uluru = { lat: 	39.1130484, lng: -76.9001878};
+        var uluru = { lat: 	39.151169, lng: -76.923051};
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 17,
+            zoom: 12,
             center: uluru
         });
         var marker = new google.maps.Marker({

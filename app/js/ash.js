@@ -165,6 +165,10 @@ function EmployeesCtrl() {
 
 function CareersCtrl() {
     this.positions = new SparkIf(document.getElementById('careers-all-pos'), true);
+
+    this.positionContact = new SparkIf(document.getElementById('careers-contact'), false);
+    this.positionContactFor = new SkBind(document.getElementById('careers-contact-content'), null);  
+
     this.info = new SparkIf(document.getElementById('careers-info'), false);
     this.infoFor = new SkBind(document.getElementById('careers-info-content'), null);   
     
@@ -186,6 +190,10 @@ function CareersCtrl() {
         
         var qualificationsFor = new SkFor(document.getElementById('qualifications-item'), this.selectedCareer.qualifications, "text");
         qualificationsFor.reconcile();
+    }
+    this.bindPositionContact = function(){
+        this.positionContactFor.obj = this.selectedCareer;
+        this.positionContactFor.reconcile();
     }
 
     this.options = {
