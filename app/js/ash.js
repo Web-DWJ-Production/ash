@@ -36,6 +36,11 @@ loginCtrl.login = function () {
         password: document.getElementById('login_password_input').value
     }
 
+    if (!body.email || !body.password) {
+        alert("Enter your credentials.");
+        return;
+    }
+
     cinnabarisland.post('/api/auth', body, function (data) {
         loginCtrl.token = data.substring(1, data.length - 1);
 
@@ -49,6 +54,18 @@ loginCtrl.login = function () {
 
 loginCtrl.signout = function () {
     localStorage.clear();
+}
+
+loginCtrl.resetPwd = function () {
+    var email = document.getElementById('login_email_input').value;
+    if (!email) {
+        alert('Enter your email address, then click reset password.');
+        return;
+    }
+    var body = { email: document.getElementById('login_email_input').value }
+    cinnabarisland.post('/api/users/pwdreset', body, function (data) {
+        alert('A temporary password has been sent to ' + email + ".")
+    }, null, true);
 }
 
 var linksCtrl = {};

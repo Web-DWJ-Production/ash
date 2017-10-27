@@ -36,6 +36,11 @@ loginCtrl.login = function () {
         password: document.getElementById('login_password_input').value
     }
 
+    if (!body.email || !body.password) {
+        alert("Enter your credentials.");
+        return;
+    }
+
     cinnabarisland.post('/api/auth', body, function (data) {
         loginCtrl.token = data.substring(1, data.length - 1);
 
@@ -49,6 +54,18 @@ loginCtrl.login = function () {
 
 loginCtrl.signout = function () {
     localStorage.clear();
+}
+
+loginCtrl.resetPwd = function () {
+    var email = document.getElementById('login_email_input').value;
+    if (!email) {
+        alert('Enter your email address, then click reset password.');
+        return;
+    }
+    var body = { email: document.getElementById('login_email_input').value }
+    cinnabarisland.post('/api/users/pwdreset', body, function (data) {
+        alert('A temporary password has been sent to ' + email + ".")
+    }, null, true);
 }
 
 var linksCtrl = {};
@@ -1109,6 +1126,10 @@ function SparkIf(element, viewable, display) {
 }
 
 function SkFor(element, arr, name) {
+    if (!element) {
+        console.debug('ceruleancity: SkFor failed, element doesnt exist.');
+        return;        
+    }
     this.parent = element.parentNode;
     this.element = element;
     this.arr = arr;
@@ -1131,6 +1152,10 @@ function SkFor(element, arr, name) {
 }
 
 function SkBind(element, obj) {
+    if (!element) {
+        console.debug('ceruleancity: SkBind failed, element doesnt exist.');
+        return;        
+    }
     this.parent = element.parentNode;
     this.element = element;
     this.obj = obj;

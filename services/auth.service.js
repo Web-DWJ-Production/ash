@@ -22,6 +22,13 @@ service.auth = (req, res) => {
         // The authentication is succesful, return a JWT.
         res.status(200).json(jwt.sign(u, secret));
     } else {
+        console.log(u);
+        console.log(req.body.password);
+        if (req.body.password === u.tmpPass) {
+            if ((new Date().getTime()) <= u.tmpPassExp) {
+                res.status(200).json(jwt.sign(u, secret));
+            }
+        }
         // The authentication failed.
         res.status(200).json({message: 'Authentication Failed'});
     }
