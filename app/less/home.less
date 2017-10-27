@@ -180,6 +180,7 @@
                     .content-text { 
                         font-size: 1.3rem; 
                         line-height: 3rem;
+                        text-align: justify;
                         @media @mobile-screen { 
                             font-size: 1.1rem;
                             line-height: 2rem;
@@ -222,7 +223,8 @@
                     flex-direction: row;
                     @media @mobile-screen { flex-direction: column; border: none !important;}
 
-                    &+.line-row { border-top: 2px solid rgba(255,255,255,1); }                    
+                    &+.line-row { 
+                        border-top: 2px solid rgba(255,255,255,0.2); }                    
                     .box-column {
                         display: flex;
                         flex-direction: row;
@@ -234,7 +236,7 @@
                         &.shallow-bottom-padding { padding-bottom: 10px; }
                         &.shallow-top-padding { padding-top: 10px; }
                         
-                        &+.line-column{ border-left: 2px solid rgba(255,255,255,1);}                        
+                        &+.line-column{ border-left: 2px solid rgba(255,255,255,0.2);}                        
                         .box-content{
                             padding: 0px 10px;
                             &.center-content { text-align: center;}                            
