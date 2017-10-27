@@ -12,6 +12,7 @@ router.get('/benefits', getBenefits);
 router.get('/services', getServices);
 router.get('/aboutus', getAboutUs);
 router.get('/careers', getCareers);
+router.get('/leadership', getLeadership);
 router.get('/employees', expressJWT({ secret: secret }), getEmployees);
 
 module.exports = router;
@@ -22,6 +23,7 @@ function getBenefits(req, res) { res.sendFile('benefits.html', { root: path.join
 function getServices(req, res) { res.sendFile('services.html', { root: path.join(__dirname, '../dist') }) };
 function getAboutUs(req, res) { res.sendFile('aboutus.html', { root: path.join(__dirname, '../dist') }) };
 function getCareers(req, res) { res.sendFile('careers.html', { root: path.join(__dirname, '../dist') }) };
+function getLeadership(req, res) { res.sendFile('leadership.html', { root: path.join(__dirname, '../dist') }) };
 function getUC(req, res) { res.sendFile('underconstruction.html', { root: path.join(__dirname, '../dist') }) };
 function getEmployees(req, res) {
     console.log('Access granted to employees.');

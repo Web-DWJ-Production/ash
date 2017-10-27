@@ -37,12 +37,13 @@ var config = {
       { 'filename': 'benefits', 'locationname': 'benefits.html' },
       { 'filename': 'services', 'locationname': 'services.html' },
       { 'filename': 'aboutus', 'locationname': 'aboutus.html' },
-      { 'filename': 'careers', 'locationname': 'careers.html' }
+      { 'filename': 'careers', 'locationname': 'careers.html' },
+      { 'filename': 'leadership', 'locationname': 'leadership.html' }
     ],
     navigationLinks: [
       ['{home}','/'],
       ['{about-us}','aboutus'],
-      ['{leadership}','underconstruction'],
+      ['{leadership}','leadership'],
       ['{company-history}','underconstruction'],
       ['{careers}','careers'],
       ['{benefits}','benefits'],
