@@ -14,101 +14,110 @@
                 <img class="settings-app-icon" src="images/gears.svg" alt="Settings">
                 <span class="app-label">Account</span>
             </div>
-            <div class="app-tile square-tile deltek-tile raised">
+            <div onclick="openInNewTab('https://subktemp.caci.com/DeltekTC/welcome.msv');" class="app-tile square-tile deltek-tile raised">
                 <img class="app-icon" src="images/deltek.svg" alt="Deltek">
                 <span class="app-label">Deltek Time</span>
             </div>
-            <div class="app-tile square-tile trow-tile raised">
+            <div onclick="openInNewTab('https://www3.troweprice.com/usrps/workplace/en/login.html');" class="app-tile square-tile trow-tile raised">
                 <img class="app-icon" src="images/401k.svg" alt="401k">
                 <span class="app-label">T. Rowe Price 401K</span>
             </div>
-            <div class="app-tile stretch-tile payroll-tile raised">
+            <div onclick="openInNewTab('https://wageview.wellsfargo.com/signon');" class="app-tile stretch-tile payroll-tile raised">
                 <img class="app-icon" src="images/payroll.svg" alt="401k">
                 <span class="app-label">Payroll</span>
             </div>
         </div>
 
         <div class="employees-dls-container">
-            <div class="dl-tile raised">
-                <img class="dl-icon" src="images/download.svg" alt="Short-term Disability">
-                <span class="dl-label">Short-term Disability Policy</span>
+            <a href="/downloads/STD_policy">
+                <div class="dl-tile raised">
+                    <img class="dl-icon" src="images/download.svg" alt="Short-term Disability">
+                    <span class="dl-label">Short-term Disability Policy</span>
+                </div>
+            </a>
+            <a href="/downloads/LTD_policy">
+                <div class="dl-tile raised">
+                    <div class="dl-tile raised">
+                        <img class="dl-icon" src="images/download.svg" alt="Long-term Disability">
+                        <span class="dl-label">Long-term Disability Policy</span>
+                    </div>
+                </div>
+            </a>
+            <a href="/downloads/EAP">
+                <div class="dl-tile raised">
+                    <div class="dl-tile raised">
+                        <img class="dl-icon" src="images/download.svg" alt="Employee Assistance Program">
+                        <span class="dl-label">Employee Assistance Program</span>
+                    </div>
+                </div>
+            </a>
             </div>
-            <div class="dl-tile raised">
-                <img class="dl-icon" src="images/download.svg" alt="Long-term Disability">
-                <span class="dl-label">Long-term Disability Policy</span>
-            </div>
-            <div class="dl-tile raised">
-                <img class="dl-icon" src="images/download.svg" alt="Employee Assistance Program">
-                <span class="dl-label">Employee Assistance Program</span>
-            </div>
-        </div>
-    </div>
-    <div id="employees-admin-component">
+            <div id="employees-admin-component">
 
-        <div class="admin-usr-table">
-            <span class="backToHome" onclick="onHomeClick()">
+                <div class="admin-usr-table">
+                    <span class="backToHome" onclick="onHomeClick()">
                 Home <i class="material-icons">&#xE5C8;</i>
             </span>
-            <div class="clearfix"></div>
-
-            <div id="user-card-parent">
-                <div id="user-card" class="user-card raised" style="display: inline-block">
-                    <div class="user-card-email">
-                        <h3>{{email}}</h3>
-                    </div>
-                    <div class="user-card-pw-1 new-pwd-col-1 show-on-reset" style="display: none">
-                        <input type="password" placeholder="new password" />
-                    </div>
-                    <div class="user-card-pw-2 new-pwd-col-2 show-on-reset" style="display: none">
-                        <input type="password" placeholder="repeat password" />
-                    </div>
-                    <div class="user-card-pw-3 show-on-reset" style="display: none">
-                        <i class="material-icons" onclick="onNonAdminCancelReset(this)" title="Cancel">&#xE5C9;</i>
-                        <i class="material-icons" onclick="onSaveReset('{{email}}', this); onNonAdminCancelReset(this)" style="padding-right: 5px;"
-                            title="Save">&#xE161;</i>
-                    </div>
                     <div class="clearfix"></div>
-                    <div class="user-card-reset-pw hide-on-reset">
-                        <button onclick="onNonAdminResetPwd('{{email}}', this)" class="user-card-reset-pw">reset password</button>
+
+                    <div id="user-card-parent">
+                        <div id="user-card" class="user-card raised" style="display: inline-block">
+                            <div class="user-card-email">
+                                <h3>{{email}}</h3>
+                            </div>
+                            <div class="user-card-pw-1 new-pwd-col-1 show-on-reset" style="display: none">
+                                <input type="password" placeholder="new password" />
+                            </div>
+                            <div class="user-card-pw-2 new-pwd-col-2 show-on-reset" style="display: none">
+                                <input type="password" placeholder="repeat password" />
+                            </div>
+                            <div class="user-card-pw-3 show-on-reset" style="display: none">
+                                <i class="material-icons" onclick="onNonAdminCancelReset(this)" title="Cancel">&#xE5C9;</i>
+                                <i class="material-icons" onclick="onSaveReset('{{email}}', this); onNonAdminCancelReset(this)" style="padding-right: 5px;"
+                                    title="Save">&#xE161;</i>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="user-card-reset-pw hide-on-reset">
+                                <button onclick="onNonAdminResetPwd('{{email}}', this)" class="user-card-reset-pw">reset password</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div id="admin-usr-table" class="raised">
-                <div class="admin-usr-table-header">
-                    <span class="title">Accounts</span>
-                    <i class="material-icons addico" title="Add New" onclick="onAddAccount()">&#xE7FE;</i>
-                    <div class="clearfix"></div>
-                </div>
+                    <div id="admin-usr-table" class="raised">
+                        <div class="admin-usr-table-header">
+                            <span class="title">Accounts</span>
+                            <i class="material-icons addico" title="Add New" onclick="onAddAccount()">&#xE7FE;</i>
+                            <div class="clearfix"></div>
+                        </div>
 
-                <div>
-                    <div class="new-user-row" style="display: inline-block">
-                        <div class="new-email-col">
-                            <input id="new-acc-email" type="text" title="Email" placeholder="email" />
+                        <div>
+                            <div class="new-user-row" style="display: inline-block">
+                                <div class="new-email-col">
+                                    <input id="new-acc-email" type="text" title="Email" placeholder="email" />
+                                </div>
+                                <div class="new-password-col">
+                                    <input id="new-acc-password" type="password" title="Password" placeholder="password" />
+                                </div>
+                                <div class="new-admin-col">
+                                    <i id="new-acc-admin" onclick="onNewAdminClick()" class="material-icons" title="Admin">&#xE835;</i>
+                                </div>
+                                <div class="new-cancel-col">
+                                    <i onclick="onCancelAccount()" class="material-icons" title="Cancel">&#xE5C9;</i>
+                                </div>
+                                <div class="new-save-col">
+                                    <i onclick="onSaveClick()" class="material-icons" title="Save">&#xE161;</i>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
                         </div>
-                        <div class="new-password-col">
-                            <input id="new-acc-password" type="password" title="Password" placeholder="password" />
-                        </div>
-                        <div class="new-admin-col">
-                            <i id="new-acc-admin" onclick="onNewAdminClick()" class="material-icons" title="Admin">&#xE835;</i>
-                        </div>
-                        <div class="new-cancel-col">
-                            <i onclick="onCancelAccount()" class="material-icons" title="Cancel">&#xE5C9;</i>
-                        </div>
-                        <div class="new-save-col">
-                            <i onclick="onSaveClick()" class="material-icons" title="Save">&#xE161;</i>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
 
 
-                <div class="header-row">
-                    <div class="email-col">email</div>
-                    <div class="admin-title" style="padding-right: 175px;">admin</div>
-                    <div class="clearfix"></div>
-                </div>
-                <span id="users-template-parent">
+                        <div class="header-row">
+                            <div class="email-col">email</div>
+                            <div class="admin-title" style="padding-right: 175px;">admin</div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <span id="users-template-parent">
                     <div id="users-template" class="user-row">
                             <div class="email-col hide-on-reset">{{email}}</div>
                             <div class="delete-col hide-on-reset"><i onclick="onDeleteClick('{{email}}')" class="material-icons">&#xE872;</i></div> 
@@ -129,154 +138,164 @@
                             <div class="clearfix"></div>                                                        
                     </div>
                 </span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
-<script>
-    var ctrl = ctrl ? ctrl : new EmployeesCtrl();
-    var user = JSON.parse(localStorage.getItem('SAUser'));
+        <script>
+            var ctrl = ctrl ? ctrl : new EmployeesCtrl();
+            var user = JSON.parse(localStorage.getItem('SAUser'));
 
-    function onAdminClick() {
-        ctrl.adminIf.viewable = true;
-        ctrl.homeIf.viewable = false;
-        ctrl.adminIf.reconcile();
-        ctrl.homeIf.reconcile();
-        window.scroll(0, 0);
-        if (!ctrl.users) ctrl.getUsers();
-        ctrl.usrAdminIf.viewable = user.admin;
-        ctrl.usrAdminIf.reconcile();
-        ctrl.usrCardIf.viewable = !user.admin;
-        ctrl.usrCardIf.reconcile();
+            function onAdminClick() {
+                ctrl.adminIf.viewable = true;
+                ctrl.homeIf.viewable = false;
+                ctrl.adminIf.reconcile();
+                ctrl.homeIf.reconcile();
+                window.scroll(0, 0);
+                if (!ctrl.users) ctrl.getUsers();
+                ctrl.usrAdminIf.viewable = user.admin;
+                ctrl.usrAdminIf.reconcile();
+                ctrl.usrCardIf.viewable = !user.admin;
+                ctrl.usrCardIf.reconcile();
 
-        if (!user.admin) {
-            ctrl.usrCardBind.obj = user;
-            ctrl.usrCardBind.reconcile();
-        }
+                if (!user.admin) {
+                    ctrl.usrCardBind.obj = user;
+                    ctrl.usrCardBind.reconcile();
+                }
 
-    }
-
-
-    function onHomeClick() {
-        ctrl.adminIf.viewable = false;
-        ctrl.homeIf.viewable = true;
-        ctrl.adminIf.reconcile();
-        ctrl.homeIf.reconcile();
-        window.scroll(0, 0);
-    }
-
-    function onAddAccount() {
-        ctrl.newUserIf.viewable = true;
-        ctrl.newUserIf.reconcile();
-    }
-
-    function onCancelAccount() {
-        ctrl.newUserIf.viewable = false;
-        ctrl.newUserIf.reconcile();
-    }
-
-    function onNewAdminClick(event) {
-        var e = document.getElementById('new-acc-admin');
-        ctrl.newAccount.admin = !ctrl.newAccount.admin;
-        if (ctrl.newAccount.admin) {
-            e.innerHTML = '&#xE834;';
-        } else {
-            e.innerHTML = '&#xE835;';
-        }
-    }
-
-    function onSaveClick() {
-        ctrl.newAccount.email = document.getElementById('new-acc-email').value;
-        ctrl.newAccount.password = document.getElementById('new-acc-password').value;
-        ctrl.postUser();
-    }
-
-    function onDeleteClick(email) {
-        var r = confirm("Are you sure you want to delete " + email + "?");
-        if (r == true) {
-            ctrl.deleteUser(email);
-        }
-    }
-
-    function onUpdateAdminClick(email, admin, el) {
-        var b = !JSON.parse(admin);
-        ctrl.updateUser(email, null, b);
-    }
-
-    function onResetPwdClick(email, el) {
-        var cols = el.parentNode.parentNode.childNodes;
-        for (var i = 0; i < cols.length; i++) {
-            if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
-                cols[i].style.display = 'none';
-            } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
-                cols[i].style.display = 'inline-block';
             }
-        }
-    }
 
-    function onCancelReset(el) {
-        var cols = el.parentNode.parentNode.childNodes;
-        for (var i = 0; i < cols.length; i++) {
-            if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
-                cols[i].style.display = 'inline-block';
-            } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
-                cols[i].style.display = 'none';
+
+            function onHomeClick() {
+                ctrl.adminIf.viewable = false;
+                ctrl.homeIf.viewable = true;
+                ctrl.adminIf.reconcile();
+                ctrl.homeIf.reconcile();
+                window.scroll(0, 0);
             }
-        }
-    }
 
-    function onSaveReset(email, el) {
-        var cols = el.parentNode.parentNode.childNodes;
-        var newpass, repeatpass;
-
-        for (var i = 0; i < cols.length; i++) {
-            if (cols[i].classList && cols[i].classList.contains('new-pwd-col-1')) {
-                newpass = cols[i].childNodes[1].value;
+            function onAddAccount() {
+                ctrl.newUserIf.viewable = true;
+                ctrl.newUserIf.reconcile();
             }
-            if (cols[i].classList && cols[i].classList.contains('new-pwd-col-2')) {
-                repeatpass = cols[i].childNodes[1].value;
+
+            function onCancelAccount() {
+                ctrl.newUserIf.viewable = false;
+                ctrl.newUserIf.reconcile();
             }
-        }
 
-        if (newpass == null || newpass == '') {
-            alert('Password reset failed: passwords must not be empty.');
-            return;
-        }
-
-        if (newpass != repeatpass) {
-            alert('Password reset failed: passwords must match.');
-            return;
-        }
-
-        ctrl.updateUser(email, newpass, null);
-    }
-
-    function onNonAdminResetPwd(email, el) {
-        var cols = el.parentNode.parentNode.childNodes;
-        for (var i = 0; i < cols.length; i++) {
-            if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
-                cols[i].style.display = 'none';
-            } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
-                cols[i].style.display = 'inline';
+            function onNewAdminClick(event) {
+                var e = document.getElementById('new-acc-admin');
+                ctrl.newAccount.admin = !ctrl.newAccount.admin;
+                if (ctrl.newAccount.admin) {
+                    e.innerHTML = '&#xE834;';
+                } else {
+                    e.innerHTML = '&#xE835;';
+                }
             }
-        }
-    }
 
-    function onNonAdminCancelReset(el) {
-        var cols = el.parentNode.parentNode.childNodes;
-        for (var i = 0; i < cols.length; i++) {
-            if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
-                cols[i].style.display = 'inline';
-            } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
-                cols[i].style.display = 'none';
+            function onSaveClick() {
+                ctrl.newAccount.email = document.getElementById('new-acc-email').value;
+                ctrl.newAccount.password = document.getElementById('new-acc-password').value;
+                ctrl.postUser();
             }
-        }
-    }
 
-    function openInNewTab(url) {
-        var win = window.open(url, '_blank');
-        win.focus();
-    }
+            function onDeleteClick(email) {
+                var r = confirm("Are you sure you want to delete " + email + "?");
+                if (r == true) {
+                    ctrl.deleteUser(email);
+                }
+            }
 
-</script>
+            function onUpdateAdminClick(email, admin, el) {
+                var b = !JSON.parse(admin);
+                ctrl.updateUser(email, null, b);
+            }
+
+            function onResetPwdClick(email, el) {
+                var cols = el.parentNode.parentNode.childNodes;
+                for (var i = 0; i < cols.length; i++) {
+                    if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+                        cols[i].style.display = 'none';
+                    } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
+                        cols[i].style.display = 'inline-block';
+                    }
+                }
+            }
+
+            function onCancelReset(el) {
+                var cols = el.parentNode.parentNode.childNodes;
+                for (var i = 0; i < cols.length; i++) {
+                    if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+                        cols[i].style.display = 'inline-block';
+                    } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
+                        cols[i].style.display = 'none';
+                    }
+                }
+            }
+
+            function onSaveReset(email, el) {
+                var cols = el.parentNode.parentNode.childNodes;
+                var newpass, repeatpass;
+
+                for (var i = 0; i < cols.length; i++) {
+                    if (cols[i].classList && cols[i].classList.contains('new-pwd-col-1')) {
+                        newpass = cols[i].childNodes[1].value;
+                    }
+                    if (cols[i].classList && cols[i].classList.contains('new-pwd-col-2')) {
+                        repeatpass = cols[i].childNodes[1].value;
+                    }
+                }
+
+                if (newpass == null || newpass == '') {
+                    alert('Password reset failed: passwords must not be empty.');
+                    return;
+                }
+
+                if (newpass != repeatpass) {
+                    alert('Password reset failed: passwords must match.');
+                    return;
+                }
+
+                ctrl.updateUser(email, newpass, null);
+            }
+
+            function onNonAdminResetPwd(email, el) {
+                var cols = el.parentNode.parentNode.childNodes;
+                for (var i = 0; i < cols.length; i++) {
+                    if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+                        cols[i].style.display = 'none';
+                    } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
+                        cols[i].style.display = 'inline';
+                    }
+                }
+            }
+
+            function onNonAdminCancelReset(el) {
+                var cols = el.parentNode.parentNode.childNodes;
+                for (var i = 0; i < cols.length; i++) {
+                    if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+                        cols[i].style.display = 'inline';
+                    } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
+                        cols[i].style.display = 'none';
+                    }
+                }
+            }
+
+            function openInNewTab(url) {
+                var win = window.open(url, '_blank');
+                win.focus();
+            }
+
+            function downloadURI(uri, name) {
+                var link = document.createElement("a");
+                link.download = name;
+                link.href = uri;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                delete link;
+            }
+
+        </script>
