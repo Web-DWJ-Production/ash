@@ -21,6 +21,7 @@
     "gulp-batch-replace": "0.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-file-insert": "^1.0.3",
+    "gulp-js-minify": "0.0.3",
     "gulp-json-editor": "^2.2.1",
     "gulp-less": "^3.3.2",
     "gulp-minify-css": "^1.2.4",
