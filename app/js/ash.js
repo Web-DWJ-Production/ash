@@ -59,7 +59,7 @@ loginCtrl.signout = function () {
 loginCtrl.resetPwd = function () {
     var email = document.getElementById('login_email_input').value;
     if (!email) {
-        alert('Enter your email address, then click reset password.');
+        alert('Enter your email address, then click forgot password.');
         return;
     }
     var body = { email: document.getElementById('login_email_input').value }
