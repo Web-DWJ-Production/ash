@@ -13,6 +13,7 @@
     <link href="css/libs.min.css" rel="stylesheet">
     <link href="css/styles.min.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="page-wrapper">
 
@@ -50,12 +51,12 @@
                         <li><a href="{contact-us}"><span class="nav-txt">Contact Us</span></a></li>
                         <li id="signin-btn" style="display: list-item;"><button class="lame-btn" onclick="linksCtrl.redirectToEmployees()"><span class="nav-txt"><i class="material-icons">&#xE853;</i></span></button></li>
                         <li id="signout-btn" class="dropdown">
-                                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="material-icons">&#xE853;</i></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a onclick="linksCtrl.redirectToEmployees()"><span class="nav-txt">Employee Apps</span></a></li>
-                                    <li ><a onclick="loginCtrl.signout()" href="{home}"><span class="nav-txt">Sign out</span></a></li>                                                            
-                                </ul>
-                            </li>
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="material-icons">&#xE853;</i></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="linksCtrl.redirectToEmployees()"><span class="nav-txt">Employee Apps</span></a></li>
+                                <li><a onclick="loginCtrl.signout()" href="{home}"><span class="nav-txt">Sign out</span></a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -78,11 +79,14 @@
     <div class="bottom">
         <!-- footer -->
         <div class="footer-container">
-                        <div class="footer-logo-container"><img src="images/logo-grey.svg"></div>
-                    <div class="footer-links-container">
-                        <span class="indent-links"><a href="{careers}">Careers</a></span> /
-                        <span class="indent-links"><a href="{contact-us}">Contact</a></span>
-                    </div>
+            <div class="center-content">
+                <div class="footer-logo-container"><img src="images/logo-grey.svg"></div>
+                <span class='match-txt'>Think we're a match?</span>                
+                <div class="footer-links-container">
+                    <span class="indent-links"><a href="{careers}">Please view our current job openings.</a></span>
+                    <span class="indent-links"><a href="{contact-us}">We'd like to hear from you.</a></span>
+                </div>
+            </div>
             <div class="sub-section">
                 <div class="row-layout">
                     <div class="row-column left">STRATEGIC ANALYTIX © COPYRIGHT 2017</div>
@@ -91,7 +95,7 @@
             </div>
         </div>
     </div>
-    
+
 </body>
 
 <!-- JS -->
