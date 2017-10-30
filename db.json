@@ -11,6 +11,46 @@
       "email": "test@dwjproduction.com",
       "password": "$2a$10$bC4bnA1VDowMwXXn7Pk3YuEbD14MSliBXx6rBqMV3mwsIrX6WC3g6",
       "admin": false
+    },
+    {
+      "email": "sudhir.bahl@strategic-analytix.com",
+      "password": "$2a$10$Zkrg4S5Hfipl7tCqfXARSu3AZiEfV5XhYZrjAAR3PK/H/Tv0J4JKu",
+      "admin": true
+    },
+    {
+      "email": "shawn.bonner@strategic-analytix.com",
+      "password": "$2a$10$R6aDjXZma9TQ.Au/HpQ5DuPyyZ24cC1.fNzVtxJNCbTJh2fe6sjQS",
+      "admin": true
+    },
+    {
+      "email": "garey.reece@strategic-analytix.com",
+      "password": "$2a$10$XJqD.Z44FHLQv4wUcWr8d.QWCWVTfns12VAjz78p09UfOrVLmKoim",
+      "admin": false
+    },
+    {
+      "email": "bob.webb@strategic-analytix.com",
+      "password": "$2a$10$LMJs2Z2Pk7bEkoz7X6aCEuQ9Skee3isWC2ijcRL7SDdSJ0xNl2vjm",
+      "admin": false
+    },
+    {
+      "email": "christine.bowman@strategic-analytix.com",
+      "password": "$2a$10$rhTUz15JtirwPWu9RGn1DeGHkw8EeDu/200DX.0A7InqyVKfM.VyO",
+      "admin": false
+    },
+    {
+      "email": "diane.horn@strategic-analytix.com",
+      "password": "$2a$10$mLtndBxlPT1E5zTF09nm3uxFGqs7VyBVI7UH1jIhVZCP.aj.J3erW",
+      "admin": false
+    },
+    {
+      "email": "melody.cartwright@strategic-analytix.com",
+      "password": "$2a$10$Llw0MUW0UnTNSUjpY9Hvo.tJnRf8lW0kiVfXNJoF7Cokb4Xu7CdmG",
+      "admin": false
+    },
+    {
+      "email": "irina.kass@strategic-analytix.com",
+      "password": "$2a$10$sPnDITXlwzAUKeUR9CrUq.fZDThh1xkLxcEdh/eOr9LrfyU2oiqKy",
+      "admin": false
     }
   ]
 }
