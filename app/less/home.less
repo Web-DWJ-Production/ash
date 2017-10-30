@@ -1,5 +1,6 @@
 .content-body {
     &.home {
+        .ceruleanCarousel { overflow-x: hidden;}
         .carousel-navigation {
             position: absolute;
             top:0;
@@ -165,6 +166,8 @@
                     display: none;
                     -webkit-animation:1.5s  fadeOutLeft ease;
                     animation:1.5s fadeOutLeft ease;
+                    padding: 0px 5px;
+                    @media @half-screen { padding-right: 10px; }
 
                     &.active {
                         display: block;
