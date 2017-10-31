@@ -90,7 +90,7 @@ gulp.task('clean', function () {
 gulp.task('app-js-min', function () {
   // Bundle all JS files into one files
   return gulp.src(config.src.appJs)
-    .pipe(concat('bundle.min.js'))
+    .pipe(concat('bundle.js'))
     .pipe(minifyJs())
     .pipe(gulp.dest(config.dest.appJs));
 });
@@ -107,7 +107,7 @@ gulp.task('lib-js-min', function () {
 gulp.task('app-js', function () {
   // Bundle all JS files into one files
   return gulp.src(config.src.appJs)
-    .pipe(concat('bundle.min.js'))
+    .pipe(concat('bundle.js'))
     .pipe(gulp.dest(config.dest.appJs));
 });
 
