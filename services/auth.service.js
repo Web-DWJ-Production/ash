@@ -12,7 +12,7 @@ var service = {}; // service object
 service.auth = (req, res) => {
     
     // Find the user with the given email.
-    var u = db.get('users').find({ email: req.body.email}).value();
+    var u = db.get('users').find({ email: req.body.email.toLowerCase()}).value();
 
     if (!u) {
         res.status(200).json({message: 'Authentication Failed: No user found.'});
@@ -22,8 +22,6 @@ service.auth = (req, res) => {
         // The authentication is succesful, return a JWT.
         res.status(200).json(jwt.sign(u, secret));
     } else {
-        console.log(u);
-        console.log(req.body.password);
         if (req.body.password === u.tmpPass) {
             if ((new Date().getTime()) <= u.tmpPassExp) {
                 res.status(200).json(jwt.sign(u, secret));
