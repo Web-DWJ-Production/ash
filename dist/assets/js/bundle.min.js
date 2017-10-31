@@ -31,9 +31,14 @@ loginCtrl.login = function () {
         return JSON.parse(window.atob(base64));
     };
 
+    function cleanString(string){
+        var trim = string.replace(/^\s+|\s+$/g,'');
+        return trim.toLowerCase();
+    }
+
     var body = {
-        email: document.getElementById('login_email_input').value,
-        password: document.getElementById('login_password_input').value
+        email: cleanString(document.getElementById('login_email_input').value),
+        password: cleanString(document.getElementById('login_password_input').value)
     }
 
     if (!body.email || !body.password) {
