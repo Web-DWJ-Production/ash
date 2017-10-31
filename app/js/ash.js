@@ -198,7 +198,7 @@ function CareersCtrl() {
 
     this.options = {
         valueNames: [{ data: ['id'] }, 'title', 'category', 'skillLevel', 'description', 'capabilities', 'qualifications'],
-        item: '<li data-id="id" onclick="onCareerInfoClick(this)"><div class="position-container"><div class="position-section position-icon"></div><div class="position-section position-info"><div class="position-row"><span class="title"></span></div><div class="position-row flex-row"><div class="category"></div><div>Full-time</div><div class="position-skill">Skill Level: <span class="skillLevel"></span></div></div></div><div class="position-section position-details"><a class="cir-btn"><span>More Information</span></a></div></div></li>',
+        item: '<li data-id="id" onclick="onCareerInfoClick(this)"><div class="position-container"><div class="position-section position-icon"></div><div class="position-section position-info"><div class="position-row"><span class="title"></span></div><div class="position-row flex-row"><div class="category"></div><div>Full-time</div><div class="position-skill">Skill Level: <span class="skillLevel"></span></div></div></div><div class="position-section position-details"><div class="cir-btn"><span>More Information</span></div></div></div></li>',
         page: 5,
         pagination: true
     }

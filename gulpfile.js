@@ -57,7 +57,7 @@ var config = {
       ['{contact-us}','contactus'],
       ['{employee-portal}','underconstruction'],
       ['{facebook-link}','underconstruction'],
-      ['{twitter-link}','underconstruction'],
+      ['{twitter-link}','https://twitter.com/intent/tweet?text=Contact&url=http%3A%2F%2Fwww.strategic-analytix.com%2Fcontact.html%23.Wfiz1tSH08o.twitter&related='],
       ['{linkedin-link}','underconstruction'],
       ['{employee-portal}','employees']
     ],    

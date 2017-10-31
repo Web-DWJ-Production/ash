@@ -3,15 +3,16 @@
     .content-box-container {
         margin-top: 20px;
         .content-box {
+            width: 100%;
             .flex-row {
                 width: 100%;
                 position: relative;
-                .flex-column {
-                    flex:1;
-                    &.service-browser {}
-                    &.service-content{ 
-                        font-size: 1.1rem;
-                        width: 50%;
+                justify-content: initial !important;
+                .flex-column {                    
+                    &.service-browser {
+                        text-align: right;
+                    }
+                    &.service-content{                                             
                         .content-txt { margin-bottom: 10px;}
                         ul {
                             li {

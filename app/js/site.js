@@ -161,17 +161,22 @@ function setCarousel(){
 }
 
 function adjust(me) {
-    var carouselBtns = document.getElementsByClassName('carousel-btn');
-    var carouselContent = document.getElementsByClassName('switch-content');
+    if(homeCarousel != null && homeCarousel.length > 0){
+        var carouselBtns = document.getElementsByClassName('carousel-btn');
+        var carouselContent = document.getElementsByClassName('switch-content');
 
-    var outgoingId = me.currId;
-    var incomingId = (me.currId == (me.members.length - 1)) ? 0 : (me.currId + 1);
+        var outgoingId = me.currId;
+        var incomingId = (me.currId == (me.members.length - 1)) ? 0 : (me.currId + 1);
 
-    carouselBtns[outgoingId].classList.remove('active-btn');
-    carouselContent[outgoingId].classList.remove('active');
+        carouselBtns[outgoingId].classList.remove('active-btn');
+        carouselContent[outgoingId].classList.remove('active');
 
-    carouselBtns[incomingId].classList.add('active-btn');
-    carouselContent[incomingId].classList.add('active');
+        carouselBtns[incomingId].classList.add('active-btn');
+        carouselContent[incomingId].classList.add('active');   
+    }
+    else {
+        carousel = null;
+    }
 }
 
 function go(id) {
