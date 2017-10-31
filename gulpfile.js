@@ -90,7 +90,7 @@ gulp.task('clean', function () {
 gulp.task('app-js-min', function () {
   // Bundle all JS files into one files
   return gulp.src(config.src.appJs)
-    .pipe(concat('bundle.js'))
+    .pipe(concat('bundle.min.js'))
     .pipe(minifyJs())
     .pipe(gulp.dest(config.dest.appJs));
 });
@@ -195,6 +195,8 @@ gulp.task('build-production', function(){
 });
 /* Local Builds */
 gulp.task('local', gulpSequence('clean', 'build-local', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));
+gulp.task('local-min', gulpSequence('clean', 'build-local', ['lib-fonts', 'lib-css', 'lib-js-min', 'app-imgs', 'app-js-min', 'app-less', 'copy-views'], 'build-html'));
+
 
 /* Development Build */
 gulp.task('dev', gulpSequence('clean', 'build-dev', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));
