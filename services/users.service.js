@@ -71,7 +71,7 @@ service.postUser = (req, res) => {
     }
 
     db.get('users')
-        .push({ email: req.body.email, password: bcrypt.hashSync(req.body.password, 10), admin: req.body.admin })
+        .push({ email: req.body.email.toLowerCase(), password: bcrypt.hashSync(req.body.password, 10), admin: req.body.admin })
         .write();
 
     var newUser = db.get('users').find({ email: req.body.email }).value();
