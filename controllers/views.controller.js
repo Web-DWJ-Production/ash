@@ -14,6 +14,8 @@ router.get('/aboutus', getAboutUs);
 router.get('/careers', getCareers);
 router.get('/leadership', getLeadership);
 router.get('/business-relationships', getRelationships);
+router.get('/login', getLogin);
+
 
 router.get('/employees', expressJWT({ secret: secret }), getEmployees);
 
@@ -27,7 +29,7 @@ function getAboutUs(req, res) { res.sendFile('aboutus.html', { root: path.join(_
 function getCareers(req, res) { res.sendFile('careers.html', { root: path.join(__dirname, '../dist') }) };
 function getLeadership(req, res) { res.sendFile('leadership.html', { root: path.join(__dirname, '../dist') }) };
 function getRelationships(req, res) { res.sendFile('relationships.html', { root: path.join(__dirname, '../dist') }) };
-
+function getLogin(req, res) { res.sendFile('login.html', { root: path.join(__dirname, '../dist') }) };
 
 function getUC(req, res) { res.sendFile('underconstruction.html', { root: path.join(__dirname, '../dist') }) };
 

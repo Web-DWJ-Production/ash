@@ -82,10 +82,12 @@ linksCtrl.redirectToEmployees = function () {
     };
 
     cinnabarisland.get('/employees', function (data) {
+        window.location = "/employees"
         document.open();
         document.write(data);
         document.close();
     }, headers, true);
+
 }
 
 
@@ -1011,6 +1013,8 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
             var currEl = that.members[that.currId];
             var nextEl = that.members[nextId];
             that.currId = nextId;
+
+            if (!currEl) return;
 
             // Position the next Element to be animated.
             nextEl.style.top = currEl.clientTop + 'px';
