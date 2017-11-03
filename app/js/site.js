@@ -19,6 +19,13 @@ if(homeCarousel != null && homeCarousel.length > 0){
 var carCtrl = carCtrl ? carCtrl : new CareersCtrl();
 var jobList = new List('jobs', carCtrl.options, carCtrl.values);
 
+/* Employees Page */
+if(document.getElementsByClassName('employees-body') != null && document.getElementsByClassName('employees-body').length > 0){
+    var eCtrl = ((document.getElementsByClassName('employees-body') != null && document.getElementsByClassName('employees-body').length > 0)|| !eCtrl) ? new EmployeesCtrl() : eCtrl;
+    var user = JSON.parse(localStorage.getItem('SAUser'));
+}
+
+
 /* Email Form */
 function EmailSend(formName){
     var formData = $('#'+formName).serializeArray();
@@ -104,6 +111,159 @@ function BuildForm(formData){
 }
 
 /* Private Methods */
+/* Employee */
+function onAdminClick() {
+    eCtrl.adminIf.viewable = true;
+    eCtrl.homeIf.viewable = false;
+    eCtrl.adminIf.reconcile();
+    eCtrl.homeIf.reconcile();
+    window.scroll(0, 0);
+    if (!eCtrl.users) eCtrl.getUsers();
+    eCtrl.usrAdminIf.viewable = user.admin;
+    eCtrl.usrAdminIf.reconcile();
+    eCtrl.usrCardIf.viewable = !user.admin;
+    eCtrl.usrCardIf.reconcile();
+
+    if (!user.admin) {
+        eCtrl.usrCardBind.obj = user;
+        eCtrl.usrCardBind.reconcile();
+    }
+
+}
+
+
+function onHomeClick() {
+    eCtrl.adminIf.viewable = false;
+    eCtrl.homeIf.viewable = true;
+    eCtrl.adminIf.reconcile();
+    eCtrl.homeIf.reconcile();
+    window.scroll(0, 0);
+}
+
+function onAddAccount() {
+    eCtrl.newUserIf.viewable = true;
+    eCtrl.newUserIf.reconcile();
+}
+
+function onCancelAccount() {
+    eCtrl.newUserIf.viewable = false;
+    eCtrl.newUserIf.reconcile();
+}
+
+function onNewAdminClick(event) {
+    var e = document.getElementById('new-acc-admin');
+    eCtrl.newAccount.admin = !eCtrl.newAccount.admin;
+    if (eCtrl.newAccount.admin) {
+        e.innerHTML = '&#xE834;';
+    } else {
+        e.innerHTML = '&#xE835;';
+    }
+}
+
+function onSaveClick() {
+    eCtrl.newAccount.email = document.getElementById('new-acc-email').value;
+    eCtrl.newAccount.password = document.getElementById('new-acc-password').value;
+    eCtrl.postUser();
+}
+
+function onDeleteClick(email) {
+    var r = confirm("Are you sure you want to delete " + email + "?");
+    if (r == true) {
+        eCtrl.deleteUser(email);
+    }
+}
+
+function onUpdateAdminClick(email, admin, el) {
+    var b = !JSON.parse(admin);
+    eCtrl.updateUser(email, null, b);
+}
+
+function onResetPwdClick(email, el) {
+    var cols = el.parentNode.parentNode.childNodes;
+    for (var i = 0; i < cols.length; i++) {
+        if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+            cols[i].style.display = 'none';
+        } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
+            cols[i].style.display = 'inline-block';
+        }
+    }
+}
+
+function onCancelReset(el) {
+    var cols = el.parentNode.parentNode.childNodes;
+    for (var i = 0; i < cols.length; i++) {
+        if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+            cols[i].style.display = 'inline-block';
+        } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
+            cols[i].style.display = 'none';
+        }
+    }
+}
+
+function onSaveReset(email, el) {
+    var cols = el.parentNode.parentNode.childNodes;
+    var newpass, repeatpass;
+
+    for (var i = 0; i < cols.length; i++) {
+        if (cols[i].classList && cols[i].classList.contains('new-pwd-col-1')) {
+            newpass = cols[i].childNodes[1].value;
+        }
+        if (cols[i].classList && cols[i].classList.contains('new-pwd-col-2')) {
+            repeatpass = cols[i].childNodes[1].value;
+        }
+    }
+
+    if (newpass == null || newpass == '') {
+        alert('Password reset failed: passwords must not be empty.');
+        return;
+    }
+
+    if (newpass != repeatpass) {
+        alert('Password reset failed: passwords must match.');
+        return;
+    }
+
+    eCtrl.updateUser(email, newpass, null);
+}
+
+function onNonAdminResetPwd(email, el) {
+    var cols = el.parentNode.parentNode.childNodes;
+    for (var i = 0; i < cols.length; i++) {
+        if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+            cols[i].style.display = 'none';
+        } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
+            cols[i].style.display = 'inline';
+        }
+    }
+}
+
+function onNonAdminCancelReset(el) {
+    var cols = el.parentNode.parentNode.childNodes;
+    for (var i = 0; i < cols.length; i++) {
+        if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+            cols[i].style.display = 'inline';
+        } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
+            cols[i].style.display = 'none';
+        }
+    }
+}
+
+function openInNewTab(url) {
+    var win = window.open(url, '_blank');
+    win.focus();
+}
+
+function downloadURI(uri, name) {
+    var link = document.createElement("a");
+    link.download = name;
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    delete link;
+}
+
+/* Careers */
 function onCareerInfoClick(elem){
     // Get id
     var id = $(elem).attr("data-id");
@@ -157,7 +317,7 @@ function ReturnPosition(){
 }
 
 function setCarousel(){
-    carousel = new CeruleanCarousel(document.getElementsByClassName('carousel-item'), 10000, adjust);    
+    carousel = new CeruleanCarousel(document.getElementsByClassName('carousel-item'), 15000, adjust);    
 }
 
 function adjust(me) {

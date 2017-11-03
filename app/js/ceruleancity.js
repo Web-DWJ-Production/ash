@@ -155,7 +155,7 @@ function SparkIf(element, viewable, display) {
 
     this.element = element;
     this.viewable = viewable;
-    this.display = display || this.element.style.display || this.element.style.display || 'initial';
+    this.display = display || this.element.style.display || this.element.style.display || '';
 
     this.hide = function () {
         this.viewable = false;

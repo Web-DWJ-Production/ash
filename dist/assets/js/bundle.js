@@ -89,7 +89,7 @@ linksCtrl.redirectToEmployees = function () {
     }, headers, true);
 
 }
-
+// Login
 
 function EmployeesCtrl() {
     this.adminIf = new SparkIf(document.getElementById('employees-admin-component'), false);
@@ -166,9 +166,9 @@ function EmployeesCtrl() {
 
         }, headers, true);
     }
-
-    // INIT
 }
+
+// Careers
 
 function CareersCtrl() {
     this.positions = new SparkIf(document.getElementById('careers-all-pos'), true);
@@ -1118,7 +1118,7 @@ function SparkIf(element, viewable, display) {
 
     this.element = element;
     this.viewable = viewable;
-    this.display = display || this.element.style.display || this.element.style.display || 'initial';
+    this.display = display || this.element.style.display || this.element.style.display || '';
 
     this.hide = function () {
         this.viewable = false;
@@ -1239,6 +1239,32 @@ ceruleancity.insert = function (html, name, value) {
  * 
  * Alex Goley
  */
+// Browser Check
+var browserChecks = {
+    // Opera 8.0+
+    isOpera: false,
+    // Firefox 1.0+
+    isFirefox: false,
+    // Safari 3.0+ "[object HTMLElementConstructor]" 
+    isSafari:false,
+    // Internet Explorer 6-11
+    isIE:false,
+    // Edge 20+
+    isEdge:false,
+    // Chrome 1+
+    isChrome:false,    
+    // Blink engine detection
+    isBlink: false
+};
+
+browserChecks.isOpera= (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+browserChecks.isFirefox= typeof InstallTrigger !== 'undefined';
+browserChecks.isSafari=/constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
+browserChecks.isIE=/*@cc_on!@*/false || !!document.documentMode;
+browserChecks.isEdge=!browserChecks.isIE && !!window.StyleMedia;
+browserChecks.isChrome=!!window.chrome && !!window.chrome.webstore;
+browserChecks.isBlink= (browserChecks.isChrome || browserChecks.isOpera) && !!window.CSS;  
+
 
 // VARIABLES
 var cinnabarisland = {}; // initialize the cinnabarisland object.
@@ -1252,13 +1278,17 @@ var cinnabarisland = {}; // initialize the cinnabarisland object.
  * @param {boolean} async - optional: flag to run asynchronous request. Defaults to false.
  */
 cinnabarisland.get = function (url, next, headers, async) {
-    var xhttp = cinnabarisland.getHTTPObject();
+    var xhttp = cinnabarisland.getHTTPObject();    
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             next(this.responseText);
         }
     };
-
+    // IE prevent caching results by URI
+    if(browserChecks.isIE){
+        url = url + "?random="+Math.random();
+    }
+    
     var isAsync = (typeof async === 'undefined') ? false : async;    
     xhttp.open("GET", url, isAsync);    
     if (headers) {
@@ -1348,7 +1378,7 @@ cinnabarisland.delete = function(url, next, headers, async) {
  * @return a new HTTP Request object. 
  */
 cinnabarisland.getHTTPObject = function () {
-    if (window.XMLHttpRequest) {
+    if (window.XMLHttpRequest) {    
         // code for modern browsers
         return new XMLHttpRequest();
     } else {
@@ -1518,6 +1548,13 @@ if(homeCarousel != null && homeCarousel.length > 0){
 var carCtrl = carCtrl ? carCtrl : new CareersCtrl();
 var jobList = new List('jobs', carCtrl.options, carCtrl.values);
 
+/* Employees Page */
+if(document.getElementsByClassName('employees-body') != null && document.getElementsByClassName('employees-body').length > 0){
+    var eCtrl = ((document.getElementsByClassName('employees-body') != null && document.getElementsByClassName('employees-body').length > 0)|| !eCtrl) ? new EmployeesCtrl() : eCtrl;
+    var user = JSON.parse(localStorage.getItem('SAUser'));
+}
+
+
 /* Email Form */
 function EmailSend(formName){
     var formData = $('#'+formName).serializeArray();
@@ -1603,6 +1640,159 @@ function BuildForm(formData){
 }
 
 /* Private Methods */
+/* Employee */
+function onAdminClick() {
+    eCtrl.adminIf.viewable = true;
+    eCtrl.homeIf.viewable = false;
+    eCtrl.adminIf.reconcile();
+    eCtrl.homeIf.reconcile();
+    window.scroll(0, 0);
+    if (!eCtrl.users) eCtrl.getUsers();
+    eCtrl.usrAdminIf.viewable = user.admin;
+    eCtrl.usrAdminIf.reconcile();
+    eCtrl.usrCardIf.viewable = !user.admin;
+    eCtrl.usrCardIf.reconcile();
+
+    if (!user.admin) {
+        eCtrl.usrCardBind.obj = user;
+        eCtrl.usrCardBind.reconcile();
+    }
+
+}
+
+
+function onHomeClick() {
+    eCtrl.adminIf.viewable = false;
+    eCtrl.homeIf.viewable = true;
+    eCtrl.adminIf.reconcile();
+    eCtrl.homeIf.reconcile();
+    window.scroll(0, 0);
+}
+
+function onAddAccount() {
+    eCtrl.newUserIf.viewable = true;
+    eCtrl.newUserIf.reconcile();
+}
+
+function onCancelAccount() {
+    eCtrl.newUserIf.viewable = false;
+    eCtrl.newUserIf.reconcile();
+}
+
+function onNewAdminClick(event) {
+    var e = document.getElementById('new-acc-admin');
+    eCtrl.newAccount.admin = !eCtrl.newAccount.admin;
+    if (eCtrl.newAccount.admin) {
+        e.innerHTML = '&#xE834;';
+    } else {
+        e.innerHTML = '&#xE835;';
+    }
+}
+
+function onSaveClick() {
+    eCtrl.newAccount.email = document.getElementById('new-acc-email').value;
+    eCtrl.newAccount.password = document.getElementById('new-acc-password').value;
+    eCtrl.postUser();
+}
+
+function onDeleteClick(email) {
+    var r = confirm("Are you sure you want to delete " + email + "?");
+    if (r == true) {
+        eCtrl.deleteUser(email);
+    }
+}
+
+function onUpdateAdminClick(email, admin, el) {
+    var b = !JSON.parse(admin);
+    eCtrl.updateUser(email, null, b);
+}
+
+function onResetPwdClick(email, el) {
+    var cols = el.parentNode.parentNode.childNodes;
+    for (var i = 0; i < cols.length; i++) {
+        if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+            cols[i].style.display = 'none';
+        } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
+            cols[i].style.display = 'inline-block';
+        }
+    }
+}
+
+function onCancelReset(el) {
+    var cols = el.parentNode.parentNode.childNodes;
+    for (var i = 0; i < cols.length; i++) {
+        if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+            cols[i].style.display = 'inline-block';
+        } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
+            cols[i].style.display = 'none';
+        }
+    }
+}
+
+function onSaveReset(email, el) {
+    var cols = el.parentNode.parentNode.childNodes;
+    var newpass, repeatpass;
+
+    for (var i = 0; i < cols.length; i++) {
+        if (cols[i].classList && cols[i].classList.contains('new-pwd-col-1')) {
+            newpass = cols[i].childNodes[1].value;
+        }
+        if (cols[i].classList && cols[i].classList.contains('new-pwd-col-2')) {
+            repeatpass = cols[i].childNodes[1].value;
+        }
+    }
+
+    if (newpass == null || newpass == '') {
+        alert('Password reset failed: passwords must not be empty.');
+        return;
+    }
+
+    if (newpass != repeatpass) {
+        alert('Password reset failed: passwords must match.');
+        return;
+    }
+
+    eCtrl.updateUser(email, newpass, null);
+}
+
+function onNonAdminResetPwd(email, el) {
+    var cols = el.parentNode.parentNode.childNodes;
+    for (var i = 0; i < cols.length; i++) {
+        if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+            cols[i].style.display = 'none';
+        } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
+            cols[i].style.display = 'inline';
+        }
+    }
+}
+
+function onNonAdminCancelReset(el) {
+    var cols = el.parentNode.parentNode.childNodes;
+    for (var i = 0; i < cols.length; i++) {
+        if (cols[i].classList && cols[i].classList.contains('hide-on-reset')) {
+            cols[i].style.display = 'inline';
+        } else if (cols[i].classList && cols[i].classList.contains('show-on-reset')) {
+            cols[i].style.display = 'none';
+        }
+    }
+}
+
+function openInNewTab(url) {
+    var win = window.open(url, '_blank');
+    win.focus();
+}
+
+function downloadURI(uri, name) {
+    var link = document.createElement("a");
+    link.download = name;
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    delete link;
+}
+
+/* Careers */
 function onCareerInfoClick(elem){
     // Get id
     var id = $(elem).attr("data-id");
@@ -1656,7 +1846,7 @@ function ReturnPosition(){
 }
 
 function setCarousel(){
-    carousel = new CeruleanCarousel(document.getElementsByClassName('carousel-item'), 10000, adjust);    
+    carousel = new CeruleanCarousel(document.getElementsByClassName('carousel-item'), 15000, adjust);    
 }
 
 function adjust(me) {

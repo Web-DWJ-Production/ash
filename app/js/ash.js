@@ -89,7 +89,7 @@ linksCtrl.redirectToEmployees = function () {
     }, headers, true);
 
 }
-
+// Login
 
 function EmployeesCtrl() {
     this.adminIf = new SparkIf(document.getElementById('employees-admin-component'), false);
@@ -166,9 +166,9 @@ function EmployeesCtrl() {
 
         }, headers, true);
     }
-
-    // INIT
 }
+
+// Careers
 
 function CareersCtrl() {
     this.positions = new SparkIf(document.getElementById('careers-all-pos'), true);

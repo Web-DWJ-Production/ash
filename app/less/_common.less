@@ -34,7 +34,7 @@
 @nav-height:90px;
 @angleHeight: 50px;
 @transition-time: 0.5s;
-@comp-content-width: 540px;
+@comp-content-width: 460px;
 
 
 * {
@@ -88,7 +88,7 @@ body { color: rgba(255,255,255,1);}
       }
     }
   }
-  @media @mobile-screen { .color1(background-color, 0.8); }
+  @media @mobile-screen { .color1(background-color, 0.95); }
   .navbar-header { 
     .navbar-toggle {
       border-color: rgba(0,0,0,0);
@@ -135,7 +135,13 @@ body { color: rgba(255,255,255,1);}
     }
   }
   .navbar-collapse {
-    @media @mobile-screen { li { text-align: center; }}
+    @media @mobile-screen { 
+      li { 
+        text-align: center; 
+        font-size: 1.3rem; 
+        a { padding: 20px 10px !important;}
+      }
+    }
     .navbar-nav {
       li {
         &.open { a { background-color: rgba(0,0,0,0); }}
@@ -524,8 +530,8 @@ body { color: rgba(255,255,255,1);}
   &.css-computer {
     margin: 0px auto 140px;
     &.screen {
-      width: 580px;
-      height: 354px;
+      width: calc(~"40px +"@comp-content-width);
+      height: 300px;
       position: relative;
       background: linear-gradient(45deg, @color1 20%, @color3 60%, @color2);
       border: 20px solid #242830;
@@ -600,7 +606,7 @@ body { color: rgba(255,255,255,1);}
     width: @comp-content-width;
     height: 240px;
     left: 50%;
-    margin-left: -270px;
+    margin-left: calc(-@comp-content-width/2);
     overflow: hidden;
     &:before {
       content: "";
