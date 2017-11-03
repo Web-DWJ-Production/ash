@@ -44,4 +44,17 @@
     </div>
 </body>
 
+<script>
+
+document.getElementById('login_password_input').onkeypress = function(e){
+    if (!e) e = window.event;
+    var keyCode = e.keyCode || e.which;
+    if (keyCode == '13'){
+      // Enter pressed
+      loginCtrl.login();
+      return;
+    }
+  }
+</script>
+
 </html>

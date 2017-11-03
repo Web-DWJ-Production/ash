@@ -51,6 +51,8 @@ function CeruleanCarousel(mems, milliseconds, callback, auto) {
             var nextEl = that.members[nextId];
             that.currId = nextId;
 
+            if (!currEl) return;
+
             // Position the next Element to be animated.
             nextEl.style.top = currEl.clientTop + 'px';
             nextEl.style.left = currEl.clientWidth + 'px';

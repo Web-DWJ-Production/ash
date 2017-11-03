@@ -82,10 +82,12 @@ linksCtrl.redirectToEmployees = function () {
     };
 
     cinnabarisland.get('/employees', function (data) {
+        window.location = "/employees"
         document.open();
         document.write(data);
         document.close();
     }, headers, true);
+
 }
 
 
