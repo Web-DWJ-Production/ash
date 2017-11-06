@@ -79,7 +79,7 @@ var config = {
       apiUrl: 'https://strategic-analytix-demo.herokuapp.com'
     },
     production: {
-      apiUrl: ''
+      apiUrl: 'https://www.strategic-analytix.com/'
     }
   }
 };
@@ -194,6 +194,7 @@ gulp.task('build-production', function(){
   }))
   .pipe(gulp.dest("./"));
 });
+
 /* Local Builds */
 gulp.task('local', gulpSequence('clean', 'build-local', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));
 gulp.task('local-min', gulpSequence('clean', 'build-local', ['lib-fonts', 'lib-css', 'lib-js-min', 'app-imgs', 'app-js-min', 'app-less', 'copy-views'], 'build-html'));
