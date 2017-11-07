@@ -32,7 +32,7 @@ var secret = process.env.JWT_SECRET || 'changeme';
 var port = process.env.PORT || 8081;
 
 // EXPRESS ROUTES
-app.use(forceSsl);
+//app.use(forceSsl);
 app.use('/api/auth', require('./controllers/auth.controller.js'));
 app.use('/api/users', require('./controllers/users.controller.js'));
 app.use('/downloads', require('./controllers/downloads.controller.js'));

@@ -79,7 +79,7 @@ var config = {
       apiUrl: 'https://strategic-analytix-demo.herokuapp.com'
     },
     production: {
-      apiUrl: 'https://www.strategic-analytix.com/'
+      apiUrl: 'https://www.strategic-analytix.com'
     }
   }
 };
