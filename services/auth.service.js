@@ -15,6 +15,7 @@ service.auth = (req, res) => {
     var u = db.get('users').find({ email: req.body.email.toLowerCase()}).value();
 
     if (!u) {
+        console.log("Authentication Failed: No user found: [user:"+req.body.email.toLowerCase()+"]");
         res.status(200).json({message: 'Authentication Failed: No user found.'});
     }
 
@@ -28,6 +29,7 @@ service.auth = (req, res) => {
             }
         }
         // The authentication failed.
+        console.log("Authentication Failed: Password does not match: [user:"+req.body.email.toLowerCase()+"]")
         res.status(200).json({message: 'Authentication Failed'});
     }
 }

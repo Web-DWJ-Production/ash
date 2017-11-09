@@ -57,6 +57,7 @@ service.getAll = (req, res) => {
     var all = db.get('users').value();
 
     if (!all) {
+        console.log("Users (getAll) failed.");
         res.status(200).json({ message: 'Users (getAll) failed.' });
     }
 
@@ -83,6 +84,7 @@ service.deleteUser = (req, res) => {
     var email = req.params.email;
 
     if (!email) {
+        console.log("User delete failed: Empty Email Address");
         res.status(200).json({ message: 'Users (deleteUser) failed.' });
     }
 
@@ -90,6 +92,7 @@ service.deleteUser = (req, res) => {
         .remove({ email: email })
         .write();
 
+    console.log("Email Deleted:[email:"+email+"]");
     res.status(200).json(true);
 }
 
