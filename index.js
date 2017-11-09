@@ -4,12 +4,13 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var expressJwt = require('express-jwt');
 var path = require('path');
+var mongoose = require('mongoose');
+var database = require('./db/config');
 
 // EXPRESS CONFIG
 
 var forceSsl = function (req, res, next) {
-    if (req.headers['x-forwarded-proto'] !== 'https') {
-        console.log(req.get('Host'));
+    if (req.headers['x-forwarded-proto'] !== 'https') {        
         if (req.get('Host').indexOf('localhost') < 0) {
             return res.redirect(['https://', req.get('Host'), req.url].join(''));
         }
@@ -17,6 +18,9 @@ var forceSsl = function (req, res, next) {
     return next();
 };
 
+// DB CONFIG
+mongoose.Promise = global.Promise;
+mongoose.connect(database.remoteUrl, { useMongoClient: true });
 
 var app = express();
 app.use(cors()); // enable cors
