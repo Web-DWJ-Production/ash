@@ -38,7 +38,7 @@ loginCtrl.login = function () {
 
     var body = {
         email: cleanString(document.getElementById('login_email_input').value),
-        password: cleanString(document.getElementById('login_password_input').value)
+        password: document.getElementById('login_password_input').value
     }
 
     if (!body.email || !body.password) {

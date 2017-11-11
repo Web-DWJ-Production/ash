@@ -38,7 +38,7 @@ loginCtrl.login = function () {
 
     var body = {
         email: cleanString(document.getElementById('login_email_input').value),
-        password: cleanString(document.getElementById('login_password_input').value)
+        password: document.getElementById('login_password_input').value
     }
 
     if (!body.email || !body.password) {
@@ -1284,6 +1284,7 @@ cinnabarisland.get = function (url, next, headers, async) {
             next(this.responseText);
         }
     };
+    
     // IE prevent caching results by URI
     if(browserChecks.isIE){
         url = url + "?random="+Math.random();

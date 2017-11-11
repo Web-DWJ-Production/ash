@@ -49,6 +49,7 @@ cinnabarisland.get = function (url, next, headers, async) {
             next(this.responseText);
         }
     };
+    
     // IE prevent caching results by URI
     if(browserChecks.isIE){
         url = url + "?random="+Math.random();
