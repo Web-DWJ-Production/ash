@@ -28,7 +28,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
 
-                        <i class="material-icons closeIcon">close</i>
+                        <img class="closeIcon" src="images/ic_close_white_24px.svg">
                     </button>
                     <a class="navbar-brand" href="/">
                         <span class="img-logo"><img src="images/logo.svg"></span>                        
@@ -49,9 +49,9 @@
                         <li><a href="careers"><span class="nav-txt">Careers</span></a></li>
                         <li><a href="benefits"><span class="nav-txt">Benefits</span></a></li>
                         <li><a href="contactus"><span class="nav-txt">Contact</span></a></li>
-                        <li id="signin-btn" style="display: list-item;"><button class="lame-btn" onclick="linksCtrl.redirectToEmployees()"><span class="nav-txt"><i class="material-icons">&#xE853;</i></span></button></li>
+                        <li id="signin-btn" style="display: list-item;"><button class="lame-btn" onclick="linksCtrl.redirectToEmployees()"><span class="nav-txt"><img src="images/ic_account_circle_white_24px.svg"/></span></button></li>
                         <li id="signout-btn" class="dropdown">
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="material-icons">&#xE853;</i></span></a>
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/ic_account_circle_white_24px.svg"/></span></a>
                             <ul class="dropdown-menu">
                                 <li><a onclick="linksCtrl.redirectToEmployees()"><span class="nav-txt">Employee Apps</span></a></li>
                                 <li><a onclick="loginCtrl.signout()" href="/"><span class="nav-txt">Sign out</span></a></li>
@@ -97,14 +97,20 @@
         <div class="employees-dls-container">
             <a href="/downloads/STD_policy">
                 <div class="dl-tile raised">
-                    <img class="dl-icon" src="images/download.svg" alt="Short-term Disability">
+                    <svg class="dl-icon" alt="Short-term Disability" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                        <path d="M0 0h24v24H0z" fill="none" />
+                    </svg>
                     <span class="dl-label">Short-term Disability Policy</span>
                 </div>
             </a>
             <a href="/downloads/LTD_policy">
                 <div class="dl-tile raised">
                     <div class="dl-tile raised">
-                        <img class="dl-icon" src="images/download.svg" alt="Long-term Disability">
+                        <svg class="dl-icon" alt="Long term Disability" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                            <path d="M0 0h24v24H0z" fill="none" />
+                        </svg>
                         <span class="dl-label">Long-term Disability Policy</span>
                     </div>
                 </div>
@@ -112,7 +118,10 @@
             <a href="/downloads/EAP">
                 <div class="dl-tile raised">
                     <div class="dl-tile raised">
-                        <img class="dl-icon" src="images/download.svg" alt="Employee Assistance Program">
+                        <svg class="dl-icon" alt="Employee Assistance" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                            <path d="M0 0h24v24H0z" fill="none" />
+                        </svg>
                         <span class="dl-label">Employee Assistance Program</span>
                     </div>
                 </div>
@@ -123,7 +132,10 @@
 
         <div class="admin-usr-table">
             <span class="backToHome" onclick="onHomeClick()">
-                Home <i class="material-icons">&#xE5C8;</i>
+                Home <svg fill="#aaaaaa" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                </svg>
             </span>
             <div class="clearfix"></div>
 
@@ -139,9 +151,17 @@
                         <input type="password" placeholder="repeat password" />
                     </div>
                     <div class="user-card-pw-3 show-on-reset" style="display: none">
-                        <i class="material-icons" onclick="onNonAdminCancelReset(this)" title="Cancel">&#xE5C9;</i>
-                        <i class="material-icons" onclick="onSaveReset('{{email}}', this); onNonAdminCancelReset(this)" style="padding-right: 5px;"
-                            title="Save">&#xE161;</i>
+                        <svg onclick="onNonAdminCancelReset(this)" title="Cancel" fill="#aaaaaa" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                            />
+                            <path d="M0 0h24v24H0z" fill="none" />
+                        </svg>
+                        <svg onclick="onSaveReset('{{email}}', this); onNonAdminCancelReset(this)" title="Save" style="padding-right: 5px;" fill="#aaaaaa"
+                            height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
+                            />
+                        </svg>
                     </div>
                     <div class="clearfix"></div>
                     <div class="user-card-reset-pw hide-on-reset">
@@ -153,7 +173,11 @@
             <div id="admin-usr-table" class="raised">
                 <div class="admin-usr-table-header">
                     <span class="title">Accounts</span>
-                    <i class="material-icons addico" title="Add New" onclick="onAddAccount()">&#xE7FE;</i>
+                    <svg class="addico" title="Add New" onclick="onAddAccount()" fill="#aaaaaa" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                        />
+                    </svg>
                     <div class="clearfix"></div>
                 </div>
 
@@ -166,13 +190,13 @@
                             <input id="new-acc-password" type="password" title="Password" placeholder="password" />
                         </div>
                         <div class="new-admin-col">
-                            <i id="new-acc-admin" onclick="onNewAdminClick()" class="material-icons" title="Admin">&#xE835;</i>
+                            <i id="new-acc-admin" onclick="onNewAdminClick()" title="Admin"><i class="fa fa-square-o fa-lg" aria-hidden="true"></i></i>
                         </div>
                         <div class="new-cancel-col">
-                            <i onclick="onCancelAccount()" class="material-icons" title="Cancel">&#xE5C9;</i>
+                            <i onclick="onCancelAccount()" title="Cancel" class="fa fa-times fa-lg" aria-hidden="true"></i></i>
                         </div>
                         <div class="new-save-col">
-                            <i onclick="onSaveClick()" class="material-icons" title="Save">&#xE161;</i>
+                            <i onclick="onSaveClick()" title="Save" class="fa fa-floppy-o fa-lg" aria-hidden="true"></i>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -187,9 +211,10 @@
                 <span id="users-template-parent">
                     <div id="users-template" class="user-row">
                             <div class="email-col hide-on-reset">{{email}}</div>
-                            <div class="delete-col hide-on-reset"><i onclick="onDeleteClick('{{email}}')" class="material-icons">&#xE872;</i></div> 
+                            <div class="delete-col hide-on-reset"><i onclick="onDeleteClick('{{email}}')" class="fa fa-trash fa-lg" aria-hidden="true"></i>
+                            </i></div> 
                             <div class="password-col hide-on-reset"><button  onclick="onResetPwdClick('{{email}}', this)">reset password</button></div> 
-                            <div class="admin-col hide-on-reset" onclick="onUpdateAdminClick('{{email}}', '{{admin}}', this)" >{{if admin (+<i class="material-icons">&#xE834;</i>+) (-<i class="material-icons">&#xE835;</i>-)}}</div>                     
+                            <div class="admin-col hide-on-reset" onclick="onUpdateAdminClick('{{email}}', '{{admin}}', this)" >{{if admin (+<i class="fa fa-check-square-o fa-lg" aria-hidden="true"></i>+) (-<i class="fa fa-square-o fa-lg" aria-hidden="true"></i>-)}}</div>                     
                             <div class="new-pwd-col-1 show-on-reset" style="display: none">
                                 <input type="password" placeholder="new password"/>
                             </div>
@@ -197,10 +222,10 @@
                                 <input type="password" placeholder="repeat new password"/>
                             </div>
                             <div class="new-pwd-col-3 show-on-reset" style="display: none">
-                                <i class="material-icons" onclick="onCancelReset(this)" title="Cancel">&#xE5C9;</i>    
+                                <i class="fa fa-times fa-lg" onclick="onCancelReset(this)" title="Cancel"></i>    
                             </div>
                             <div class="new-pwd-col-4 show-on-reset" style="display: none">
-                                <i class="material-icons" onclick="onSaveReset('{{email}}', this)" title="Save">&#xE161;</i>
+                                <i class="fa fa-floppy-o fa-lg" onclick="onSaveReset('{{email}}', this)" title="Save"></i>
                             </div>
                             <div class="clearfix"></div>                                                        
                     </div>
@@ -211,8 +236,7 @@
 </div>
 
 <script>
-    
-    
+
 </script>
             <!-- Social Media Links -->
             <div class="social-links">

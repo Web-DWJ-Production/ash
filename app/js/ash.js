@@ -144,7 +144,7 @@ function EmployeesCtrl() {
             document.getElementById('new-acc-email').value = "";
             document.getElementById('new-acc-password').value = "";
             that.newAccount.admin = false;
-            document.getElementById('new-acc-admin').innerHTML = "&#xE835;";
+            document.getElementById('new-acc-admin').innerHTML = "<i class='fa fa-square-o' aria-hidden='true'></i>";
             that.newUserIf.viewable = false;
             that.newUserIf.reconcile();
         }, headers, true);

@@ -154,9 +154,9 @@ function onNewAdminClick(event) {
     var e = document.getElementById('new-acc-admin');
     eCtrl.newAccount.admin = !eCtrl.newAccount.admin;
     if (eCtrl.newAccount.admin) {
-        e.innerHTML = '&#xE834;';
+        e.innerHTML = '<i class="fa fa-check-square-o fa-lg" aria-hidden="true"></i>';
     } else {
-        e.innerHTML = '&#xE835;';
+        e.innerHTML = '<i class="fa fa-square-o fa-lg" aria-hidden="true"></i>';
     }
 }
 
