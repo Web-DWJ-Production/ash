@@ -59,7 +59,7 @@ var config = {
       ['{login}','login'],
       ['{facebook-link}','underconstruction'],
       ['{twitter-link}','https://twitter.com/intent/tweet?text=Contact&url=http%3A%2F%2Fwww.strategic-analytix.com%2Fcontact.html%23.Wfiz1tSH08o.twitter&related='],
-      ['{linkedin-link}','underconstruction'],
+      ['{linkedin-link}','https://www.linkedin.com/company/strategic-analytix'],
       ['{employee-portal}','employees']
     ],    
     htmlLocation: "app/templates/"
