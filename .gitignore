@@ -1,5 +1,4 @@
 /app/assets/libs
 /node_modules
-/public
 npm-debug.log
 db.json
