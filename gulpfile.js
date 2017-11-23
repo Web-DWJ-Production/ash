@@ -30,6 +30,7 @@ var config = {
     ],
     libsFonts: ['app/assets/fonts/**', 'app/assets/libs/bootstrap/fonts/**', 'app/assets/libs/font-awesome/fonts/**',],
     views: ['app/views/*.html'],
+    sitemap: ['app/sitemap.xml'],
     htmlFiles: [
       { 'filename': 'index', 'locationname': 'index.html' },
       { 'filename': 'contactus', 'locationname': 'contactus.html' },
@@ -167,6 +168,11 @@ gulp.task('copy-views', function () {
     .pipe(gulp.dest(config.dest.base));
 });
 
+gulp.task('copy-sitemap', function () {
+  return gulp.src(config.src.sitemap)
+    .pipe(gulp.dest(config.dest.base));
+});
+
 /* Environment Builds */
 gulp.task('build-local', function(){
   gulp.src("ash.json")
@@ -206,4 +212,4 @@ gulp.task('dev', gulpSequence('clean', 'build-dev', ['lib-fonts', 'lib-css', 'li
 /* Production Build */
 gulp.task('prod', gulpSequence('clean', 'build-production', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));
 
-gulp.task('all', gulpSequence('clean', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views'], 'build-html'));
+gulp.task('all', gulpSequence('clean', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less', 'copy-views', 'copy-sitemap'], 'build-html'));
