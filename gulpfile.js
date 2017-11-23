@@ -30,7 +30,7 @@ var config = {
     ],
     libsFonts: ['app/assets/fonts/**', 'app/assets/libs/bootstrap/fonts/**', 'app/assets/libs/font-awesome/fonts/**',],
     views: ['app/views/*.html'],
-    sitemap: ['app/sitemap.xml'],
+    sitemap: ['app/assets/sitemap.xml'],
     htmlFiles: [
       { 'filename': 'index', 'locationname': 'index.html' },
       { 'filename': 'contactus', 'locationname': 'contactus.html' },
@@ -70,6 +70,7 @@ var config = {
     appCSS: 'dist/assets/css',
     appFonts: 'dist/assets/fonts',
     appImgs: 'dist/assets/images',
+    appPub: 'dist/assets',
     base: 'dist'
   },
   builds:{
@@ -170,7 +171,7 @@ gulp.task('copy-views', function () {
 
 gulp.task('copy-sitemap', function () {
   return gulp.src(config.src.sitemap)
-    .pipe(gulp.dest(config.dest.base));
+    .pipe(gulp.dest(config.dest.appPub));
 });
 
 /* Environment Builds */
