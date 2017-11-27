@@ -30,7 +30,7 @@ var config = {
     ],
     libsFonts: ['app/assets/fonts/**', 'app/assets/libs/bootstrap/fonts/**', 'app/assets/libs/font-awesome/fonts/**',],
     views: ['app/views/*.html'],
-    sitemap: ['app/assets/sitemap.xml'],
+    sitemap: ['app/assets/sitemap.xml', 'app/assets/robots.txt'],
     htmlFiles: [
       { 'filename': 'index', 'locationname': 'index.html' },
       { 'filename': 'contactus', 'locationname': 'contactus.html' },
