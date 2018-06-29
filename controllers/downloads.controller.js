@@ -8,8 +8,19 @@ var path = require('path');
 router.get('/LTD_policy', getLTDPolicy);
 router.get('/STD_policy', getSTDPolicy);
 router.get('/EAP', getEAP);
+router.get('/ED_Reimburse', getEDReimburse);
+router.get('/Prof_dev', getProfDev);
 
 
+function getEDReimburse(req, res) { 
+    var file = __dirname + '/fs/Educational_Reimbursement_Expense_Agreement_&_Request_2018.docx';
+    res.download(file);
+};
+
+function getProfDev(req, res) { 
+    var file = __dirname + '/fs/Professional_Development_ReimbursementExpense_Agreement&Request_2018.docx';
+    res.download(file);
+};
 
 function getSTDPolicy(req, res) { 
     var file = __dirname + '/fs/STRATEGIC_ANALYTIX _STD_Policy.pdf';

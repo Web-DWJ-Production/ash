@@ -15,6 +15,7 @@ service.auth = (req, res) => {
     // Find the user with the given email.
     //var u = db.get('users').find({ email: req.body.email.toLowerCase()}).value();
     var u;    
+    
     mdb.findOne({email: req.body.email.toLowerCase()}, function(err, ret){
         u = ret;                      
         if (!u || u == null) {
