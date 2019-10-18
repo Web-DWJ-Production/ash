@@ -10,6 +10,8 @@ router.get('/STD_policy', getSTDPolicy);
 router.get('/EAP', getEAP);
 router.get('/ED_Reimburse', getEDReimburse);
 router.get('/Prof_dev', getProfDev);
+router.get('/getEMPHandbook', getEMPHandbook);
+router.get('/getFBA', getFBA);
 
 
 function getEDReimburse(req, res) { 
@@ -37,5 +39,13 @@ function getEAP(req, res) {
     res.download(file);
 };
 
+function getEMPHandbook(req, res) { 
+    var file = __dirname + '/fs/Strategic_Analytix_Employee_Handbook_102019.pdf';
+    res.download(file);
+};
+function getFBA(req, res) { 
+    var file = __dirname + '/fs/Flexible_Communication_Health_Fitness_Reimbursement_Policy_102019.pdf';
+    res.download(file);
+};
 
 module.exports = router;

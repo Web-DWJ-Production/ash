@@ -9,7 +9,7 @@
   "author": "dwj production web team",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^1.0.3",
+    "bcrypt": "^3.0.4",
     "body-parser": "^1.18.2",
     "bower": "^1.8.2",
     "cors": "^2.8.4",
@@ -23,7 +23,7 @@
     "gulp-file-insert": "^1.0.3",
     "gulp-js-minify": "0.0.3",
     "gulp-json-editor": "^2.2.1",
-    "gulp-less": "^3.3.2",
+    "gulp-less": "^3.5.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-rename": "^1.2.2",
     "gulp-sequence": "^0.4.6",
