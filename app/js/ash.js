@@ -958,6 +958,37 @@ function CareersCtrl() {
                 {text:'Experience in the preparation of reports that reflect programs/project status in areas of cost, schedule and performance. '},
                 {text:'Experience in budget planning, budget preparation and budget execution for acquisition programs. FACTS experience is preferred. In lieu of a degree, Certified Defense Financial Manager (CDFM), or DAWIA Level III in Business/Financial Management, and three (3) years of directly related experience for a total of Thirteen (13) years may be substituted.'}
             ]
+        },
+
+        {
+            id: 27,
+            title: 'Configuration Manager',
+            category: 'Configuration Manager(CM)',
+            skillLevel: 3,
+            description: '',
+            capabilities: [                
+                {text:'Assist in implementing hardware and software version control processes, policies and procedures'},
+                {text:'Assist in the use of configuration management tools (e.g. DOORS, Eclipse) to store, track, and manage configuration items'},
+                {text:'Understand basic concepts, and assist in documenting hardware and software confignration management processes and procedures'},
+                {text:'Understand basic concepts, assist in maintaining and developing the enviromnent for hardware and software product build, staging, testing and integration'},
+                {text:'Assist in defining and implementing hardware and software configuration management processes and procedures; such as creating product build scripts and procedures, and integrating those scripts with the hardware and software build process'},
+                {text:'Implement hardware and software version control processes, policies and procedures'},
+                {text:'Utilize configuration management tools (e.g. DOORS, Eclipse) to store, track, and manage configuration items'},
+                {text:'Maintain the CM environment for hardware and software product build, staging, testing and integration'},
+                {text:'Apply concepts and define and implement hardware and software configuration management processes and procedures, such as creating product build scripts and procedures, and integrate those scripts with the hardware and software build process'},
+                {text:'Develop hardware and software version control processes, policies and procedures and ensure that they are followed on hardware and software development projects'},
+                {text:'Serve as an advisor to (or non-voting member oJ) Government Change Control Board (CCB)'},
+                {text:'Manage, maintain and develop the CM environment for hardware and software product build, staging, testing and integration'},
+                {text:'Work independently and defines and implement hardware and software configuration management processes and procedures, such as creating product build scripts and procedures, and integrate those scripts with the hardware and software build process'},
+                {text:'Ensure hardware and software version control processes, policies and procedures are followed on hardware and software development projects.'}
+            ],
+            qualifications: [
+                {text:'Eight (8) years experience as a CM in programs and contracts of similar scope, type, and complexity is required.'}, 
+                {text:'Bachelor\'s degree in a technical or business discipline from an accredited college or university is required.'},
+                {text:'A Master\'s degree may be substituted for two (2) years of experience, thereby reducing the total years of experience to six (6).'},
+                {text:'Four (4) years of additional CM experience may be substituted for a bachelor\'s degree.'},
+                {text:'If assigned to a developmental program, one (!) year of experience using a source code control system for a developmental program of similar scope and complexity is required.'}
+            ]
         }
     ];
 }
