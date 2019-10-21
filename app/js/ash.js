@@ -215,6 +215,7 @@ function CareersCtrl() {
             id: 1,
             title: 'Configuration Manager (CM)',
             category: 'Mangement',
+            date:'10-20-2018',
             skillLevel: 0,
             description: 'Responsible for configuration management (CM) of developmental and operational systems. Works on developmental and operational teams to create and maintain configuration baselines (development, test, production, etc.) supporting developmental and operational systems. Uses or recommends automated CM tools to implement CM policies and procedures. Develops or modifies CM plans, policies, and procedures tailored to the complexity and scope of the developmental or operational system. Implement CM discipline for the entire life cycle of systems from initial requirements/capabilities baselines to system end-of-life. Perform change control and configuration audits.',
             capabilities: [
@@ -228,6 +229,7 @@ function CareersCtrl() {
             id: 2,
             title: 'Configuration Manager (CM)',
             category: 'Mangement',
+            date:'10-20-2018',
             skillLevel: 1,
             description: 'Responsible for configuration management (CM) of developmental and operational systems. Works on developmental and operational teams to create and maintain configuration baselines (development, test, production, etc.) supporting developmental and operational systems. Uses or recommends automated CM tools to implement CM policies and procedures. Develops or modifies CM plans, policies, and procedures tailored to the complexity and scope of the developmental or operational system. Implement CM discipline for the entire life cycle of systems from initial requirements/capabilities baselines to system end-of-life. Perform change control and configuration audits.',
             capabilities: [
@@ -248,6 +250,7 @@ function CareersCtrl() {
             id: 3,
             title: 'Information Systems Security Engineer (ISSE)',
             category: 'Information Systems',
+            date:'10-20-2018',
             skillLevel: 1,
             description: 'The Information Systems Security Engineer (ISSE) shall perform, or review, technical security assessments of computing environments to identify points of vulnerability, non-compliance with established Information Assurance (IA) standards and regulations, and recommend mitigation strategies. Validates and verifies system security requirements definitions and analysis and establishes system security designs. Designs, develops, implements and/or integrates IA and security systems and system components including those for networking, computing, and enclave environments to include those with multiple enclaves and with differing data protection/classification requirements. Builds IA into systems deployed to operational environments. Assists architects and systems developers in the identification and implementation of appropriate information security functionality to ensure uniform application of Agency security policy and enterprise solutions. Supports the building of security architectures. Enforce the design and implementation of trusted relations among external systems and architectures. Assesses and mitigates system security threats/risks throughout the program life cycle. Contributes to the security planning, assessment, risk analysis, risk management, certification and awareness activities for system and networking operations. Reviews certification and accreditation (C&A) documentation, providing feedback on completeness and compliance of its content. Applies system security engineering expertise in one or more of the following to : system security design process; engineering life cycle; information domain; cross domain solutions; commercial off-the-shelf and government off-the-shelf cryptography; identification; authentication; and authorization; system integration; risk management; intrusion detection; contingency planning; incident handling; configuration control; change management; auditing; certification and accreditation process; principles of IA (confidentiality, integrity, non-repudiation, availability, and access control); and security testing. Support security authorization activities in compliance with NSA/CSS Information System Certification and Accreditation Process (NISCAP) and DoD Information Assurance Certification and Accreditation Process (DIACAP) process, the NIST Risk Management Framework (RMF) process, and prescribed NSA/CSS business processes for security engineering.',
             capabilities: [
@@ -272,6 +275,7 @@ function CareersCtrl() {
             id: 4,
             title: 'Information Systems Security Engineer (ISSE)',
             category: 'Information Systems',
+            date:'10-20-2018',
             skillLevel: 2,
             description: 'The Information Systems Security Engineer (ISSE) shall perform, or review, technical security assessments of computing environments to identify points of vulnerability, non-compliance with established Information Assurance (IA) standards and regulations, and recommend mitigation strategies. Validates and verifies system security requirements definitions and analysis and establishes system security designs. Designs, develops, implements and/or integrates IA and security systems and system components including those for networking, computing, and enclave environments to include those with multiple enclaves and with differing data protection/classification requirements. Builds IA into systems deployed to operational environments. Assists architects and systems developers in the identification and implementation of appropriate information security functionality to ensure uniform application of Agency security policy and enterprise solutions. Supports the building of security architectures. Enforce the design and implementation of trusted relations among external systems and architectures. Assesses and mitigates system security threats/risks throughout the program life cycle. Contributes to the security planning, assessment, risk analysis, risk management, certification and awareness activities for system and networking operations. Reviews certification and accreditation (C&A) documentation, providing feedback on completeness and compliance of its content. Applies system security engineering expertise in one or more of the following to : system security design process; engineering life cycle; information domain; cross domain solutions; commercial off-the-shelf and government off-the-shelf cryptography; identification; authentication; and authorization; system integration; risk management; intrusion detection; contingency planning; incident handling; configuration control; change management; auditing; certification and accreditation process; principles of IA (confidentiality, integrity, non-repudiation, availability, and access control); and security testing. Support security authorization activities in compliance with NSA/CSS Information System Certification and Accreditation Process (NISCAP) and DoD Information Assurance Certification and Accreditation Process (DIACAP) process, the NIST Risk Management Framework (RMF) process, and prescribed NSA/CSS business processes for security engineering.',
             capabilities: [
@@ -300,6 +304,7 @@ function CareersCtrl() {
             id: 5,
             title: 'Program Manager (PM)',
             category: 'Manager',
+            date:'10-20-2018',
             skillLevel: 3,
             description: 'The Program Manager shall be responsible for the successful cost, schedule, and performance of the contract. Serves as the main point of contact for the Contracting Officer (CO), the Contracting Officer’s Representative (COR), the Government Program Manager, and the Contractor’s senior management. Directly contributes to program efforts in several areas, including cost management/avoidance, schedule estimation and tracking, contract performance management, risk management, requirements analysis, and quality assurance activities. Ensures proper performance of tasks necessary to ensure the most efficient and effective execution of the contract. The PM shall utilize expert communication skills needed to direct the skilled technical resources and report on the technical progress, issues, and problem areas, as well as write and review technical documents.',
             capabilities: [
@@ -334,6 +339,7 @@ function CareersCtrl() {
             id: 6,
             title: 'Scheduler (SCHED)',
             category: 'Scheduling',
+            date:'10-20-2018',
             skillLevel: 1,
             description: 'Responsible for designing, developing, and maintaining detailed resource-loaded schedules for implementation, developmental and operational systems. Works with developmental and operational teams to develop detailed schedules and assists in keeping these schedules current. Uses or recommends automated tools such as MS Project, Primavera or program mandated software. Develops and or modifies project schedules and or the integration of multiple project schedules into an overall Master Program Schedule. Maintains the overall Master Program /Project Schedule. Links project schedules with the overarching program, Investment Portfolio, functional area and/or other Integrated Master Plans (IMPs). Provides hands-on development of layered schedules and IMPs that address how an acquisition project is progressing and how that project contributes to overarching requirements and objectives. Maintains status on linkages and dependencies with related projects.',
             capabilities: [
@@ -353,6 +359,7 @@ function CareersCtrl() {
             id: 7,
             title: 'Scheduler (SCHED)',
             category: 'Scheduling',
+            date:'10-20-2018',
             skillLevel: 2,
             description: 'Responsible for designing, developing, and maintaining detailed resource-loaded schedules for implementation, developmental and operational systems. Works with developmental and operational teams to develop detailed schedules and assists in keeping these schedules current. Uses or recommends automated tools such as MS Project, Primavera or program mandated software. Develops and or modifies project schedules and or the integration of multiple project schedules into an overall Master Program Schedule. Maintains the overall Master Program /Project Schedule. Links project schedules with the overarching program, Investment Portfolio, functional area and/or other Integrated Master Plans (IMPs). Provides hands-on development of layered schedules and IMPs that address how an acquisition project is progressing and how that project contributes to overarching requirements and objectives. Maintains status on linkages and dependencies with related projects.',
             capabilities: [
@@ -376,6 +383,7 @@ function CareersCtrl() {
             id: 8,
             title: 'System Engineer (SE)',
             category: 'Engineering',
+            date:'10-20-2018',
             skillLevel: 0,
             description: 'Analyzes user’s requirements, concept of operations documents, and high level system architectures to develop system requirements specifications. Analyzes system requirements and leads design and development activities. Guides users in formulating requirements, advises alternative approaches, and conducts feasibility studies. Provides technical leadership for the integration of requirements, design, and technology. Incorporates new plans, designs and systems into ongoing operations. Develops technical documentation. Develops system Architecture and system design documentation. Guides system development and implementation planning through assessment or preparation of system engineering management plans and system integration and test plans. Interacts with the Government regarding Systems Engineering technical considerations and for associated problems, issues or conflicts. Ultimate responsibility for the technical integrity of work performed and deliverables associated with the Systems Engineering area of responsibility. Communicates with other program personnel, government overseers, and senior executives.',
             capabilities: [
@@ -394,6 +402,7 @@ function CareersCtrl() {
             id: 9,
             title: 'System Engineer (SE)',
             category: 'Engineering',
+            date:'10-20-2018',
             skillLevel: 1,
             description: 'Analyzes user’s requirements, concept of operations documents, and high level system architectures to develop system requirements specifications. Analyzes system requirements and leads design and development activities. Guides users in formulating requirements, advises alternative approaches, and conducts feasibility studies. Provides technical leadership for the integration of requirements, design, and technology. Incorporates new plans, designs and systems into ongoing operations. Develops technical documentation. Develops system Architecture and system design documentation. Guides system development and implementation planning through assessment or preparation of system engineering management plans and system integration and test plans. Interacts with the Government regarding Systems Engineering technical considerations and for associated problems, issues or conflicts. Ultimate responsibility for the technical integrity of work performed and deliverables associated with the Systems Engineering area of responsibility. Communicates with other program personnel, government overseers, and senior executives.',
             capabilities: [
@@ -424,6 +433,7 @@ function CareersCtrl() {
             id: 10,
             title: 'System Engineer (SE)',
             category: 'Enginerring',
+            date:'10-20-2018',
             skillLevel: 2,
             description: 'Analyzes user’s requirements, concept of operations documents, and high level system architectures to develop system requirements specifications. Analyzes system requirements and leads design and development activities. Guides users in formulating requirements, advises alternative approaches, and conducts feasibility studies. Provides technical leadership for the integration of requirements, design, and technology. Incorporates new plans, designs and systems into ongoing operations. Develops technical documentation. Develops system Architecture and system design documentation. Guides system development and implementation planning through assessment or preparation of system engineering management plans and system integration and test plans. Interacts with the Government regarding Systems Engineering technical considerations and for associated problems, issues or conflicts. Ultimate responsibility for the technical integrity of work performed and deliverables associated with the Systems Engineering area of responsibility. Communicates with other program personnel, government overseers, and senior executives.',
             capabilities: [
@@ -469,6 +479,7 @@ function CareersCtrl() {
             id: 11,
             title: 'System Engineer (SE)',
             category: 'Engineering',
+            date:'10-20-2018',
             skillLevel: 3,
             description: 'Analyzes user’s requirements, concept of operations documents, and high level system architectures to develop system requirements specifications. Analyzes system requirements and leads design and development activities. Guides users in formulating requirements, advises alternative approaches, and conducts feasibility studies. Provides technical leadership for the integration of requirements, design, and technology. Incorporates new plans, designs and systems into ongoing operations. Develops technical documentation. Develops system Architecture and system design documentation. Guides system development and implementation planning through assessment or preparation of system engineering management plans and system integration and test plans. Interacts with the Government regarding Systems Engineering technical considerations and for associated problems, issues or conflicts. Ultimate responsibility for the technical integrity of work performed and deliverables associated with the Systems Engineering area of responsibility. Communicates with other program personnel, government overseers, and senior executives.',
             capabilities: [
@@ -528,6 +539,7 @@ function CareersCtrl() {
             id: 12,
             title: 'Technical Writer (TW)',
             category: 'Technical Writing',
+            date:'10-20-2018',
             skillLevel: 0,
             description: 'Responsible for the preparation, review, revision, and maintenance of technical documents including software and systems engineering, system operations, testing, and user documentation. Writes and edits technical documentation for all of the project’s hardware and software to include installation, configuration and how-to documentation. Creates code documentation for software; produces implementation guides and end-user guides for capabilities; provides field, data definition, and data flow documentation and formats technical publications from pamphlets, technical drawings, and consultations with technical personnel and other available resources.',
             capabilities: [
@@ -547,6 +559,7 @@ function CareersCtrl() {
             id: 13,
             title: 'Technical Writer (TW)',
             category: 'Technical Writing',
+            date:'10-20-2018',
             skillLevel: 1,
             description: 'Responsible for the preparation, review, revision, and maintenance of technical documents including software and systems engineering, system operations, testing, and user documentation. Writes and edits technical documentation for all of the project’s hardware and software to include installation, configuration and how-to documentation. Creates code documentation for software; produces implementation guides and end-user guides for capabilities; provides field, data definition, and data flow documentation and formats technical publications from pamphlets, technical drawings, and consultations with technical personnel and other available resources.',
             capabilities: [
@@ -572,6 +585,7 @@ function CareersCtrl() {
             id: 14,
             title: 'Technical Writer (TW)',
             category: 'Technical Writing',
+            date:'10-20-2018',
             skillLevel: 2,
             description: 'Responsible for the preparation, review, revision, and maintenance of technical documents including software and systems engineering, system operations, testing, and user documentation. Writes and edits technical documentation for all of the project’s hardware and software to include installation, configuration and how-to documentation. Creates code documentation for software; produces implementation guides and end-user guides for capabilities; provides field, data definition, and data flow documentation and formats technical publications from pamphlets, technical drawings, and consultations with technical personnel and other available resources.',
             capabilities: [
@@ -604,6 +618,7 @@ function CareersCtrl() {
             id: 15,
             title: 'Technical Writer (TW)',
             category: 'Technical Writing',
+            date:'10-20-2018',
             skillLevel: 3,
             description: 'Responsible for the preparation, review, revision, and maintenance of technical documents including software and systems engineering, system operations, testing, and user documentation. Writes and edits technical documentation for all of the project’s hardware and software to include installation, configuration and how-to documentation. Creates code documentation for software; produces implementation guides and end-user guides for capabilities; provides field, data definition, and data flow documentation and formats technical publications from pamphlets, technical drawings, and consultations with technical personnel and other available resources.',
             capabilities: [
@@ -642,6 +657,7 @@ function CareersCtrl() {
             id: 16,
             title: 'Acquisition Professional',
             category: 'Acquisitions',
+            date:'10-20-2018',
             skillLevel: 0,
             description: 'Provide acquisition support on functions of program management. Assist program managers in developing program documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams. Provide expertise on the myriad of factors that influence cost, schedule, performance, and risk. Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer. Provides assistance in analyzing and developing improved policies, plans, methods, procedures, and systems of acquisition management programs.',
             capabilities: [
@@ -661,6 +677,7 @@ function CareersCtrl() {
             id: 17,
             title: 'Acquisition Professional',
             category: 'Acquisitions',
+            date:'10-20-2018',
             skillLevel: 1,
             description: 'Provide acquisition support on functions of program management. Assist program managers in developing program documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams. Provide expertise on the myriad of factors that influence cost, schedule, performance, and risk. Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer. Provides assistance in analyzing and developing improved policies, plans, methods, procedures, and systems of acquisition management programs.',
             capabilities: [
@@ -690,6 +707,7 @@ function CareersCtrl() {
             id: 18,
             title: 'Acquisition Professional',
             category: 'Acquisitions',
+            date:'10-20-2018',
             skillLevel: 2,
             description: ' Provide acquisition support on functions of program management. Assist program managers in developing program documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams. Provide expertise on the myriad of factors that influence cost, schedule, performance, and risk. Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer. Provides assistance in analyzing and developing improved policies, plans, methods, procedures, and systems of acquisition management programs.',
             capabilities: [
@@ -731,6 +749,7 @@ function CareersCtrl() {
             id: 19,
             title: 'Acquisition Professional',
             category: 'Acquisitions',
+            date:'10-20-2018',
             skillLevel: 3,
             description: 'Provide acquisition support on functions of program management. Assist program managers in developing program documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams. Provide expertise on the myriad of factors that influence cost, schedule, performance, and risk. Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer. Provides assistance in analyzing and developing improved policies, plans, methods, procedures, and systems of acquisition management programs.',
             capabilities: [
@@ -784,6 +803,7 @@ function CareersCtrl() {
             id: 20,
             title: 'Acquisition Professional – BA5 Front Office Source Selection',
             category: 'Acquisitions',
+            date:'10-20-2018',
             skillLevel: 2,
             description: 'Provide acquisition support on functions of program management. Assist program managers in developing program documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams. Provide expertise on the myriad of factors that influence cost, schedule, performance, and risk. Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer. Provides assistance in analyzing and developing improved policies, plans, methods, procedures, and systems of acquisition management programs.',
             capabilities: [
@@ -811,6 +831,7 @@ function CareersCtrl() {
             id: 21,
             title: 'Acquisition Professional – BA5 Front Office Source Selection',
             category: 'Acquisitions',
+            date:'10-20-2018',
             skillLevel: 3,
             description: 'Provide acquisition support on functions of program management. Assist program managers in developing program documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams. Provide expertise on the myriad of factors that influence cost, schedule, performance, and risk. Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer. Provides assistance in analyzing and developing improved policies, plans, methods, procedures, and systems of acquisition management programs.',
             capabilities: [
@@ -847,6 +868,7 @@ function CareersCtrl() {
             id: 22,
             title: 'Acquisition Professional Lead',
             category: 'Acquisitions',
+            date:'10-20-2018',
             skillLevel: 3,
             description: 'Provide acquisition support on functions of program management. Assist program managers in developing program documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams. Provide expertise on the myriad of factors that influence cost, schedule, performance, and risk. Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer. Provides assistance in analyzing and developing improved policies, plans, methods, procedures, and systems of acquisition management programs.',
             capabilities: [
@@ -870,6 +892,7 @@ function CareersCtrl() {
             id: 23,
             title: 'Data Management Specialist',
             category: 'Data Management',
+            date:'10-20-2018',
             skillLevel: 2,
             description: 'Implement and supervise data management procedures for both classified and unclassified program and project information as defined by the Program Data Manager; Utilize available automated data management tools to support data management activities; Ensure adequate version control, storage, and retention of program and project data and documentation as directed by the Program Data Manager; Support the Program Data Manager in the conduct of all data management activities.',
             capabilities: [
@@ -893,6 +916,7 @@ function CareersCtrl() {
             id: 24,
             title: 'Financial Analyst',
             category: 'Analyst',
+            date:'10-20-2018',
             skillLevel: 0,
             description: 'Assist in the creation of the program and budget; justify the resources (manpower and funding) to support the strategic plans of the President, DoD, Intelligence Community, and the Agency. Assist in the defense and execution of the appropriated, unexpired resources to support the day-to-day mission activities; perform statistical and graphical analysis on various aspects of resources management such as on the rate of execution of funding, fill-rates of authorized positions, workforce skills, size and cost, and success in obtaining appropriations for new program requests. Advise management on the regulatory aspects of resources management to avoid violations such as anti-deficiency and misappropriation of resources.',
             capabilities: [
@@ -911,6 +935,7 @@ function CareersCtrl() {
             id: 25,
             title: 'Financial Analyst',
             category: 'Analyst',
+            date:'10-20-2018',
             skillLevel: 1,
             description: 'Assist in the creation of the program and budget; justify the resources (manpower and funding) to support the strategic plans of the President, DoD, Intelligence Community, and the Agency. Assist in the defense and execution of the appropriated, unexpired resources to support the day-to-day mission activities; perform statistical and graphical analysis on various aspects of resources management such as on the rate of execution of funding, fill-rates of authorized positions, workforce skills, size and cost, and success in obtaining appropriations for new program requests. Advise management on the regulatory aspects of resources management to avoid violations such as anti-deficiency and misappropriation of resources.',
             capabilities: [
@@ -936,6 +961,7 @@ function CareersCtrl() {
             id: 26,
             title: 'Financial Analyst',
             category: 'Analyst',
+            date:'10-20-2018',
             skillLevel: 2,
             description: 'Assist in the creation of the program and budget; justify the resources (manpower and funding) to support the strategic plans of the President, DoD, Intelligence Community, and the Agency. Assist in the defense and execution of the appropriated, unexpired resources to support the day-to-day mission activities; perform statistical and graphical analysis on various aspects of resources management such as on the rate of execution of funding, fill-rates of authorized positions, workforce skills, size and cost, and success in obtaining appropriations for new program requests. Advise management on the regulatory aspects of resources management to avoid violations such as anti-deficiency and misappropriation of resources.',
             capabilities: [
@@ -959,13 +985,13 @@ function CareersCtrl() {
                 {text:'Experience in budget planning, budget preparation and budget execution for acquisition programs. FACTS experience is preferred. In lieu of a degree, Certified Defense Financial Manager (CDFM), or DAWIA Level III in Business/Financial Management, and three (3) years of directly related experience for a total of Thirteen (13) years may be substituted.'}
             ]
         },
-
         {
             id: 27,
             title: 'Configuration Manager',
             category: 'Configuration Manager(CM)',
+            date:'10-20-2019',
             skillLevel: 3,
-            description: '',
+            description: 'Responsible for configuration management (CM) of developmental and operational systems. Works on developmental and operational teams to create and maintain configuration baselines (development, test, production, etc.) supporting developmental and operational systems. Uses or recommends automated CM tools to implement CM policies and procedures. Develops or modifies CM plans, policies, and procedures tailored to the complexity and scope of the developmental or operational system. Implement CM discipline for the entire life cycle of systems from initial requirements/capabilities baselines to system end-of-life. Perform change control and configuration audits.',
             capabilities: [                
                 {text:'Assist in implementing hardware and software version control processes, policies and procedures'},
                 {text:'Assist in the use of configuration management tools (e.g. DOORS, Eclipse) to store, track, and manage configuration items'},
@@ -988,6 +1014,184 @@ function CareersCtrl() {
                 {text:'A Master\'s degree may be substituted for two (2) years of experience, thereby reducing the total years of experience to six (6).'},
                 {text:'Four (4) years of additional CM experience may be substituted for a bachelor\'s degree.'},
                 {text:'If assigned to a developmental program, one (!) year of experience using a source code control system for a developmental program of similar scope and complexity is required.'}
+            ]
+        },
+        {
+            id: 28,
+            title: 'Software Engineer (SWE)',
+            category: 'Information Technology',
+            date:'10-20-2019',
+            skillLevel: 2,
+            description: 'The Software Engineer develops, maintains, and enhances complex and diverse software systems (e.g., processing-intensive analytics, novel algorithm development, manipulation of extremely large data sets, real-time systems, and business management information systems) based upon documented requirements. Works individually or as part of a team. Reviews and tests software components for adherence to the design requirements and documents test results. Resolves software problem reports. Utilizes software development and software design methodologies appropriate to the development environment. Provides specific input to the software components of system design to include hardware/software trade-offs, software reuse, use of Commercial Off-the-shelf (COTS)/Government Off-the-shelf (GOTS) in place of new development, and requirements analysis and synthesis from system level to individual software components. ',
+            capabilities: [                
+                {text:'Analyze user requirements to derive software design and performance requirements'},               
+                {text:'Design and code new software or modify existing software to add new features'},
+                {text:'Debug existing software and correct defects'},
+                {text:'Integrate existing software into new or modified systems or operating environments'},
+                {text:'Develop simple data queries for existing or proposed databases or data repositories'},
+                {text:'Provide recommendations for improving documentation and software development process standards'},
+                {text:'Develop or implement algorithms to meet or exceed system performance and functional standards'},               
+                {text:'Assist with developing and executing test procedures for software components'},
+                {text:'Write or review software and system documentation'},
+                {text:'Develop software solutions by analyzing system performance standards, confer with users or system engineers; analyze systems flow, data usage and work processes; and investigate problem areas'},
+                {text:'Serve as team lead .at the level appropriate to the software development process being used on any particular project'},
+                {text:'Modify e~isting software to correct errors, to adapt to new hardware, or to improve its performance'},
+                {text:'Design, develop and modify software systems, using scientific analysis and mathematical models to predict and measure outcome and consequences of design'},               
+                {text:'Design or implement complex database or data repository interfaces/queries'},
+                {text:'Oversee one or more software development teams and ensure the work is completed in accordance with the constraints of the software development process being used on any particular project'},
+                {text:'Design or implement complex algorithms requiring adherence to strict timing, system resource, or interface constraints; Perform quality control on team products'},
+                {text:'Confer with system engineers and hardware engineers to derive software requirements and to obtain information on project limitations and capabilities, performance requirements and interfaces'},
+                {text:'Coordinate software system installation and monitor equipment functioning to ensure operational specifications are met'},
+                {text:'Implement recommendations for improving documentation and software development process standards'}                
+            ],
+            qualifications: [
+                {text:'Fourteen (14) years experience as a SWE in programs and contracts of similar scope, type, and complexity is required'},                
+                {text:'Bachelor\'s degree in Computer Science or related discipline from an accredited college or university is required'},
+                {text:'Four (4) years of additional SWE experience on projects with similar software processes may be substituted for a bachelor\'s degree.'}
+            ]
+        },
+        {
+            id: 29,
+            title: 'System Engineer (SWE)',
+            category: 'Information Technology',
+            date:'10-20-2019',
+            skillLevel: 4,
+            description: 'Applies systems engineering principles throughout the systems life cycle phases: Concept, Development, Production, Utilization, Support, and Retirement. Interacts with the Government regarding Systems Engineering technical considerations and for associated problems, issues or conflicts. Communicates with other program personnel, government overseers, and senior executives. Responsibility for the technical integrity, quality, and completeness of work performed and deliverables associated with one or more of the 25 process areas defined by ISOMICI5288. Technical Process Area: Stakeholder Requirements Definition, Requirements Analysis, Architectural Design; Implementation, Integration, Verification, Transition, Validation, Operation, Maintenance, and Disposal; Project Process Area: Project Planning, Project Assessment and Control, Decision Management, Risk Management, Configuration Management, Information Management, and Measurement; Enterprise (Organizational Project-Enabling) Process Area: Project Portfolio Management, Infrastructure Management, Lifecycle Model Management, Human Resource Management, and Quality Management; Agreement Process Area: Acquisition and Supply.',
+            capabilities: [                
+                {text:'Assist in developing a new or innovative approach to a technical or engineering issue'},               
+                {text:'Assist in conducting an evaluation to determine its suitability for project implementation.'},
+                {text:'Analyze and propose appropriate engineering standards and processes for a project.'},
+                {text:'Supervise or coordinate the work of other contractor engineers or technicians on a project.'}
+            ],
+            qualifications: [
+                {text:'A Bachelor\'s degree in a Qualified Engineering Field or a related discipline from an accredited college or university plus ten (10) years of systems engineering experience.'},                
+                {text:'A High School Diploma or GED plus fourteen (14) years of general systems engineering experience.'},
+                {text:'A Master\'s degree in a Qualified Engineering Field or a related discipline from an accredited college or university plus eight (8) years of systems engineering experience.'},
+                {text: 'A PhD in a Qualified Engineering Field (See Note 1) or a related discipline from an accredited college or university plus eight (8) years of systems engineering experience.'}
+            ]
+        },
+        {
+            id: 30,
+            title: 'Test Engineer (TE)',
+            category: 'Test Engineer (TE)',
+            date:'10-20-2019',
+            skillLevel: 3,
+            description: 'Analyzes system requirements and concept of operations documents. acquisition plans, and system descriptions to develop evaluation and test plans and procedures, prepare for and conduct the data collection and analysis, and report status and results. Supports the development of Government test and evaluation documentation e.g., Test & Evaluation (T&E) Strategy, Test & Evaluation Master Plan, Event Test Plans, Test Readiness Assessments, and T&E Reports. Works with other test organizations to support T&E. program integration. Provides specialized T&E capabilities tailored to system functions, level, maturity, and performance area as assigned in the SOW.',
+            capabilities: [                
+                {text:'Assist with any or all of the Level I tasks as constrained by technical training and previous testing experience'}, 
+                {text:'Conduct research into and apply knowledge of Government test and evaluation concepts and related engineering, acquisition, and operations activities as needed to support the T&E activities'}, 
+                {text:'Plan and Execute Performance Analysis'}, 
+                {text:'Assess operational and system performance requirements for testability and criticality to frame and prioritize T&E objectives and enable evaluation planning'}, 
+                {text:'Review planned acquisition approaches to support T&E schedule alignment with decision maker needs for T&E support '}, 
+                {text:'Coordinate with program Systems Engineering (SE) and review T&E-related SE information to leverage functional analysis, system descriptions, parameter selection and dependencies, Modeling and Simulation, and initial performance risk assessments to inform evaluation planning'}, 
+                {text:'Assess operational environments and priorities for evaluation attention and scenario selection, and to coordinate user participation in T&E'}, 
+                {text:'Analyze performance risk areas to focus T&E planning (U) Specify, validate, and adapt Modeling and Simulation for T&E use'}, 
+                {text:'Plan program and event level risk-tailored performance estimation and analysis of system and operational Effectiveness and Suitability metrics & conditions; levels of T&E include inspection, demonstration, paper analysis, survey, simulation, and physical test'}, 
+                {text:'Apply Statistical Analysis of variations in performance behavior to characterize confidence in performance estimates'},               
+                {text:'Design surveys for evaluation of Subject Matter Expert (SMF.) input and user assessments of performance'}, 
+                {text:'Select, develop, & use analysis tools'}, 
+                {text:'Participate in the T&E Working-level Integrated Product Team (WIPT) and/or Integrated Test Team for coordination of evaluation plans'}, 
+                {text:'Execute the evaluation plan on data collected by the Testing Tasks'}, 
+                {text:'Produce Evaluation Plans (metric framework, scenarios/threads, timelines, requirements/T&E cross-walk), Analysis Plans, Data Requirements, Risk Assessments, Evaluation Reports, Status reports; provide input to Government T&E products (e.g., Technology Readiness Assessments, Test & Evaluation Strategy, Test & Evaluation Master Plan, T&E Plans & Procedures and Test Readiness Reports)'}, 
+                {text:'Plan and Execute Performance Data Collection'}, 
+                {text:'Plan program and event level testing for collection of data required for analysis and to synch T&E events with supported decision points'}, 
+                {text:'Design data sampling schemes to optimize the information/resource balance and to control testing uncertainties'}, 
+                {text:'Select, coordinate, and calibrate Instrumentation, collection and data management tools, targets, & facilities'}, 
+                {text:'Ensure test readiness including training of test event participants it conduct of the event; equipment readiness, and security, legal, and privacy compliance arrangements'},
+                {text:'Establish and employ Data & Configuration Management capabilities'}, 
+                {text:'Support Data Authentication group functions; and comply with program Discrepancy Reporting criteria and processes'}, 
+                {text:'Participate in T&E WIPT and/or Integrated Test Team for coordination of data collection plans'}, 
+                {text:'Execute Testing and Data Collection per plan'}, 
+                {text:'Produce associated Test Plans, Procedures, and Reports/Briefings, Data Management Plan (U) Define and provide technical direction and guidance for the Level I tasks to the Level 0 and Level I TES assigned to the task'}, 
+                {text:'Recommend draft plans and reports from the Level I tasks for approval by the task leader (U) Work directly with the Government sponsor to coordinate task implementation'}, 
+                {text:'Maintain knowledge of current and evolving agency, national. and international standards applicable to the system development of interest'}, 
+                {text:'Provide overall leadership of the T&F. task and serve as primary liaison to the government for supporting contract coordination and task execution'}, 
+                {text:'Manage T&E resources and tasks; ensure quality assurance of test processes and products (U) Coordinate and integrate Evaluation and Testing tasks and products'}, 
+                {text:'Participate in T&E WIPE and/or Integrated Test Team as needed to ensure proper coordination of T&E activities'},
+                {text:'Communicate issues and solutions to the broader government and contract management structure as requested by leadership'}, 
+                {text:'Drive innovation and responsiveness to program changes and evolving T&E status to help manage program risk: develop alternative courses of action, work-arounds, and fall-back positions with a recommended course of action for each risk, and monitor and re-evaluate risks at appropriate milestones'},
+                {text:'Ensure the appropriate level of independence of the team from the solution provider to support government management of objectivity risk'}                
+            ],
+            qualifications: [
+                {text:'Eight (8) years experience as a TE in prograins and contracts of similar scope, type and complexity is required.'},                
+                {text:'Bachelor\'s degree in Math, Science, Engineering, Statistics, Engineering Management or related discipline from an accredited college or university is required.'},
+                {text:'Four (4) years of additional TE experience may be substituted for a bachelor\'s degree.'}
+            ]
+        },
+        {
+            id: 31,
+            title: 'Business Manager',
+            category: 'Business Manager',
+            date:'10-20-2019',
+            skillLevel: 1,
+            description: 'Responsible for programmatic and administrative aspects of project performance such as contract management, deliverables management, program performance metrics, and financial management. Manages and supervises personnel involved in relevant areas of project activity. Performs metrics gathering and analysis. Assists in establishing and maintaining technical and financial reports. Assists in the implementation of Technical Task Orders. Monitors and reports on program progress relative to program plans, programmatic, and financial baselines.',
+            capabilities: [                
+                {text:'Perform real-time program assessment'},               
+                {text:'Track system life cycle cost'},        
+                {text:'Develop independent cost estimates'},        
+                {text:'Identify risks that could adversely impact the budget or schedule'},        
+                {text:'Perform forecasting and financial accountability'},        
+                {text:'Perform return-on-investment analysis'}
+            ],
+            qualifications: [
+                {text:'Five (5) years experience in Business Management in programs and contracts of similar scope, type and complexity is required.'},                
+                {text:'Bachelor\'s degree in accounting, program management, information systems, electronic publishing, couununications or related discipline is required,'},
+                {text:'In lieu of a degree a Defense Acquisition Workforce Improvement Act (DA WIA) Level I in Program or Business Management, and an additional three (3) years of directly related experience for a total of eight (8) years may be substituted.'}                
+            ]
+        },
+        {
+            id: 32,
+            title: 'Business Manager',
+            category: 'Business Manager',
+            date:'10-20-2019',
+            skillLevel: 2,
+            description: 'Responsible for programmatic and administrative aspects of project performance such as contract management, deliverables management, program performance metrics, and financial management. Manages and supervises personnel involved in relevant areas of project activity. Performs metrics gathering and analysis. Assists in establishing and maintaining technical and financial reports. Assists in the implementation of Technical Task Orders. Monitors and reports on program progress relative to program plans, programmatic, and financial baselines.',
+            capabilities: [                
+                {text:'Perform real-time program assessment'},               
+                {text:'Track system life cycle cost'},        
+                {text:'Develop independent cost estimates'},        
+                {text:'Identify risks that could adversely impact the budget or schedule'},        
+                {text:'Perform forecasting and financial accountability'},        
+                {text:'Perform return-on-investment analysis'},
+                {text:'Develop methodologies to identify, control, and eliminate potential cost and schedule deviations'},
+                {text:'Develop a system to track and report contract deliverables in accordance with contract data requirements'},
+                {text:'Develop formal program tracking procedures'},
+                {text:'Perform risk analysis, mitigation planning and implementation, and tracking for all identified risks'}
+            ],
+            qualifications: [
+                {text:'Ten (10) years experience in Business Management in programs and contracts of similar scope, type and complexity is required.'},                
+                {text:'Bachelor\'s degree in accounting, program management, information systems, electronic publishing, couununications or related discipline is required,'},
+                {text:'In lieu of a degree a Defense Acquisition Workforce Improvement Act (DA WIA) Level II in Program or Business Management, and an additional three (3) years of directly related experience for a total of 13 years may be substituted.'}                
+            ]
+        },
+        {
+            id: 33,
+            title: 'Graphic Artist',
+            category: 'Graphic Artist',
+            date:'10-20-2019',
+            skillLevel: 1,
+            description: 'The Graphic Artist is responsible for completing and leading the design and development of 213 and 30 graphic and multi-media renderings to support the design and development of learning solutions. They will function as a subject matter expert in graphics arts tools, techniques, methods and applications and will recommend appropriate graphic and/or multimedia solutions to support the learning goals, following the approved task design strategy. ',
+            capabilities: [                
+                {text:'Basic knowledge of applications such as Adobe, Dreamweaver, Flash, and Captivate applications'},               
+                {text:'At least two (2) years demonstrated and/or documented experience within the last five (5) years in graphical design, developing, updating, and maintaining web-based graphic solutions'},        
+                {text:'Development of2D graphics and graphical interactions supporting training and/or learning solutions using multiple delivery methodologies'},        
+                {text:'Technology-based instructional systems design, workplace learning and development, and trainlng development'},        
+                {text:'Training, education, and experience in design and development with synchronous and asynchronous, web-based, computer-based, and technology-based instructional systems including experience in using instructional design standards for application-based'},        
+                {text:'At least one (I) years demonstrated and/or documented experience in designing, developing, updating, and maintaining interactive graphics for sinlulation and gaming solutions'},
+                {text:'The Level 0 Graphic Altist shall have a minimum of one (I) year, within the last three (3) years, demonstrated and/or documented experience in the following graphic design acumens:'},
+                {text:'The Level I Graphic Artist.shall have a minimum of two (2) years, within the last three (3) years, demonstrated and/or documented experience in the following graphic design acumens:'},
+                {text:'Use of applications such as Adobe, Dreamweaver, Flash, and Captivate applications'},
+                {text:'Technology-based instructional systems design, workplace learnlng and development, and training development'},
+                {text:'At least two (2) years demonstrated and/or documented experience in designing, developing, updating, and maintaining inte1•active graphics for simulation and gaming solutions'},                
+                {text:'Training, education, and experience in design and development with synchronous and asynchronous, web-based, computer-based, and technology-based instructional systems including experience in using instructional design standards for application-based'},
+                {text:'At least three (3) years demonstrated and/or documented experience within the last five (5) years in graphical design, developing, updating, and maintaining web-based graphic solutions'},
+                {text:'Development of 2D and 3D graphics and graphical interactions supporting training and/or learning solutions using multiple delivery methodologies'}
+            ],
+            qualifications: [
+                {text:'Level I Graphic Artist shall have an Associate\'s degree in Graphic Design, Instructional Systems Design with a Graphic Arts emphasis or Instructional Systems Design with a Certificate in Graphic Design,'},                
+                {text:'A degree in a directly related field with a minimum three (3) years within the last five (5) years documented experience in visual design or graphical design with an emphasis in supporting training and learning interventions,'},
+                {text:'A minimum of two (2) years, within the last three (3) years, documented experience in designing solutions using static graphics, animations, and interactive animations. In lieu of an Associate\'s degree'},
+                {text:'An additional two (2) years of directly related experience for a total of five (5) years may be substituted.'}
             ]
         }
     ];

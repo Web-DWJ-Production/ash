@@ -17,7 +17,8 @@ if(homeCarousel != null && homeCarousel.length > 0){
 
 /* Careers Page */
 var carCtrl = carCtrl ? carCtrl : new CareersCtrl();
-var jobList = new List('jobs', carCtrl.options, carCtrl.values);
+//var jobList = new List('jobs', carCtrl.options, carCtrl.values);
+var jobList = new List('jobs', carCtrl.options, carCtrl.values.sort(function(a,b) { return new Date(b.date) - new Date(a.date); }));
 
 /* Employees Page */
 if(document.getElementsByClassName('employees-body') != null && document.getElementsByClassName('employees-body').length > 0){
