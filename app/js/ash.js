@@ -798,72 +798,7 @@ function CareersCtrl() {
                 {text:'Twelve (12) years of demonstrated combined experience in DoD acquisition management, program management, and/or contract management.'}, 
                 {text:'A Bachelor’s Degree in an acquisition related field and professional certification at any level from a recognized institution is desired but not required. In lieu of the Bachelor’s degree, Project Management Institute PMP certification, or Contract Manager CPCM certification, or DAWIA Level III in any other focus area, and an additional three (3) years of directly related experience for a total of fifteen (15) years may be substituted.'}
             ]
-        },
-        {
-            id: 20,
-            title: 'Acquisition Professional – BA5 Front Office Source Selection',
-            category: 'Acquisitions',
-            date:'10-20-2018',
-            skillLevel: 2,
-            description: 'Provide acquisition support on functions of program management. Assist program managers in developing program documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams. Provide expertise on the myriad of factors that influence cost, schedule, performance, and risk. Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer. Provides assistance in analyzing and developing improved policies, plans, methods, procedures, and systems of acquisition management programs.',
-            capabilities: [
-                {text:'Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer.'}, 
-                {text:'Work with government project personnel and contracting, as appropriate, ensuring that all required documentation is completed and included (e.g. verify Section 508 information; acquisition security form and/or Contract Security Classification Specification (DD254) completed and submitted to Security; review the Competition in Contracting Act justification (CICA), CDRLs and Source Selection Plan and associated documents. In addition, the following documentation may be included: Sole Source Justification, Small Business Dissolve Set Aside, Power/Space/Cooling Approval, and Baseline exemption Requests (BERs).'}, 
-                {text:'Assist program managers in developing program documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams.'},
-                {text:'Utilize established NSA acquisition and financial management policies, procedures, regulations and tools.'}, 
-                {text:'Track financial execution performance information (commitments, obligations, and outlays).'}, 
-                {text:'Provide financial status reports for program offices, budget center managers, contracting officers representatives, and expenditure center managers as tasked and recommend funding adjustments as appropriate.'},
-                {text:'Support GPM’s in the identification and collection of Minimum Acquisition Requirements.'}, 
-                {text:'Coordinate and schedule pre-acquisition meetings, to include IPTs.'}, 
-                {text:'Provide support to GPMs to assure execution within the cost, schedule, and performance baselines.'},
-                {text:'Provide assistance in acquisition process improvement initiatives.'}, 
-                {text:'Assist the Government Program Offices with responses to internal and external requests for information.'}, 
-                {text:'Provide oversight and compliance review of acquisition documentation at all levels of preparation.'},
-                {text:'Assist the Government with coordination and advice in the areas of acquisition and program management for Tier II Programs.'}
-            ],
-            qualifications: [
-                {text:'Eight (8) years of demonstrated combined experience in DoD acquisition management, program management, and/or contract management, and a Bachelor’s Degree with a business focus is required. In lieu of a degree, Project Management Institute PMP certification, or Contract Manager CPCM certification, or DAWIA Level III in any focus area, and an additional three (3) years of directly related experience for a total of eleven (11) years may be substituted.'}, 
-                {text:'Unless otherwise specified in the description field Three (3) years of demonstrated experience is required for the domain items described below:'},
-                {text:'Any hands-on Federal Government Source Selection experience to include Best Value/Low-Price Technically Acceptable, Best Value/ Trade-Off, and Sole Source acquisitions. Any hands-on Federal Government Source Selection experience to include providing solicitation documentation guidance, source selection documentation and strategy documentation.'}
-            ]
-        },
-        {
-            id: 21,
-            title: 'Acquisition Professional – BA5 Front Office Source Selection',
-            category: 'Acquisitions',
-            date:'10-20-2018',
-            skillLevel: 3,
-            description: 'Provide acquisition support on functions of program management. Assist program managers in developing program documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams. Provide expertise on the myriad of factors that influence cost, schedule, performance, and risk. Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer. Provides assistance in analyzing and developing improved policies, plans, methods, procedures, and systems of acquisition management programs.',
-            capabilities: [
-                {text:'Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer.'}, 
-                {text:'Work with government project personnel and contracting, as appropriate, ensuring that all required documentation is completed and included (e.g. verify Section 508 information; acquisition security form and/or Contract Security Classification Specification (DD254) completed and submitted to Security; review the Competition in Contracting Act justification (CICA), CDRLs and Source Selection Plan and associated documents. In addition, the following documentation may be included: Sole Source Justification, Small Business Dissolve Set Aside, Power/Space/Cooling Approval, and Baseline exemption Requests (BERs).'}, 
-                {text:'Assist program managers in developing program documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams.'},
-                {text:'Utilize established NSA acquisition and financial management policies, procedures, regulations and tools.'}, 
-                {text:'Track financial execution performance information (commitments, obligations, and outlays).'}, 
-                {text:'Provide financial status reports for program offices, budget center managers, contracting officers representatives, and expenditure center managers as tasked and recommend funding adjustments as appropriate.'},
-                {text:'Support GPM’s in the identification and collection of Minimum Acquisition Requirements.'}, 
-                {text:'Coordinate and schedule pre-acquisition meetings, to include IPTs.'}, 
-                {text:'Provide support to GPMs to assure execution within the cost, schedule, and performance baselines.'},
-                {text:'Provide assistance in acquisition process improvement initiatives.'}, 
-                {text:'Assist the Government Program Offices with responses to internal and external requests for information.'}, 
-                {text:'Provide oversight and compliance review of acquisition documentation at all levels of preparation.'},
-                {text:'Assist the Government with coordination and advice in the areas of acquisition and program management for Tier II Programs.'}, 
-                {text:'Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer.'}, 
-                {text:'Work with government project personnel and contracting, as appropriate, ensuring that all required documentation is completed and included (e.g. verify Section 508 information; acquisition security form and/or Contract Security Classification Specification (DD254) completed and submitted to Security; review the Competition in Contracting Act justification (CICA), CDRLs and Source Selection Plan and associated documents. In addition, the following documentation may be included: Sole Source Justification, Power/Space/Cooling Approval, and Baseline exemption Requests (BERs).'},
-                {text:'Assist program managers in developing program and acquisition documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams (e.g. Test and Evaluation Master Plan (TEMP), Initial Capabilities Document (ICD), Capabilities Development Document (CDD), Capabilities Production Document (CPD), Analysis of Alternatives (AOA).'}, 
-                {text:'Utilize established NSA acquisition and financial management policies, procedures, regulations and tools.'}, 
-                {text:'Support GPM in the identification and collection of Minimum Acquisition Requirements.'},,
-                {text:'Provide support to GPM to assure execution within the cost, schedule, and performance baselines.'}, 
-                {text:'Provide assistance in acquisition process improvement initiatives.'}, 
-                {text:'Assist the GPM with responses to internal and external requests for information.'},
-                {text:'Provide oversight and compliance review of acquisition documentation at all levels of preparation.'}, 
-                {text:'Assist the Government with coordination and advice in the areas of acquisition and program management for Tier I and Tier II Programs.'}
-            ],
-            qualifications: [
-                {text:'Twelve (12) years of demonstrated combined experience in DoD acquisition management, program management, and/or contract management.'}, 
-                {text:'A Bachelor’s Degree in an acquisition related field and professional certification at any level from a recognized institution is desired but not required. In lieu of the Bachelor’s degree, Project Management Institute PMP certification, or Contract Manager CPCM certification, or DAWIA Level III in any other focus area, and an additional three (3) years of directly related experience for a total of fifteen (15) years may be substituted.'}
-            ]
-        },
+        },        
         {
             id: 22,
             title: 'Acquisition Professional Lead',
@@ -1192,6 +1127,36 @@ function CareersCtrl() {
                 {text:'A degree in a directly related field with a minimum three (3) years within the last five (5) years documented experience in visual design or graphical design with an emphasis in supporting training and learning interventions,'},
                 {text:'A minimum of two (2) years, within the last three (3) years, documented experience in designing solutions using static graphics, animations, and interactive animations. In lieu of an Associate\'s degree'},
                 {text:'An additional two (2) years of directly related experience for a total of five (5) years may be substituted.'}
+            ]
+        },
+
+        {
+            id: 34,
+            title: 'PROGRAM INTEGRATOR',
+            category: 'PROGRAM INTEGRATOR',
+            date:'11-04-2019',
+            skillLevel: 3,
+            description: 'The Program Integrator shall assist individual program managers, initiative lea ds, and PEO leadership with monitoring and reporting on the overall health of programs, initiatives, and /or a portfolio.  Perform holistic analysis across multiple contracts and government activities to identify cost, schedule and performance concerns for a program or initiative. Perform cross-program analysis to assist in responding to Investment Portfolio (IP) actions and producing execution reports. Draft acquisition and program documents such as TTOs, Statements of Work (SOWs), Program Management Plans (PM Ps), Risk Management Plans, program schedules, Technical CICA memorandums, and Acquisition Strategies. Prepare presentations to report analysis findings as well as prog ram/ portfolio status.',
+            capabilities: [                
+                {text:'Provide acquisition support on functions of program management analyzing financial execution and projection reports from vendors, liaising with government contract managers (GCMs) to address any anomalies /concerns regarding contract performance and reporting, analyzing financial execution reports from government business financial managers (GBFM s); developing program¬ specific (rather than contract-specific) analysis and recommendations for action to GPM.'},               
+                {text:'Provide financial and summary reports on the program elements to GPMs and assist with the allocation and tracking of resources; recommend funding adjustments as appropriate (contract staffing, facilities, and budgets).'},        
+                {text:'Assist program managers in developing program documentation (TTOs, Statements of Work (SOWs), Program Management Plans (PMPs), Risk Management Plans, program schedules, Technical CICA memorandums, and Acquisition Strategies), creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams.'},        
+                {text:'Advise in the production and tailoring of NSA financial execution reports and program acquisition documentation, and ensure affordable, supportable and effective program requirements are specified to meet mission needs.'},        
+                {text:'Provide support to GPMs to assure execution within the cost, schedule, and performance baselines. Utilize program management tools (e.g., Plan- It, MS Excel) to assist GPM with planning, documenting, executing, and reporting of all program details (e.g., spend plans), for both current year (FY) and out-years (FYDP).'},        
+                {text:'Attend contract reviews to assist GPMs in conducting cost estimating and monitoring of program/initiative outcomes'},
+                {text:'Provide assistance in analyzing and tracking program unfunded requirements in accordance with PEO policies and process'},
+                {text:'Prepare and support delivery of presentations to assist with program/ initiative / portfolio status reviews'},
+                {text:'Prepare point pa pers, briefing charts, spreadsheets and other materials to assist in the Government in program decision-making'},
+                {text:'Perform data analysis using MS Excel with pivot table s, slicers, and pivot charts to present data clearly and effectively Create reports to support program management function to include: a.   Bi-Weekly execution reports by program to show funding execution across a program inclusive of budget center, appropriation and source of funding including point solutions & external funding) - how much money does a program have and how are is the GPM doing on spending it? b.  Bi-Weekly cost estimating reports by program to show the consolidated burn rate across all contracts that support a program and latest projection for amount of funding required to get through the fiscal year c.   Bi-Weekly combined overview of total budget available vs. total projected costs for remainder of fiscal year (i.e., is there a projected overrun or underrun based on program cost estimates?) d.  Bi-Weekly report on any areas of concern - e.g., late receipt of external funds, slow execution against certain appropriations e.   Bi-Weekly contract s report by program to track current contract funding run outs (i.e., when will contractor be at risk of work stoppage), current contract periods of performance, planned award dates, burn rate analyses, contractor CORL deliverables f.   Bi-Weekly Staffing report for LOE contracts, by program, illustrating current and projected staffing, as well as highlighting any areas of concern. Include historic staffing numbers, show positions remaining to be staffed (and their status specifying any delays in filling positions), and show projected staffing for remainder of period of performance. Include attrition metrics. g.   For programs that are going through contract actions and/or Acquisition Resource Board (ARB) base lining, document readiness schedule listing all contract documents required and the status of each against the baseline schedule for completion. (e.g., TTOs, SOWs, CORL packages, Technical CICA memos, Acquisition Strategies, etc.) Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memo rand um s to ensure affordable, supportable and effective capabilities are delivered to the customer. Assist GPM, initiative le ads, and PEO with resource planning and tracking.'}
+            ],
+            qualifications: [
+                {text:'Twelve (12) years of demonstrated combined experience in DoD program management, contract management, and/or financial management'},                
+                {text:'a Bachelor\' s Degree with a business or technical focus is required'},
+                {text:'In lieu of a degree, Project Management Institute PMP certification, Contract Manager CPCM certification, or DAWIA Level III in any focus area'},
+                {text:'An additional three (3) years of directly related experience for a total of fifteen (15) years may be substituted'},
+                {text:'Familiarity with Plan-It is preferred'},
+                {text:'In lieu of certification, an additional three (3) years of directly related experience for a total of eighteen (18) years may be substituted'},
+                {text:'Intermediate proficiency with MS Excel is required to include demonstrated use of pivot tables, slicers, and pivot charts'}                
             ]
         }
     ];
