@@ -1129,7 +1129,6 @@ function CareersCtrl() {
                 {text:'An additional two (2) years of directly related experience for a total of five (5) years may be substituted.'}
             ]
         },
-
         {
             id: 34,
             title: 'PROGRAM INTEGRATOR',
@@ -1157,6 +1156,141 @@ function CareersCtrl() {
                 {text:'Familiarity with Plan-It is preferred'},
                 {text:'In lieu of certification, an additional three (3) years of directly related experience for a total of eighteen (18) years may be substituted'},
                 {text:'Intermediate proficiency with MS Excel is required to include demonstrated use of pivot tables, slicers, and pivot charts'}                
+            ]
+        },
+        {
+            id: 35,
+            title: 'Process Engineer',
+            category: 'Process Engineer',
+            date:'11-08-2019',
+            skillLevel: 1,
+            description: 'Applies process improvement (PI), engineering methodologies, and principles to effictively improve and align Enterprise-level processes.  Facilitates project teams in accomplishing project activities and objectives.  Coordinates the transter of new processes and practices to project teams by providing group facilitation, interviewing, training, and additional forms of knowledge transfer. Acts as a key coordinator between multiple project teams to ensure Enterprise-wide integration of engineering efforts.',
+            capabilities: [                
+                {text:'Develop the plans for process .assessments, both informal and formal'},    
+                {text:'Work closely with the systems and software engineering process development team members to determine.organizational readiness for assessment as well as in conducting assessments'},  
+                {text:'Coordinate and schedule process assessments'},  
+                {text:'Lead assessment teams in conducting both formal and info1mal assessments'},  
+                {text:'Analyze assessment results and make improvement recommendations'},  
+                {text:'Ensure assessment results and recommendations are used as the basis for improvement plans'},  
+                {text:'Assess Process Improvement progress and report findings'},  
+                {text:'Evaluate Systems Engineering and Software Engineering processes to address problems with process work flows, organizational structure and alignment and planning.'},  
+                {text:'Assist in defining Process Improvement strategy and lesson learns'},  
+                {text:'Conducts training sessions and workshops for Process Improvement activities'}  
+            ],
+            qualifications: [
+                {text:'Five (5) years experience with Process Improvement on programs and contracts of similar scope, type, and complexity is required.'},  
+                {text:'Within the past five (5) years, three (3) years experience in facilitation, training, methodology development and evaluation, process engineering across all phases of acquisition identifying best practices, change management, business management techniques, organizational development, activity and data modeling, or information system development methods and practices.'},  
+                {text:'A Bachelor\'s Degree in computer science, information systems, engineering, business, or education from an accredited college or university is required.'}              
+            ]
+        },
+        {
+            id: 36,
+            title: 'Process Engineer',
+            category: 'Process Engineer',
+            date:'11-08-2019',
+            skillLevel: 2,
+            description: 'Applies process improvement (PI), engineering methodologies, and principles to effictively improve and align Enterprise-level processes.  Facilitates project teams in accomplishing project activities and objectives.  Coordinates the transter of new processes and practices to project teams by providing group facilitation, interviewing, training, and additional forms of knowledge transfer. Acts as a key coordinator between multiple project teams to ensure Enterprise-wide integration of engineering efforts.',
+            capabilities: [                
+                {text:'Develop the plans for process .assessments, both informal and formal'},    
+                {text:'Work closely with the systems and software engineering process development team members to determine.organizational readiness for assessment as well as in conducting assessments'},  
+                {text:'Coordinate and schedule process assessments'},  
+                {text:'Lead assessment teams in conducting both formal and info1mal assessments'},  
+                {text:'Analyze assessment results and make improvement recommendations'},  
+                {text:'Ensure assessment results and recommendations are used as the basis for improvement plans'},  
+                {text:'Assess Process Improvement progress and report findings'},  
+                {text:'Evaluate Systems Engineering and Software Engineering processes to address problems with process work flows, organizational structure and alignment and planning.'},  
+                {text:'Assist in defining Process Improvement strategy and lesson learns'},  
+                {text:'Conducts training sessions and workshops for Process Improvement activities'},
+                {text:'Lead Process Improvement effort utilizing CMM/CMMI or other similar process models'},  
+                {text:'Assist in Enterprise level Systems and Software Engineering Process hnprovement initiatives'}    
+            ],
+            qualifications: [
+                {text:'Ten (10) years\' experience with Process Improvement on programs and contracts of similar scope, type, and complexity is required'},  
+                {text:'Within the past ten (10) years, five (5) years experience in facilitation, training, methodology development and evaluation, process engineering across all phases of acquisition identifying best practices, change management, business management techniques, organizational development, activity and data modeling, or information system development methods and practices. '},  
+                {text:'A Bachelor\'s Degree in computer science, information systems, engineering, business, or education from an accredited college or university is required.'}              
+            ]
+        },
+        {
+            id: 37,
+            title: 'Systems Data Modeler',
+            category: 'Systems Data Modeler',
+            date:'11-08-2019',
+            skillLevel: 0,
+            description: 'Assists the Missions Systems Engineering (MSE) Organization and Enterprise Architecture (EA) in the development and implementation of Enterprise Data Modeling standards.  Analyzes MSE an dEA data requirements to ensure development efforts align with the corporate data standards, the Enterprise Architecture, and future transformation efforts.  Implement and maintain Enterprise Data Modeling Governance processes to include change management and configuration management for enterprise data models.  Identifies and manages data model domain data stewards and conduct data modeling enabling activites including the development of the Enterprise Logical Data Model (ELDM), the Enterprise Data Dictionary (EDD), Physical Data Models, data format specifications, model releases, data harmonization and mapping across the data models, the modification of tools to support data modeling, and software application programming interfaces and converteres to enable data model implementations.',
+            capabilities: [                
+                {text:'Map legacy data stores/formats to logical and physical data models'},    
+                {text:'Design and assess system interfaces, end-to-end data flows, and data storage and retrieval solutions for data modeling effort '},  
+                {text:'Create data element definitions and dictionaries'}
+                
+            ],
+            qualifications: [
+                {text:'One (1) year experience as a Data Modeler or Data Architect in programs and contracts of similar scope, type, and complexity is required.'},  
+                {text:'Bachelor\'s degree in Electrical, Systems, or Computer Engineering or related discipline from an accredited college or university is required.'}
+            ]
+        },
+        {
+            id: 38,
+            title: 'Systems Data Modeler',
+            category: 'Systems Data Modeler',
+            date:'11-08-2019',
+            skillLevel: 1,
+            description: 'Assists the Missions Systems Engineering (MSE) Organization and Enterprise Architecture (EA) in the development and implementation of Enterprise Data Modeling standards.  Analyzes MSE an dEA data requirements to ensure development efforts align with the corporate data standards, the Enterprise Architecture, and future transformation efforts.  Implement and maintain Enterprise Data Modeling Governance processes to include change management and configuration management for enterprise data models.  Identifies and manages data model domain data stewards and conduct data modeling enabling activites including the development of the Enterprise Logical Data Model (ELDM), the Enterprise Data Dictionary (EDD), Physical Data Models, data format specifications, model releases, data harmonization and mapping across the data models, the modification of tools to support data modeling, and software application programming interfaces and converteres to enable data model implementations.',
+            capabilities: [                
+                {text:'Map legacy data stores/formats to logical and physical data models'},    
+                {text:'Design and assess system interfaces, end-to-end data flows, and data storage and retrieval solutions for data modeling effort '},  
+                {text:'Create data element definitions and dictionaries'},
+                {text:'Perform UML and ERD data model development'},
+                {text:'Perform XML schema generation and application of related XML technologies (i.e. W3C XML standards, XML Parsers, XSL T, Fast Infoset, Namespaces, XLink, XPath, and XMI) '},
+                {text:'Create, submit, analyze, and review data model change requests and change proposals'},
+                {text:'Develop and maintain domain data models and physical formats required for specific projects across the Enterprise'}
+            ],
+            qualifications: [
+                {text:'Five (5) years\' experience as a Data Modeler or Data Architect in programs and contracts of similar scope, type, and complexity is required. '},
+                {text:'Bachelor\'s degree in Electrical, Systems, or Computer Engineering or related discipline from an accredited college or university is required'},
+                {text:'A Master\'s degree may be substituted for two (2) years of experience, thereby reducing the total years of experience to three (3). '}
+            ]
+        },
+        {
+            id: 39,
+            title: 'Systems Data Modeler',
+            category: 'Systems Data Modeler',
+            date:'11-08-2019',
+            skillLevel: 2,
+            description: 'Assists the Missions Systems Engineering (MSE) Organization and Enterprise Architecture (EA) in the development and implementation of Enterprise Data Modeling standards.  Analyzes MSE an dEA data requirements to ensure development efforts align with the corporate data standards, the Enterprise Architecture, and future transformation efforts.  Implement and maintain Enterprise Data Modeling Governance processes to include change management and configuration management for enterprise data models.  Identifies and manages data model domain data stewards and conduct data modeling enabling activites including the development of the Enterprise Logical Data Model (ELDM), the Enterprise Data Dictionary (EDD), Physical Data Models, data format specifications, model releases, data harmonization and mapping across the data models, the modification of tools to support data modeling, and software application programming interfaces and converteres to enable data model implementations.',
+            capabilities: [                
+                {text:'Map legacy data stores/formats to logical and physical data models'},    
+                {text:'Design and assess system interfaces, end-to-end data flows, and data storage and retrieval solutions for data modeling effort '},  
+                {text:'Create data element definitions and dictionaries'},
+                {text:'Perform UML and ERD data model development'},
+                {text:'Perform XML schema generation and application of related XML technologies (i.e. W3C XML standards, XML Parsers, XSL T, Fast Infoset, Namespaces, XLink, XPath, and XMI) '},
+                {text:'Create, submit, analyze, and review data model change requests and change proposals'},
+                {text:'Develop and maintain domain data models and physical formats required for specific projects across the Enterprise'},
+                {text:'Perform requitements analysis'},
+                {text:'Manage System Engineering efforts'},
+                {text:'Coordinate Stakeholder input for model development and Technical Peer Review'}
+            ],
+            qualifications: [
+                {text:'Twelve (12) years\' experience as a Data Modeler or Data Architect in programs and contracts of similar scope, type, and complexity is required. '},
+                {text:'Bachelor\'s degree in Electrical, Systems, or Computer Engineering or related discipline from an accredited college or university is required'},
+                {text:'A Master\'s degree may be substituted for two (2) years of experience, thereby reducing the total years of experience to ten (10). '}
+            ]
+        },
+        {
+            id: 40,
+            title: 'Operations Requirements Analyst',
+            category: 'Operations Requirements Analyst',
+            date:'11-08-2019',
+            skillLevel: 3,
+            description: 'Provies technical direction in the area of national and tactical cryptologic capabilities. Facilitates requirements gathering by coordination technical exchange meetings (and other meetings as needed) with the SErvices, Combat Support Agencies (CSAs), systems engineers , data modelers, and other members of the requiremetns team.  Provides comprehensive definition and documentation updates for deliverables. Coordinates with analysts, managers, and seniors within Unigied Cryptoligic Systems (UCS) to verify operational requirements.',
+            capabilities: [                
+                {text:'Participate in forums throughout the national/tactical SIGINT community'},  
+                {text:'Gather updated standards information'},
+                {text:'Collect programmatic information to identify programs that need to be considered for future assessments'},
+                {text:'Capture and deliver Tactical Compliance Verification (TCV) lessons learned through briefings and discussions '}
+            ],
+            qualifications: [
+                {text:'Ten(10) years\' experience in programs and contracts of similar scope, type and complexity is required of which five (5) years shall be in the Intelligence Community (IC). '},
+                {text:'Bachelor\'s Degree in Engineering or a related field (e.g., systems engineering, mathematics, information technology, operations research). '}
             ]
         }
     ];
