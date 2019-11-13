@@ -798,72 +798,7 @@ function CareersCtrl() {
                 {text:'Twelve (12) years of demonstrated combined experience in DoD acquisition management, program management, and/or contract management.'}, 
                 {text:'A Bachelor’s Degree in an acquisition related field and professional certification at any level from a recognized institution is desired but not required. In lieu of the Bachelor’s degree, Project Management Institute PMP certification, or Contract Manager CPCM certification, or DAWIA Level III in any other focus area, and an additional three (3) years of directly related experience for a total of fifteen (15) years may be substituted.'}
             ]
-        },
-        {
-            id: 20,
-            title: 'Acquisition Professional – BA5 Front Office Source Selection',
-            category: 'Acquisitions',
-            date:'10-20-2018',
-            skillLevel: 2,
-            description: 'Provide acquisition support on functions of program management. Assist program managers in developing program documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams. Provide expertise on the myriad of factors that influence cost, schedule, performance, and risk. Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer. Provides assistance in analyzing and developing improved policies, plans, methods, procedures, and systems of acquisition management programs.',
-            capabilities: [
-                {text:'Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer.'}, 
-                {text:'Work with government project personnel and contracting, as appropriate, ensuring that all required documentation is completed and included (e.g. verify Section 508 information; acquisition security form and/or Contract Security Classification Specification (DD254) completed and submitted to Security; review the Competition in Contracting Act justification (CICA), CDRLs and Source Selection Plan and associated documents. In addition, the following documentation may be included: Sole Source Justification, Small Business Dissolve Set Aside, Power/Space/Cooling Approval, and Baseline exemption Requests (BERs).'}, 
-                {text:'Assist program managers in developing program documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams.'},
-                {text:'Utilize established NSA acquisition and financial management policies, procedures, regulations and tools.'}, 
-                {text:'Track financial execution performance information (commitments, obligations, and outlays).'}, 
-                {text:'Provide financial status reports for program offices, budget center managers, contracting officers representatives, and expenditure center managers as tasked and recommend funding adjustments as appropriate.'},
-                {text:'Support GPM’s in the identification and collection of Minimum Acquisition Requirements.'}, 
-                {text:'Coordinate and schedule pre-acquisition meetings, to include IPTs.'}, 
-                {text:'Provide support to GPMs to assure execution within the cost, schedule, and performance baselines.'},
-                {text:'Provide assistance in acquisition process improvement initiatives.'}, 
-                {text:'Assist the Government Program Offices with responses to internal and external requests for information.'}, 
-                {text:'Provide oversight and compliance review of acquisition documentation at all levels of preparation.'},
-                {text:'Assist the Government with coordination and advice in the areas of acquisition and program management for Tier II Programs.'}
-            ],
-            qualifications: [
-                {text:'Eight (8) years of demonstrated combined experience in DoD acquisition management, program management, and/or contract management, and a Bachelor’s Degree with a business focus is required. In lieu of a degree, Project Management Institute PMP certification, or Contract Manager CPCM certification, or DAWIA Level III in any focus area, and an additional three (3) years of directly related experience for a total of eleven (11) years may be substituted.'}, 
-                {text:'Unless otherwise specified in the description field Three (3) years of demonstrated experience is required for the domain items described below:'},
-                {text:'Any hands-on Federal Government Source Selection experience to include Best Value/Low-Price Technically Acceptable, Best Value/ Trade-Off, and Sole Source acquisitions. Any hands-on Federal Government Source Selection experience to include providing solicitation documentation guidance, source selection documentation and strategy documentation.'}
-            ]
-        },
-        {
-            id: 21,
-            title: 'Acquisition Professional – BA5 Front Office Source Selection',
-            category: 'Acquisitions',
-            date:'10-20-2018',
-            skillLevel: 3,
-            description: 'Provide acquisition support on functions of program management. Assist program managers in developing program documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams. Provide expertise on the myriad of factors that influence cost, schedule, performance, and risk. Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer. Provides assistance in analyzing and developing improved policies, plans, methods, procedures, and systems of acquisition management programs.',
-            capabilities: [
-                {text:'Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer.'}, 
-                {text:'Work with government project personnel and contracting, as appropriate, ensuring that all required documentation is completed and included (e.g. verify Section 508 information; acquisition security form and/or Contract Security Classification Specification (DD254) completed and submitted to Security; review the Competition in Contracting Act justification (CICA), CDRLs and Source Selection Plan and associated documents. In addition, the following documentation may be included: Sole Source Justification, Small Business Dissolve Set Aside, Power/Space/Cooling Approval, and Baseline exemption Requests (BERs).'}, 
-                {text:'Assist program managers in developing program documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams.'},
-                {text:'Utilize established NSA acquisition and financial management policies, procedures, regulations and tools.'}, 
-                {text:'Track financial execution performance information (commitments, obligations, and outlays).'}, 
-                {text:'Provide financial status reports for program offices, budget center managers, contracting officers representatives, and expenditure center managers as tasked and recommend funding adjustments as appropriate.'},
-                {text:'Support GPM’s in the identification and collection of Minimum Acquisition Requirements.'}, 
-                {text:'Coordinate and schedule pre-acquisition meetings, to include IPTs.'}, 
-                {text:'Provide support to GPMs to assure execution within the cost, schedule, and performance baselines.'},
-                {text:'Provide assistance in acquisition process improvement initiatives.'}, 
-                {text:'Assist the Government Program Offices with responses to internal and external requests for information.'}, 
-                {text:'Provide oversight and compliance review of acquisition documentation at all levels of preparation.'},
-                {text:'Assist the Government with coordination and advice in the areas of acquisition and program management for Tier II Programs.'}, 
-                {text:'Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memorandums, and ensure affordable, supportable and effective systems are delivered to the customer.'}, 
-                {text:'Work with government project personnel and contracting, as appropriate, ensuring that all required documentation is completed and included (e.g. verify Section 508 information; acquisition security form and/or Contract Security Classification Specification (DD254) completed and submitted to Security; review the Competition in Contracting Act justification (CICA), CDRLs and Source Selection Plan and associated documents. In addition, the following documentation may be included: Sole Source Justification, Power/Space/Cooling Approval, and Baseline exemption Requests (BERs).'},
-                {text:'Assist program managers in developing program and acquisition documentation, creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams (e.g. Test and Evaluation Master Plan (TEMP), Initial Capabilities Document (ICD), Capabilities Development Document (CDD), Capabilities Production Document (CPD), Analysis of Alternatives (AOA).'}, 
-                {text:'Utilize established NSA acquisition and financial management policies, procedures, regulations and tools.'}, 
-                {text:'Support GPM in the identification and collection of Minimum Acquisition Requirements.'},,
-                {text:'Provide support to GPM to assure execution within the cost, schedule, and performance baselines.'}, 
-                {text:'Provide assistance in acquisition process improvement initiatives.'}, 
-                {text:'Assist the GPM with responses to internal and external requests for information.'},
-                {text:'Provide oversight and compliance review of acquisition documentation at all levels of preparation.'}, 
-                {text:'Assist the Government with coordination and advice in the areas of acquisition and program management for Tier I and Tier II Programs.'}
-            ],
-            qualifications: [
-                {text:'Twelve (12) years of demonstrated combined experience in DoD acquisition management, program management, and/or contract management.'}, 
-                {text:'A Bachelor’s Degree in an acquisition related field and professional certification at any level from a recognized institution is desired but not required. In lieu of the Bachelor’s degree, Project Management Institute PMP certification, or Contract Manager CPCM certification, or DAWIA Level III in any other focus area, and an additional three (3) years of directly related experience for a total of fifteen (15) years may be substituted.'}
-            ]
-        },
+        },        
         {
             id: 22,
             title: 'Acquisition Professional Lead',
@@ -1192,6 +1127,170 @@ function CareersCtrl() {
                 {text:'A degree in a directly related field with a minimum three (3) years within the last five (5) years documented experience in visual design or graphical design with an emphasis in supporting training and learning interventions,'},
                 {text:'A minimum of two (2) years, within the last three (3) years, documented experience in designing solutions using static graphics, animations, and interactive animations. In lieu of an Associate\'s degree'},
                 {text:'An additional two (2) years of directly related experience for a total of five (5) years may be substituted.'}
+            ]
+        },
+        {
+            id: 34,
+            title: 'PROGRAM INTEGRATOR',
+            category: 'PROGRAM INTEGRATOR',
+            date:'11-04-2019',
+            skillLevel: 3,
+            description: 'The Program Integrator shall assist individual program managers, initiative lea ds, and PEO leadership with monitoring and reporting on the overall health of programs, initiatives, and /or a portfolio.  Perform holistic analysis across multiple contracts and government activities to identify cost, schedule and performance concerns for a program or initiative. Perform cross-program analysis to assist in responding to Investment Portfolio (IP) actions and producing execution reports. Draft acquisition and program documents such as TTOs, Statements of Work (SOWs), Program Management Plans (PM Ps), Risk Management Plans, program schedules, Technical CICA memorandums, and Acquisition Strategies. Prepare presentations to report analysis findings as well as prog ram/ portfolio status.',
+            capabilities: [                
+                {text:'Provide acquisition support on functions of program management analyzing financial execution and projection reports from vendors, liaising with government contract managers (GCMs) to address any anomalies /concerns regarding contract performance and reporting, analyzing financial execution reports from government business financial managers (GBFM s); developing program¬ specific (rather than contract-specific) analysis and recommendations for action to GPM.'},               
+                {text:'Provide financial and summary reports on the program elements to GPMs and assist with the allocation and tracking of resources; recommend funding adjustments as appropriate (contract staffing, facilities, and budgets).'},        
+                {text:'Assist program managers in developing program documentation (TTOs, Statements of Work (SOWs), Program Management Plans (PMPs), Risk Management Plans, program schedules, Technical CICA memorandums, and Acquisition Strategies), creating program schedules, tracking program status, evaluating operational and technical alternatives, performing risk assessment and managing integrated product teams.'},        
+                {text:'Advise in the production and tailoring of NSA financial execution reports and program acquisition documentation, and ensure affordable, supportable and effective program requirements are specified to meet mission needs.'},        
+                {text:'Provide support to GPMs to assure execution within the cost, schedule, and performance baselines. Utilize program management tools (e.g., Plan- It, MS Excel) to assist GPM with planning, documenting, executing, and reporting of all program details (e.g., spend plans), for both current year (FY) and out-years (FYDP).'},        
+                {text:'Attend contract reviews to assist GPMs in conducting cost estimating and monitoring of program/initiative outcomes'},
+                {text:'Provide assistance in analyzing and tracking program unfunded requirements in accordance with PEO policies and process'},
+                {text:'Prepare and support delivery of presentations to assist with program/ initiative / portfolio status reviews'},
+                {text:'Prepare point pa pers, briefing charts, spreadsheets and other materials to assist in the Government in program decision-making'},
+                {text:'Perform data analysis using MS Excel with pivot table s, slicers, and pivot charts to present data clearly and effectively Create reports to support program management function to include: a.   Bi-Weekly execution reports by program to show funding execution across a program inclusive of budget center, appropriation and source of funding including point solutions & external funding) - how much money does a program have and how are is the GPM doing on spending it? b.  Bi-Weekly cost estimating reports by program to show the consolidated burn rate across all contracts that support a program and latest projection for amount of funding required to get through the fiscal year c.   Bi-Weekly combined overview of total budget available vs. total projected costs for remainder of fiscal year (i.e., is there a projected overrun or underrun based on program cost estimates?) d.  Bi-Weekly report on any areas of concern - e.g., late receipt of external funds, slow execution against certain appropriations e.   Bi-Weekly contract s report by program to track current contract funding run outs (i.e., when will contractor be at risk of work stoppage), current contract periods of performance, planned award dates, burn rate analyses, contractor CORL deliverables f.   Bi-Weekly Staffing report for LOE contracts, by program, illustrating current and projected staffing, as well as highlighting any areas of concern. Include historic staffing numbers, show positions remaining to be staffed (and their status specifying any delays in filling positions), and show projected staffing for remainder of period of performance. Include attrition metrics. g.   For programs that are going through contract actions and/or Acquisition Resource Board (ARB) base lining, document readiness schedule listing all contract documents required and the status of each against the baseline schedule for completion. (e.g., TTOs, SOWs, CORL packages, Technical CICA memos, Acquisition Strategies, etc.) Advise in the interpretation and tailoring of DoD/NSA acquisition regulations/memo rand um s to ensure affordable, supportable and effective capabilities are delivered to the customer. Assist GPM, initiative le ads, and PEO with resource planning and tracking.'}
+            ],
+            qualifications: [
+                {text:'Twelve (12) years of demonstrated combined experience in DoD program management, contract management, and/or financial management'},                
+                {text:'a Bachelor\' s Degree with a business or technical focus is required'},
+                {text:'In lieu of a degree, Project Management Institute PMP certification, Contract Manager CPCM certification, or DAWIA Level III in any focus area'},
+                {text:'An additional three (3) years of directly related experience for a total of fifteen (15) years may be substituted'},
+                {text:'Familiarity with Plan-It is preferred'},
+                {text:'In lieu of certification, an additional three (3) years of directly related experience for a total of eighteen (18) years may be substituted'},
+                {text:'Intermediate proficiency with MS Excel is required to include demonstrated use of pivot tables, slicers, and pivot charts'}                
+            ]
+        },
+        {
+            id: 35,
+            title: 'Process Engineer',
+            category: 'Process Engineer',
+            date:'11-08-2019',
+            skillLevel: 1,
+            description: 'Applies process improvement (PI), engineering methodologies, and principles to effictively improve and align Enterprise-level processes.  Facilitates project teams in accomplishing project activities and objectives.  Coordinates the transter of new processes and practices to project teams by providing group facilitation, interviewing, training, and additional forms of knowledge transfer. Acts as a key coordinator between multiple project teams to ensure Enterprise-wide integration of engineering efforts.',
+            capabilities: [                
+                {text:'Develop the plans for process .assessments, both informal and formal'},    
+                {text:'Work closely with the systems and software engineering process development team members to determine.organizational readiness for assessment as well as in conducting assessments'},  
+                {text:'Coordinate and schedule process assessments'},  
+                {text:'Lead assessment teams in conducting both formal and info1mal assessments'},  
+                {text:'Analyze assessment results and make improvement recommendations'},  
+                {text:'Ensure assessment results and recommendations are used as the basis for improvement plans'},  
+                {text:'Assess Process Improvement progress and report findings'},  
+                {text:'Evaluate Systems Engineering and Software Engineering processes to address problems with process work flows, organizational structure and alignment and planning.'},  
+                {text:'Assist in defining Process Improvement strategy and lesson learns'},  
+                {text:'Conducts training sessions and workshops for Process Improvement activities'}  
+            ],
+            qualifications: [
+                {text:'Five (5) years experience with Process Improvement on programs and contracts of similar scope, type, and complexity is required.'},  
+                {text:'Within the past five (5) years, three (3) years experience in facilitation, training, methodology development and evaluation, process engineering across all phases of acquisition identifying best practices, change management, business management techniques, organizational development, activity and data modeling, or information system development methods and practices.'},  
+                {text:'A Bachelor\'s Degree in computer science, information systems, engineering, business, or education from an accredited college or university is required.'}              
+            ]
+        },
+        {
+            id: 36,
+            title: 'Process Engineer',
+            category: 'Process Engineer',
+            date:'11-08-2019',
+            skillLevel: 2,
+            description: 'Applies process improvement (PI), engineering methodologies, and principles to effictively improve and align Enterprise-level processes.  Facilitates project teams in accomplishing project activities and objectives.  Coordinates the transter of new processes and practices to project teams by providing group facilitation, interviewing, training, and additional forms of knowledge transfer. Acts as a key coordinator between multiple project teams to ensure Enterprise-wide integration of engineering efforts.',
+            capabilities: [                
+                {text:'Develop the plans for process .assessments, both informal and formal'},    
+                {text:'Work closely with the systems and software engineering process development team members to determine.organizational readiness for assessment as well as in conducting assessments'},  
+                {text:'Coordinate and schedule process assessments'},  
+                {text:'Lead assessment teams in conducting both formal and info1mal assessments'},  
+                {text:'Analyze assessment results and make improvement recommendations'},  
+                {text:'Ensure assessment results and recommendations are used as the basis for improvement plans'},  
+                {text:'Assess Process Improvement progress and report findings'},  
+                {text:'Evaluate Systems Engineering and Software Engineering processes to address problems with process work flows, organizational structure and alignment and planning.'},  
+                {text:'Assist in defining Process Improvement strategy and lesson learns'},  
+                {text:'Conducts training sessions and workshops for Process Improvement activities'},
+                {text:'Lead Process Improvement effort utilizing CMM/CMMI or other similar process models'},  
+                {text:'Assist in Enterprise level Systems and Software Engineering Process hnprovement initiatives'}    
+            ],
+            qualifications: [
+                {text:'Ten (10) years\' experience with Process Improvement on programs and contracts of similar scope, type, and complexity is required'},  
+                {text:'Within the past ten (10) years, five (5) years experience in facilitation, training, methodology development and evaluation, process engineering across all phases of acquisition identifying best practices, change management, business management techniques, organizational development, activity and data modeling, or information system development methods and practices. '},  
+                {text:'A Bachelor\'s Degree in computer science, information systems, engineering, business, or education from an accredited college or university is required.'}              
+            ]
+        },
+        {
+            id: 37,
+            title: 'Systems Data Modeler',
+            category: 'Systems Data Modeler',
+            date:'11-08-2019',
+            skillLevel: 0,
+            description: 'Assists the Missions Systems Engineering (MSE) Organization and Enterprise Architecture (EA) in the development and implementation of Enterprise Data Modeling standards.  Analyzes MSE an dEA data requirements to ensure development efforts align with the corporate data standards, the Enterprise Architecture, and future transformation efforts.  Implement and maintain Enterprise Data Modeling Governance processes to include change management and configuration management for enterprise data models.  Identifies and manages data model domain data stewards and conduct data modeling enabling activites including the development of the Enterprise Logical Data Model (ELDM), the Enterprise Data Dictionary (EDD), Physical Data Models, data format specifications, model releases, data harmonization and mapping across the data models, the modification of tools to support data modeling, and software application programming interfaces and converteres to enable data model implementations.',
+            capabilities: [                
+                {text:'Map legacy data stores/formats to logical and physical data models'},    
+                {text:'Design and assess system interfaces, end-to-end data flows, and data storage and retrieval solutions for data modeling effort '},  
+                {text:'Create data element definitions and dictionaries'}
+                
+            ],
+            qualifications: [
+                {text:'One (1) year experience as a Data Modeler or Data Architect in programs and contracts of similar scope, type, and complexity is required.'},  
+                {text:'Bachelor\'s degree in Electrical, Systems, or Computer Engineering or related discipline from an accredited college or university is required.'}
+            ]
+        },
+        {
+            id: 38,
+            title: 'Systems Data Modeler',
+            category: 'Systems Data Modeler',
+            date:'11-08-2019',
+            skillLevel: 1,
+            description: 'Assists the Missions Systems Engineering (MSE) Organization and Enterprise Architecture (EA) in the development and implementation of Enterprise Data Modeling standards.  Analyzes MSE an dEA data requirements to ensure development efforts align with the corporate data standards, the Enterprise Architecture, and future transformation efforts.  Implement and maintain Enterprise Data Modeling Governance processes to include change management and configuration management for enterprise data models.  Identifies and manages data model domain data stewards and conduct data modeling enabling activites including the development of the Enterprise Logical Data Model (ELDM), the Enterprise Data Dictionary (EDD), Physical Data Models, data format specifications, model releases, data harmonization and mapping across the data models, the modification of tools to support data modeling, and software application programming interfaces and converteres to enable data model implementations.',
+            capabilities: [                
+                {text:'Map legacy data stores/formats to logical and physical data models'},    
+                {text:'Design and assess system interfaces, end-to-end data flows, and data storage and retrieval solutions for data modeling effort '},  
+                {text:'Create data element definitions and dictionaries'},
+                {text:'Perform UML and ERD data model development'},
+                {text:'Perform XML schema generation and application of related XML technologies (i.e. W3C XML standards, XML Parsers, XSL T, Fast Infoset, Namespaces, XLink, XPath, and XMI) '},
+                {text:'Create, submit, analyze, and review data model change requests and change proposals'},
+                {text:'Develop and maintain domain data models and physical formats required for specific projects across the Enterprise'}
+            ],
+            qualifications: [
+                {text:'Five (5) years\' experience as a Data Modeler or Data Architect in programs and contracts of similar scope, type, and complexity is required. '},
+                {text:'Bachelor\'s degree in Electrical, Systems, or Computer Engineering or related discipline from an accredited college or university is required'},
+                {text:'A Master\'s degree may be substituted for two (2) years of experience, thereby reducing the total years of experience to three (3). '}
+            ]
+        },
+        {
+            id: 39,
+            title: 'Systems Data Modeler',
+            category: 'Systems Data Modeler',
+            date:'11-08-2019',
+            skillLevel: 2,
+            description: 'Assists the Missions Systems Engineering (MSE) Organization and Enterprise Architecture (EA) in the development and implementation of Enterprise Data Modeling standards.  Analyzes MSE an dEA data requirements to ensure development efforts align with the corporate data standards, the Enterprise Architecture, and future transformation efforts.  Implement and maintain Enterprise Data Modeling Governance processes to include change management and configuration management for enterprise data models.  Identifies and manages data model domain data stewards and conduct data modeling enabling activites including the development of the Enterprise Logical Data Model (ELDM), the Enterprise Data Dictionary (EDD), Physical Data Models, data format specifications, model releases, data harmonization and mapping across the data models, the modification of tools to support data modeling, and software application programming interfaces and converteres to enable data model implementations.',
+            capabilities: [                
+                {text:'Map legacy data stores/formats to logical and physical data models'},    
+                {text:'Design and assess system interfaces, end-to-end data flows, and data storage and retrieval solutions for data modeling effort '},  
+                {text:'Create data element definitions and dictionaries'},
+                {text:'Perform UML and ERD data model development'},
+                {text:'Perform XML schema generation and application of related XML technologies (i.e. W3C XML standards, XML Parsers, XSL T, Fast Infoset, Namespaces, XLink, XPath, and XMI) '},
+                {text:'Create, submit, analyze, and review data model change requests and change proposals'},
+                {text:'Develop and maintain domain data models and physical formats required for specific projects across the Enterprise'},
+                {text:'Perform requitements analysis'},
+                {text:'Manage System Engineering efforts'},
+                {text:'Coordinate Stakeholder input for model development and Technical Peer Review'}
+            ],
+            qualifications: [
+                {text:'Twelve (12) years\' experience as a Data Modeler or Data Architect in programs and contracts of similar scope, type, and complexity is required. '},
+                {text:'Bachelor\'s degree in Electrical, Systems, or Computer Engineering or related discipline from an accredited college or university is required'},
+                {text:'A Master\'s degree may be substituted for two (2) years of experience, thereby reducing the total years of experience to ten (10). '}
+            ]
+        },
+        {
+            id: 40,
+            title: 'Operations Requirements Analyst',
+            category: 'Operations Requirements Analyst',
+            date:'11-08-2019',
+            skillLevel: 3,
+            description: 'Provies technical direction in the area of national and tactical cryptologic capabilities. Facilitates requirements gathering by coordination technical exchange meetings (and other meetings as needed) with the SErvices, Combat Support Agencies (CSAs), systems engineers , data modelers, and other members of the requiremetns team.  Provides comprehensive definition and documentation updates for deliverables. Coordinates with analysts, managers, and seniors within Unigied Cryptoligic Systems (UCS) to verify operational requirements.',
+            capabilities: [                
+                {text:'Participate in forums throughout the national/tactical SIGINT community'},  
+                {text:'Gather updated standards information'},
+                {text:'Collect programmatic information to identify programs that need to be considered for future assessments'},
+                {text:'Capture and deliver Tactical Compliance Verification (TCV) lessons learned through briefings and discussions '}
+            ],
+            qualifications: [
+                {text:'Ten(10) years\' experience in programs and contracts of similar scope, type and complexity is required of which five (5) years shall be in the Intelligence Community (IC). '},
+                {text:'Bachelor\'s Degree in Engineering or a related field (e.g., systems engineering, mathematics, information technology, operations research). '}
             ]
         }
     ];
