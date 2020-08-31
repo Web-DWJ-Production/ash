@@ -56,12 +56,12 @@ var config = {
       ['{system-engineering}','services#system-engineering'],
       ['{programmatic-acquisition}','services#programmatic-acquisition'],
       ['{contact-us}','contactus'],
-      ['{employee-portal}','underconstruction'],
       ['{login}','login'],
       ['{facebook-link}','underconstruction'],
-      ['{twitter-link}','https://twitter.com/intent/tweet?text=Contact&url=http%3A%2F%2Fwww.strategic-analytix.com%2Fcontact.html%23.Wfiz1tSH08o.twitter&related='],
+      ['{twitter-link}','https://twitter.com/strat_analytix'],
       ['{linkedin-link}','https://www.linkedin.com/company/strategic-analytix'],
-      ['{employee-portal}','employees']
+      ['{employee-portal}','employees'],
+      ['{inc5000-link}','https://www.inc.com/inc5000/index.html']
     ],    
     htmlLocation: "app/templates/"
   },

@@ -5,7 +5,10 @@
                 .flex-column {
                     &.bulk-text { 
                         line-height: 2rem;
-                        p { &+p{ margin-top:20px;}}                         
+                        p { 
+                            b { color: @color4;}
+                            &+p{ margin-top:20px;}
+                        }                         
                     }
                 }
             }
