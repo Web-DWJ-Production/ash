@@ -4,8 +4,7 @@
   "description": "authentication app template",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "heroku-postbuild": "gulp prod"
+    "start": "node index.js"
   },
   "author": "dwj production web team",
   "license": "ISC",
