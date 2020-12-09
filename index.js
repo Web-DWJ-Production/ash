@@ -2,10 +2,9 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
-var expressJwt = require('express-jwt');
 var path = require('path');
 var mongoose = require('mongoose');
-var database = require('./db/config');
+require('dotenv').config();
 
 // EXPRESS CONFIG
 
@@ -20,7 +19,7 @@ var forceSsl = function (req, res, next) {
 
 // DB CONFIG
 mongoose.Promise = global.Promise;
-mongoose.connect(database.remoteUrl, { useMongoClient: true });
+mongoose.connect(process.env.DatabaseConnectionString, { useNewUrlParser: true, useUnifiedTopology: true, dbName: process.env.DBNAME });
 
 var app = express();
 app.use(cors()); // enable cors
@@ -28,9 +27,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'dist/assets')));
-
-// JWT CONFIG
-var secret = process.env.JWT_SECRET || 'changeme';
 
 // SERVER CONFIG
 var port = process.env.PORT || 8081;

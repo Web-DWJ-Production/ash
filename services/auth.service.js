@@ -1,6 +1,5 @@
 // IMPORTS
 var bcrypt = require('bcrypt');
-//var db = require('../lowdb/lowdb.js')
 var secret = process.env.JWT_SECRET || 'changeme';
 var jwt = require('jsonwebtoken');
 var mdb = require('../db/users');
