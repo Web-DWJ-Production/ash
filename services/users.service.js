@@ -20,8 +20,9 @@ function generatePwd() {
 
 service.pwdReset = (req, res) => {
     var tmpPass = generatePwd();
-    var tmpPassExp = new Date().getTime() + 3600000;
-
+    // 12 Hours
+    var tmpPassExp = new Date().getTime() + (12 * 60 * 60 * 1000);
+    var retData = { "error": null, "results":false };
     
     /*db.get('users')
         .find({ email: req.body.email })
@@ -35,19 +36,22 @@ service.pwdReset = (req, res) => {
             from: 'helpdesk.dwjproduction@gmail.com', // sender address
             to: req.body.email, // list of receivers
             subject: 'Strategic Analytix Temporary Password', // Subject line
-            text: 'your temporary password is ' + tmpPass + ' it is valid for 1hr. Make sure to change reset your password by going to account settings after loging in.', // plaintext body
-            html: '<p>your temporary password is </p><h1>' + tmpPass + '</h1><p> it is valid for 1hr. Make sure to reset your password by going to account settings after loging in.</p>'// html body
+            text: 'Your temporary password is ' + tmpPass + ' it is valid for the next 12 hrs. Make sure to change reset your password by going to account settings after logging in. Login using the temporary passoword, Click the settings button, Use the Reset Password Button, & Change Your password to something that you will remember', // plaintext body
+            html: '<p>Your temporary password is </p><h1>' + tmpPass + '</h1><p> it is valid for the next 12hrs. Make sure to reset your password by going to account settings after logging in.</p> <ol><li>Login using the temporary passoword</li><li>Click the settings button</li><li>Use the <b>Reset Password Button</b></li><li>Change Your password to something that you will remember</li></ol>'// html body
         };        
     
         // send mail with defined transport object
         transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
                 console.log(error);
-                res.status(200).json(false);
+                retData.error = error;                
             }
-        });
+            else {
+                retData.results = true;
+            }
 
-        res.status(200).json(true);
+            res.status(200).json(retData);
+        });
     });        
 }
 

@@ -24,6 +24,9 @@ loginCtrl.reconcile = function () {
 loginCtrl.reconcile();
 
 loginCtrl.login = function () {
+    var loaderIf = new SparkIf(document.getElementById('loader-wrapper'), true, 'inline');
+    loaderIf.viewable = true;
+    loaderIf.reconcile();
 
     function parseJwt(token) {
         var base64Url = token.split('.')[1];
@@ -46,14 +49,23 @@ loginCtrl.login = function () {
         return;
     }
 
-    cinnabarisland.post('/api/auth', body, function (data) {
-        loginCtrl.token = data.substring(1, data.length - 1);
+    cinnabarisland.post('/api/auth', body, function (retData) {
+        loaderIf.viewable = false;
+        loaderIf.reconcile();
+        var data = JSON.parse(retData);
 
-        loginCtrl.user = parseJwt(loginCtrl.token);
-        localStorage.setItem('SAUser', JSON.stringify(loginCtrl.user));
-        localStorage.setItem('SAToken', loginCtrl.token);
-        linksCtrl.redirectToEmployees();
-        loginCtrl.reconcile();
+        if(data.error){
+            alert(data.error);
+        }
+        else {
+            loginCtrl.token = data.results;//.substring(1, data.results.length - 1);
+
+            loginCtrl.user = parseJwt(loginCtrl.token);
+            localStorage.setItem('SAUser', JSON.stringify(loginCtrl.user));
+            localStorage.setItem('SAToken', loginCtrl.token);
+            linksCtrl.redirectToEmployees();
+            loginCtrl.reconcile();
+        }        
     }, null, true);
 }
 
@@ -63,13 +75,27 @@ loginCtrl.signout = function () {
 
 loginCtrl.resetPwd = function () {
     var email = document.getElementById('login_email_input').value;
+    var loaderIf = new SparkIf(document.getElementById('loader-wrapper'), true, 'inline');
+    loaderIf.viewable = true;
+    loaderIf.reconcile();
+
     if (!email) {
         alert('Enter your email address, then click forgot password.');
         return;
     }
+    
     var body = { email: document.getElementById('login_email_input').value }
-    cinnabarisland.post('/api/users/pwdreset', body, function (data) {
-        alert('A temporary password has been sent to ' + email + ".")
+    cinnabarisland.post('/api/users/pwdreset', body, function (retData) {
+        var data = JSON.parse(retData);
+        loaderIf.viewable = false;
+        loaderIf.reconcile();
+
+        if(data.error || !data.results){
+            alert("Error Sending Reset Email: Please contact Admin");
+        }
+        else {
+            alert('A temporary password has been sent to ' + email + ".");
+        }
     }, null, true);
 }
 
