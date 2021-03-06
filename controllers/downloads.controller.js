@@ -40,7 +40,7 @@ function getEAP(req, res) {
 };
 
 function getEMPHandbook(req, res) { 
-    var file = __dirname + '/fs/Strategic_Analytix_Employee_Handbook_102019.pdf';
+    var file = __dirname + '/fs/Strategic Analytix Employee Handbook_2.16.21.pdf';
     res.download(file);
 };
 function getFBA(req, res) { 
