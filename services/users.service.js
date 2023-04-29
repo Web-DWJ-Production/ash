@@ -1,5 +1,4 @@
 // IMPORTS
-var bcrypt = require('bcrypt');
 var secret = process.env.JWT_SECRET || 'changeme';
 var jwt = require('jsonwebtoken');
 var transporter = require('../mailers/info.mailer.js')
@@ -81,11 +80,8 @@ service.postUser = (req, res) => {
         console.log("Users (postUser) failed.");
         res.status(200).json({ message: 'Users (postUser) failed.' });
     }
-
-    /*db.get('users')
-        .push({ email: req.body.email.toLowerCase(), password: bcrypt.hashSync(req.body.password, 10), admin: req.body.admin })
-        .write();*/    
-    var createdUser = mdb({ email: req.body.email.toLowerCase(), password: bcrypt.hashSync(req.body.password, 10), admin: req.body.admin });
+  
+    var createdUser = mdb({ email: req.body.email.toLowerCase(), password: req.body.password, admin: req.body.admin });
 
     createdUser.save(createdUser, function(err, ret){
              //db.get('users').find({ email: req.body.email }).value();
@@ -116,8 +112,6 @@ service.deleteUser = (req, res) => {
 }
 
 service.updateUser = (req, res) => {
-    var email = req.params.email;
-
     if (typeof req.body.admin === 'boolean') {
         /*db.get('users')
             .find({ email: req.body.email })
@@ -127,11 +121,7 @@ service.updateUser = (req, res) => {
     }
 
     if (typeof req.body.password == 'string') {
-        /*db.get('users')
-            .find({ email: req.body.email })
-            .assign({ password: bcrypt.hashSync(req.body.password, 10) })
-            .write();*/
-        mdb.updateOne({'email':req.body.email}, { password: bcrypt.hashSync(req.body.password, 10) },function(err, ret){ });
+        mdb.updateOne({'email':req.body.email}, { password:req.body.password },function(err, ret){ });
     } 
     res.status(200).json(true);   
 }

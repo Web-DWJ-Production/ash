@@ -9,7 +9,6 @@
   "author": "dwj production web team",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.4",
     "body-parser": "^1.18.2",
     "bower": "^1.8.2",
     "cors": "^2.8.4",

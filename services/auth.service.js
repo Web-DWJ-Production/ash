@@ -1,5 +1,4 @@
 // IMPORTS
-var bcrypt = require('bcrypt');
 var secret = process.env.JWT_SECRET || 'changeme';
 var jwt = require('jsonwebtoken');
 var mdb = require('../db/users');
@@ -24,7 +23,7 @@ service.auth = (req, res) => {
         }
         else {        
             var signUser = {email: u.email, password: u.password, admin: u.admin, tmpPassExp: u.tmpPassExp, tmpPass: u.tmpPass};
-            if (bcrypt.compareSync(req.body.password, u.password)) {            
+            if (req.body.password, u.password) {            
                 // The authentication is succesful, return a JWT.
                 dataRet.results = jwt.sign(signUser, secret);
             } 

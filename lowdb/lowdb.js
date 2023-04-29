@@ -1,5 +1,4 @@
 const FileSync = require('lowdb/adapters/FileSync');
-var bcrypt = require('bcrypt');
 const low = require('lowdb');
 
 // CONFIG
@@ -13,7 +12,7 @@ if (!db.has('users').value()) {
     db.set('users', [
         {
             email: 'web@dwjproduction.com',
-            password: bcrypt.hashSync('changeme', 10),
+            password: "",
             admin: true
         }
     ]).write();
