@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Strategic Analytix</title>
+    <meta name="description" content="Stragtegic Analytix">
+    <meta name="author" content="DWJ Production">
+    <meta name="google-site-verification" content="QcMPyfLgvZiCkmpZeVdnUrI1-NaqTmmUF802ZRtcrQI" />
+    <!-- Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-110066059-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
+    <link href="css/libs.min.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <!-- Header -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+                        <img class="closeIcon" src="images/ic_close_white_24px.svg">
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <span class="img-logo"><img src="images/logo.svg"></span>                        
+                    </a>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="nav-txt">Our Company <span class="caret"></span></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="aboutus"><span class="nav-txt">About Us</span></a></li>
+                                <li><a href="leadership"><span class="nav-txt">Leadership</span></a></li>
+                                <li><a href="business-relationships"><span class="nav-txt">Business Relationships</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="services"><span class="nav-txt">Services</span></a></li>
+                        <li><a href="careers"><span class="nav-txt">Careers</span></a></li>
+                        <li><a href="benefits"><span class="nav-txt">Benefits</span></a></li>
+                        <li><a href="contactus"><span class="nav-txt">Contact</span></a></li>
+                        <li id="signin-btn" style="display: list-item;"><button class="lame-btn" onclick="linksCtrl.redirectToEmployees()"><span class="nav-txt"><img src="images/ic_account_circle_white_24px.svg"/></span></button></li>
+                        <li id="signout-btn" class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/ic_account_circle_white_24px.svg"/></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="linksCtrl.redirectToEmployees()"><span class="nav-txt">Employee Apps</span></a></li>
+                                <li><a onclick="loginCtrl.signout()" href="/"><span class="nav-txt">Sign out</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="mainBody">
+            <!-- Page Body -->
+            <div class="content-body 404">
+    <div class="content-section page-header-body afterAngle angle-background">
+        <div class="backImg">
+            <div class="overlay"></div>
+            <div class="img benefitsimg"></div>
+        </div>
+        <div class="page-header-container content-box-container">
+            <div class="content-box full-width about-back">
+                <div class="box-row">
+                    <div class="box-column shallow-bottom-padding">
+                        <div class="page-title-container">
+                            <div class="page-subtitle">This page does not exists</div>
+                            <h1 class="page-title">404</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-row">
+                    <div class="box-column full-width-column shallow-top-padding">
+                        <div class="page-title-container">
+                            <p class="page-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section">
+        <h1>Sorry</h1>
+        <p>You may have reached this page in error please return to our home page for more information <a href="/">Home</a></p>
+    </div>
+</div>
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <!--
+                <a class="social-icon facebook-theme" href="underconstruction" target="_blank"><i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a>
+                <a class="social-icon twitter-theme" href="https://twitter.com/strat_analytix" target="_blank"><i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a>
+                -->
+                <a class="social-icon linkedin-theme" href="https://www.linkedin.com/company/strategic-analytix" target="_blank"><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a>
+                <a class="social-icon twitter-theme" href="https://twitter.com/strat_analytix" target="_blank"><i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a>
+                <a class="social-icon email-theme" href="contactus"><i class="fa fa-2x fa-envelope" aria-hidden="true"></i></a>
+                <a class="social-icon logo-theme" href="https://www.inc.com/inc5000/index.html"><img src="images/inc_5000_logo.png" alt="Inc. 5000" /></a>
+            </div>
+        </div>
+        <div class="push"></div>
+    </div>
+
+    <div class="bottom">
+        <!-- footer -->
+        <div class="footer-container">
+            <div class="center-content">
+                <div class="footer-logo-container"><img src="images/logo-grey.svg"></div>
+                <span class='match-txt'>Think we're a match?</span>                
+                <div class="footer-links-container">
+                    <span class="indent-links"><a href="careers">Please view our current openings.</a></span>
+                    <span class="indent-links"><a href="contactus">We'd like to hear from you.</a></span>
+                </div>
+            </div>
+            <div class="sub-section">
+                <div class="row-layout">
+                    <div class="row-column left">STRATEGIC ANALYTIX © COPYRIGHT 2017</div>
+                    <div class="row-column right muted">Site By<a href="http://dwjproduction.com/" target="_blank"><img class="site-by-img" src="images/dwj-site-by.png"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<!-- JS -->
+<script src="js/libs.min.js"></script>
+<script src="js/bundle.js"></script>
+
+</html>

@@ -41,7 +41,8 @@ var config = {
       { 'filename': 'aboutus', 'locationname': 'aboutus.html' },
       { 'filename': 'careers', 'locationname': 'careers.html' },
       { 'filename': 'leadership', 'locationname': 'leadership.html' },
-      { 'filename': 'relationships', 'locationname': 'relationships.html' }
+      { 'filename': 'relationships', 'locationname': 'relationships.html' },
+      { 'filename': '404', 'locationname': '404.html' }
       
     ],
     navigationLinks: [

@@ -5,13 +5,14 @@ var expressJWT = require('express-jwt');
 var usersService = require('../services/users.service.js');
 
 // ROUTES
+/*
 router.get('', expressJWT({ secret: secret }), getAll);
 router.post('', expressJWT({ secret: secret }), postUser);
 router.post('/pwdreset', pwdReset);
 router.route('/:email')
     .delete(expressJWT({ secret: secret }), deleteUser)
     .put(expressJWT({ secret: secret }), updateUser);
-
+*/
 module.exports = router;
 
 function getAll(req, res) { usersService.getAll(req, res) };
