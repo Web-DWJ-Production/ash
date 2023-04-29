@@ -113,10 +113,6 @@ service.deleteUser = (req, res) => {
 
 service.updateUser = (req, res) => {
     if (typeof req.body.admin === 'boolean') {
-        /*db.get('users')
-            .find({ email: req.body.email })
-            .assign({ admin: req.body.admin })
-            .write();*/
         mdb.updateOne({'email':req.body.email}, { admin: req.body.admin },function(err, ret){});
     }
 
